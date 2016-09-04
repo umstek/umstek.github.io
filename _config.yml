@@ -14,3 +14,4 @@ gems:
   - jemoji
 sass:
   style: :compressed
+permalink: /blog/:year/:month/:day/:title
