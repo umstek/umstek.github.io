@@ -2,8 +2,13 @@
 layout: post
 title: 'Hello, world!'
 date: '2016-09-03 13:42:22 +0530'
-categories: snippets
-tags: hello-world snippet programming
+categories:
+  - code
+  - snippets
+tags:
+  - hello-world
+  - snippet
+  - programming
 author: hexmint
 ---
 

@@ -8,23 +8,31 @@ layout: default
     <h1 class="post-title" itemprop="name headline">
       {{ page.title | escape }}
     </h1>
+
     <p class="post-meta">
       {% assign time_to_read = page.content | number_of_words | divided_by: 200 | plus: 1 %}
       <small class="text-muted" title="Takes around {{ time_to_read }} minute(s) to read.">
         ~{{ time_to_read }} minute{% if time_to_read > 1 %}s{% endif %}.
       </small>
-      <time class="tag tag-pill tag-primary" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" title="{{ page.date | date_to_long_string }}">
+
+      <!-- Begin save to facebook button -->
+      <span class="fb-save"
+      data-uri="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+      data-size="small"></span>
+      <!-- End save to facebook button -->
+
+      <time class="tag tag-success" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" title="{{ page.date | date_to_long_string }}">
         {{ page.date | date: "%b %-d, %Y" }}
       </time>
-      <!-- {% if page.author %}
+      {% if page.author %}
         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <span class="tag tag-success" itemprop="name">
+          <span class="tag tag-primary" itemprop="name">
             {{ page.author }}
           </span>
         </span>
-      {% endif %} -->
+      {% endif %}
       {% for cat in page.categories %}
-        <span class="tag tag-pill tag-success">{{ cat }}</span>
+        <span class="tag tag-pill tag-primary">{{ cat }}</span>
       {% endfor %}
       {% for tag in page.tags %}
         <span class="tag tag-pill tag-info">{{ tag }}</span>
@@ -36,5 +44,9 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
+
+  <!-- Begin comment on facebook -->
+  <div class="fb-comments" data-href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" data-numposts="5"></div>
+  <!-- End comment on facebook -->
 
 </article>
