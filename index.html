@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="">
+    <h1 class="h1">Posts</h1>
+
+    <ul class="list-group">
+        {% for post in site.posts %}
+        <li class="list-group-item">
+          <a class="list-group-item-heading" href="{{ post.url | prepend: site.baseurl }}">
+            <big>{{ post.title | escape }}</big>
+          </a>
+          <small class="text-xs-right text-muted">
+            {{ post.date | date: "%b %-d, %Y" }}
+          </small>
+          <p class="list-group-item-text">{{ post.excerpt }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

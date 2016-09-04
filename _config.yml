@@ -1,0 +1,16 @@
+# Site settings
+title: UMSTeK
+email: umstek@live.com
+description: > # ignore newlines until "baseurl:"
+   Copyright © 2006-2016 by Wickramaranga Abeygunawardhana.
+   Website built with Jekyll using Atom on Ubuntu 16.04,
+   hosted on github-pages.
+baseurl: ""
+url: "http://umstek.github.io"
+
+# Build settings
+markdown: kramdown
+gems:
+  - jemoji
+sass:
+  style: :compressed

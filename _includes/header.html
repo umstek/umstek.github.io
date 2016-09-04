@@ -1,0 +1,30 @@
+<header class="navbar navbar-dark navbar-sticky-top bg-inverse" role="banner">
+
+  <div class="container-fluid">
+
+    <nav>
+      <a class="navbar-brand" href="{{ "/" | prepend: site.baseurl }}">
+        {{ site.title | escape }}
+      </a>
+
+      <ul class="nav navbar-nav">
+        {% for my_page in site.pages %}
+          {% if my_page.title %}
+          <li class="nav-item">
+            <a href="{{ my_page.url | prepend: site.baseurl }}" class="nav-link">
+              {{ my_page.title | escape }}
+            </a>
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+      <form class="form-inline pull-xs-right">
+        <input class="form-control" type="text" placeholder="Search">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+      </form>
+    </nav>
+
+  </div>
+
+</header>

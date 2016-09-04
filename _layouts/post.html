@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">
+      {{ page.title | escape }}
+    </h1>
+    <p class="post-meta">
+      {% assign time_to_read = page.content | number_of_words | divided_by: 200 | plus: 1 %}
+      <small class="text-muted" title="Takes around {{ time_to_read }} minute(s) to read.">
+        ~{{ time_to_read }} minute{% if time_to_read > 1 %}s{% endif %}.
+      </small>
+      <time class="tag tag-pill tag-primary" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" title="{{ page.date | date_to_long_string }}">
+        {{ page.date | date: "%b %-d, %Y" }}
+      </time>
+      <!-- {% if page.author %}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span class="tag tag-success" itemprop="name">
+            {{ page.author }}
+          </span>
+        </span>
+      {% endif %} -->
+      {% for cat in page.categories %}
+        <span class="tag tag-pill tag-success">{{ cat }}</span>
+      {% endfor %}
+      {% for tag in page.tags %}
+        <span class="tag tag-pill tag-info">{{ tag }}</span>
+      {% endfor %}
+    </p>
+
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+</article>
