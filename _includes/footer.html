@@ -16,15 +16,14 @@
       <div class="col col-xl-3 col-lg-3 col-md-6 col-sm-6">
         {% for network in site.data.social_links %}
         <div>
-          <span {% if network.icon %}class="fa fa-{{ network.icon }}"{% endif %}>
-            <a href="{{ network.link }}">{{ network.name }}</a>
-          </span>
+          <span {% if network.icon %}class="fa fa-{{ network.icon }}"{% endif %}></span>
+          <a href="{{ network.link }}">{{ network.name }}</a>
         </div>
         {% endfor %}
       </div>
 
       <div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12">
-        <p class="small">{{ site.description | escape }}</p>
+        <p class="small">{{ site.description }}</p>
       </div>
     </div>
 

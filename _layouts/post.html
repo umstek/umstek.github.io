@@ -16,12 +16,12 @@ layout: default
       </small>
 
       <!-- Begin save to facebook button -->
-      <span class="fb-save"
-      data-uri="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
-      data-size="small"></span>
+      <span class="fb-save" data-size="small"
+      data-uri="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"></span>
       <!-- End save to facebook button -->
 
-      <time class="tag tag-success" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" title="{{ page.date | date_to_long_string }}">
+      <time class="tag tag-success" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"
+      title="{{ page.date | date_to_long_string }}">
         {{ page.date | date: "%b %-d, %Y" }}
       </time>
       {% if page.author %}
@@ -46,7 +46,9 @@ layout: default
   </div>
 
   <!-- Begin comment on facebook -->
-  <div class="fb-comments" data-href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" data-numposts="5"></div>
+  <div class="fb-comments"
+  data-href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" data-numposts="5">
+  </div>
   <!-- End comment on facebook -->
 
 </article>

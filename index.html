@@ -3,7 +3,14 @@ layout: default
 ---
 
 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
-  <h1 class="h1">Posts</h1>
+  <h1>Posts</h1>
+  <span>
+    Subscribe via
+    <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+      RSS
+    </a>
+    <i class="fa fa-rss"></i>
+  </span>
 
   {% for post in site.posts %}
   <div class="card card-block shadow-1">
@@ -27,9 +34,6 @@ layout: default
     </p>
   </div>
   {% endfor %}
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 </div>
 
 <div class="col-xl-4 col-lg-4 hidden-md-down hidden-print">
