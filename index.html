@@ -2,23 +2,38 @@
 layout: default
 ---
 
-<div class="">
-    <h1 class="h1">Posts</h1>
+<div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
+  <h1 class="h1">Posts</h1>
 
-    <ul class="list-group">
-        {% for post in site.posts %}
-        <li class="list-group-item">
-          <a class="list-group-item-heading" href="{{ post.url | prepend: site.baseurl }}">
-            <big>{{ post.title | escape }}</big>
-          </a>
-          <small class="text-xs-right text-muted">
-            {{ post.date | date: "%b %-d, %Y" }}
-          </small>
-          <p class="list-group-item-text">{{ post.excerpt }}</p>
-        </li>
-        {% endfor %}
-    </ul>
+  {% for post in site.posts %}
+  <div class="card card-block shadow-1">
+    <h4 class="card-title">
+      <a href="{{ post.url | prepend: site.baseurl }}">
+        {{ post.title | escape }}
+      </a>
+    </h4>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <p class="card-text">
+      <span class="text-success">
+        {{ post.url }}
+      </span>
+      <small class="text-muted">
+        {{ post.date | date_to_long_string }}
+      </small>
+    </p>
 
+    <p class="card-text">
+      {{ post.excerpt }}
+    </p>
+  </div>
+  {% endfor %}
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
+
+<div class="col-xl-4 col-lg-4 hidden-md-down hidden-print">
+  <!-- twitter timeline -->
+  <a class="twitter-timeline" data-height="450" href="https://twitter.com/hexmint">Tweets by hexmint</a>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>

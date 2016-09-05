@@ -7,13 +7,16 @@
       <div class="col col-xl-3 col-lg-3 col-md-6 col-sm-6">
         <!-- Facebook like button -->
         <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fumstek.github.io&width=50&layout=box_count&action=like&size=small&show_faces=false&share=true&height=65&appId" width="50" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+        <!-- Twitter follow button -->
+        <a href="https://twitter.com/hexmint" class="twitter-follow-button" data-show-count="true">Follow @hexmint</a>
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
 
       <div class="col col-xl-3 col-lg-3 col-md-6 col-sm-6">
         {% for network in site.data.social_links %}
         <div>
-          <img alt="{{ network.network }}" title="{{ network.network }}" src="{{ network.icon | prepend: '/img/' | prepend: site.url }}" />
-          <span>
+          <span {% if network.icon %}class="fa fa-{{ network.icon }}"{% endif %}>
             <a href="{{ network.link }}">{{ network.name }}</a>
           </span>
         </div>
@@ -21,7 +24,7 @@
       </div>
 
       <div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12">
-        <p>{{ site.description | escape }}</p>
+        <p class="small">{{ site.description | escape }}</p>
       </div>
     </div>
 
