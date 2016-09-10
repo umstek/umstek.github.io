@@ -1,39 +1,43 @@
 ---
-layout: page
+title: Sass
 ---
 
-# SASS - Syntactically awesome style sheets
+Sass - Syntactically awesome style sheets  
+=========================================  
 
-## Data Types
-+ Numbers: `12`, `1.2`, `12px`, `75%`
-+ Strings: `sans-serif`, `"DejaVu Sans Mono"`
-+ Colors: `blue`, `#00cfff`, `rgba(193, 193, 193, 0.4)`
-+ Booleans: `true`, `false`
-+ Null: `null`
-+ Lists: `0 1px 3px #eef`
-+ Maps: `(key1: value1, key2: value2)`
+Data Types  
+----------
 
-**NOTE:**
++ Numbers: `12`, `1.2`,... with units `%`, `px`, `em`, `mm`,...   
++ Strings: `sans-serif`, `"DejaVu Sans Mono"`  
++ Colors: `blue`, `#00cfff`, `rgba(193, 193, 193, 0.4)`  
++ Booleans: `true`, `false`  
++ Null: `null`  
++ Lists: `0 1px 3px #eef`  
++ Maps: `(key1: value1, key2: value2)`  
 
-1. Selectors and Property names are strings. 
+**NOTE:**  
+1. Selectors and Property names are strings.  
 
-## Comments
-Initiators: `//` or `/*`, continue to change of indentation.
+Comments  
+--------
+Initiators: `//` or `/*`, continue to change of indentation.  
 
 ```sass
 // comments are
    indentation sensitive
 ```
 
-## Variables
+Variables  
+---------
 
-### Definition
+### Definition  
 ```sass
 $variable-name: value
 $bg-color: #cfcfff !default // set if not defined previously
 ```
 
-### Scope
+### Scope  
 ```sass
 $variable-name: value // global, works even on imported sheets
 div.main
@@ -41,7 +45,9 @@ div.main
   // $color is available only inside this block
 ```
 
-## Nesting
+Nesting  
+-------
+
 ```sass
 nav
   // applies to <nav>
@@ -51,7 +57,7 @@ nav
     // applies to all <ul> descendants of <nav>
 ```
 
-**Compiled output**
+**Compiled output**  
 
 ```css
 nav { }
@@ -59,23 +65,30 @@ nav li { }
 nav ul { }
 ```
 
-### Nested Properties
+### Nested Properties  
+
 ```sass
 .muted
   font:
 ```
 
-## Partials
-Files with a leading underscore are not compiled to make `.css` files.
-But they can be imported to other `sass` files with `@import` w/o underscore.
+Partials  
+--------
 
-## Import
+Files with a leading underscore are not compiled to make `.css` files.  
+But they can be imported to other `sass` files with `@import` w/o underscore.  
+
+Import  
+------
+
 ```sass
 @import basic
 // imports contents of _basic.sass where used
 ```
 
-## Mixins
+Mixins  
+------
+
 Works similar to functions if they existed in CSS.
 
 ### Definition
@@ -93,7 +106,7 @@ div
   +border-radius(10px)
 ```
 
-**Compiled output**
+**Compiled output**  
 
 ```css
 div {
@@ -102,7 +115,9 @@ div {
 }
 ```
 
-## Extend/Inherit
+Extend/Inherit  
+--------------
+
 ```sass
 .content
   @extends .container
@@ -110,24 +125,21 @@ div {
   // use a property name again to override
 ```
 
-## Operators
+Operators  
+---------
 
 ### Arithmetic
 `+`, `-`, `*`, `/`, `%` (modulo)
 
-**CAUTION:**
+**CAUTION:**  
+1. Units participate in calculations. e.g.: `10px * 10px == 100px * px`.  
+2. `/` is the CSS separator if both operands are numbers, and is not part of a larger expression.  
 
-1. Units participate in calculations. e.g.: `10px * 10px == 100px * px`.
-
-2. `/` is the CSS separator if both operands are numbers, and is not part of a larger expression.
-
-**NOTE:**
-
-1. Better to include spaces on both sides of `-`.
-
+**NOTE:**  
+1. Better to include spaces on both sides of `-`.  
 2. Arithmetic operations on colors are 'piecewise' for R, G, B, A.
 
-### String
+### String  
 `+` (concatenation), `#{}` (interpolation)
 
 **NOTE:**
@@ -142,7 +154,8 @@ div {
 ### Comparison
 `<`, `>`, `==`, `!=`, `<=`, `>=`
 
-## Referencing Parent Selector
+Referencing Parent Selector
+---------------------------
 ```sass
 a
   div &
