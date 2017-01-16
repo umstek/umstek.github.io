@@ -1,0 +1,58 @@
+---
+layout: post
+title: 'Text Cases in Programming'
+date: '2016-01-16 11:12:22 +0530'
+categories:
+  - code
+  - best-practices
+tags:
+  - text-cases
+  - camel-case
+  - snake-case
+  - best-practices
+  - programming
+author: hexmint
+---
+
+When coding, text cases become an important factor if you want to maintain your code up to a high standard, following best practices. Different languages follow different naming conventions for variables, constants etc. Here we discuss some of the different types of text casing and their usages in some popular languages. 
+
+#1. Camel Case  
+Spaces are omitted and first letter of each word is capitalized. Looks like a camel with multiple humps. Other names: _Pascal Case_, _Bumpy Caps_, _Upper Camel Case_.  
+e.g.: `CreateCatDetailsPage`, `GiveMeAHug`, `XmlHttpRequest` _(Note how popular abbreviations are converted.)_  
+**C#/VB _(VB is case insensitive)_ method names**  
+
+#2. Headless Camel Case  
+Spaces are omitted and first letter of each word except the first word is capitalized. As implied by the name, looks like a camel without its head.  
+e.g.: `getCatDetails`, `giveMeAHug`  
+**Java method and variable names**  
+
+#3. Snake Case  
+Looks like snakes, with the words of phrases are separated with undescores (`_`) rather than spaces.  
+e.g.: `get_snake_details`, `give_me_a_hug`  
+**Python/Ruby function and variable names**  
+
+#4. Screaming Snake Case  
+Screaming most of the time means making all the text uppercase. This case is the same as snake case except that all letters are capitalized.  
+e.g.: `SNAKE_SPEED_FACTOR`, `MAX_SNAKE_AGE`  
+**In most programming languages, constants are named using screaming snake case.**  
+
+#5. Kebab Case / Lisp Case
+This one does not have a standard name but called with various names like _Caterpillar Case_, _Spine Case_, or just _Hyphenated_.  
+e.g.: `max-time-limit`, `font-family`  
+**CSS, Lisp**
+
+#6. Train Case  
+This one is the same as the above, but first letters of all words are capitalized.  
+e.g.: `Train-Case`  
+
+#7. COBOL Case  
+Looks more like a screaming Lisp case. Hyphenated words with all caps.  
+e.g.: `MAGIC-NUMBER`  
+**COBOL**  
+
+#8. Studly Caps  
+Uppercase letters and lowercase letters are mixed. I'm just curious whether this is used in any kind of programming.  
+e.g.: `StUdLyCaPs`  
+
+---
+If you know of more, or if you want to add anything, need clarifications, please comment below. :smile:  
