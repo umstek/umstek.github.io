@@ -124,9 +124,10 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-github-metadata (~> 1.0)
+  jekyll-seo-tag
 
 RUBY VERSION
-   ruby 2.3.0p0
+   ruby 2.3.1p112
 
 BUNDLED WITH
    1.13.1

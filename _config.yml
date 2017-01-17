@@ -17,6 +17,7 @@ collections: # cheatsheets
 markdown: kramdown
 gems:
   - jemoji
+  - jekyll-seo-tag
 sass:
   style: :compressed
 permalink: /blog/:year/:month/:day/:title
