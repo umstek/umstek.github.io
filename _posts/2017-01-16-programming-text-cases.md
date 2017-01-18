@@ -4,11 +4,15 @@ title: 'Text Cases in Programming'
 date: '2016-01-16 11:12:22 +0530'
 categories:
   - code
+  - conventions
   - best-practices
 tags:
-  - text-cases
+  - naming-conventions
   - camel-case
   - snake-case
+  - kebab-case
+  - train-case
+  - cobol-case
   - best-practices
   - programming
 author: hexmint
