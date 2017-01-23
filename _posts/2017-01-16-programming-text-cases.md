@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Text Cases in Programming'
-date: '2016-01-16 11:12:22 +0530'
+date: '2017-01-16 11:12:22 +0530'
 categories:
   - code
   - conventions
