@@ -18,6 +18,7 @@ markdown: kramdown
 gems:
   - jemoji
   - jekyll-seo-tag
+  - jekyll-github-metadata
 sass:
   style: :compressed
 permalink: /blog/:year/:month/:day/:title
