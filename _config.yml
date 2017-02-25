@@ -3,7 +3,7 @@ title: UMSTeK
 email: umstek@live.com
 description: > # ignore newlines until "baseurl:"
    Copyright © 2006-2016 by Wickramaranga Abeygunawardhana. <br>
-   Website built with Jekyll using Atom on Ubuntu 16.04,
+   Website built with Jekyll using Visual Studio Code and Atom on elementary OS 0.4 Loki,
    hosted on github-pages.
 baseurl: ""
 url: "http://umstek.github.io"
