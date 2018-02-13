@@ -64,7 +64,7 @@
     "serve": "gatsby serve",
     "build": "gatsby build",
     "build:pp": "gatsby build",
-    "build:gh": "yarn run clean && yarn run build:pp && gh-pages -b master -d public",
+    "build:gh": "yarn run clean && yarn run build:pp && node ./gh-pages-deploy.js",
     "clean": "rm -rf public",
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:js-fix": "eslint --fix --ext .js,.jsx .",
