@@ -1,0 +1,2 @@
+webpackJsonp([27386866079921],{392:function(t,e){t.exports={data:{allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/hello-world"},excerpt:"I'm just trying to say hello.\nWell, here we go. :trollface: Python: Ruby: PHP: Java: VB: C#: JavaScript:",timeToRead:1,frontmatter:{title:"Hello, world!",tags:["hello world","snippet","programming"],cover:"https://unsplash.it/400/300/?random?BoldMage",date:"2016-09-03 13:42:22 +0530"}}}]}},pathContext:{tag:"hello world"}}}});
+//# sourceMappingURL=path---tags-hello-world-3c6799f1ab2db273cb3a.js.map

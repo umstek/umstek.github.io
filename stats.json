@@ -1,0 +1,136 @@
+{
+  "assetsByChunkName": {
+    "path---tags-snippet": [
+      "path---tags-snippet-62f9d81aa719fd9fe9e7.js",
+      "path---tags-snippet-62f9d81aa719fd9fe9e7.js.map"
+    ],
+    "path---tags-programming": [
+      "path---tags-programming-4c7c5fbbd8ecf1a623ba.js",
+      "path---tags-programming-4c7c5fbbd8ecf1a623ba.js.map"
+    ],
+    "path---tags-hello-world": [
+      "path---tags-hello-world-3c6799f1ab2db273cb3a.js",
+      "path---tags-hello-world-3c6799f1ab2db273cb3a.js.map"
+    ],
+    "path---funny-names-for-wi-fi-router": [
+      "path---funny-names-for-wi-fi-router-cf378ddafa67066dc6dd.js",
+      "path---funny-names-for-wi-fi-router-cf378ddafa67066dc6dd.js.map"
+    ],
+    "path---tags-funny": [
+      "path---tags-funny-4b997c014280a5b8a4a3.js",
+      "path---tags-funny-4b997c014280a5b8a4a3.js.map"
+    ],
+    "path---tags-kebab-case": [
+      "path---tags-kebab-case-bab226519235df12caab.js",
+      "path---tags-kebab-case-bab226519235df12caab.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "path---tags-train-case": [
+      "path---tags-train-case-5b3e1b484f37326a24dc.js",
+      "path---tags-train-case-5b3e1b484f37326a24dc.js.map"
+    ],
+    "path---tags-naming-conventions": [
+      "path---tags-naming-conventions-3f55bfecb61bd627ab4e.js",
+      "path---tags-naming-conventions-3f55bfecb61bd627ab4e.js.map"
+    ],
+    "component---src-layouts-index-jsx": [
+      "component---src-layouts-index-jsx-b491722106210d21c4fe.js",
+      "component---src-layouts-index-jsx-b491722106210d21c4fe.js.map"
+    ],
+    "path---tags-cobol-case": [
+      "path---tags-cobol-case-226774dbfed5a7473d39.js",
+      "path---tags-cobol-case-226774dbfed5a7473d39.js.map"
+    ],
+    "component---node-modules-gatsby-plugin-offline-app-shell-js": [
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
+    ],
+    "path---tags-camel-case": [
+      "path---tags-camel-case-54ced4a718a21713b5c4.js",
+      "path---tags-camel-case-54ced4a718a21713b5c4.js.map"
+    ],
+    "component---src-templates-category-jsx": [
+      "component---src-templates-category-jsx-487a54af4511e0347936.js",
+      "component---src-templates-category-jsx-487a54af4511e0347936.js.map"
+    ],
+    "path---tags-snake-case": [
+      "path---tags-snake-case-bdc33d76be175ff9c8f2.js",
+      "path---tags-snake-case-bdc33d76be175ff9c8f2.js.map"
+    ],
+    "path---categories-snippets": [
+      "path---categories-snippets-234f93f962f2f45a847d.js",
+      "path---categories-snippets-234f93f962f2f45a847d.js.map"
+    ],
+    "path---index": [
+      "path---index-20da80ed9ae30d4374f3.js",
+      "path---index-20da80ed9ae30d4374f3.js.map"
+    ],
+    "component---src-pages-about-jsx": [
+      "component---src-pages-about-jsx-16dca089dee574aef9ce.js",
+      "component---src-pages-about-jsx-16dca089dee574aef9ce.js.map"
+    ],
+    "path---hello-world": [
+      "path---hello-world-ddf375d7177f33168861.js",
+      "path---hello-world-ddf375d7177f33168861.js.map"
+    ],
+    "path---tags-best-practices": [
+      "path---tags-best-practices-eee5c9046e38fd76c7db.js",
+      "path---tags-best-practices-eee5c9046e38fd76c7db.js.map"
+    ],
+    "commons": [
+      "commons-9d375b6c73ae00e74764.js",
+      "build-js-styles.css",
+      "commons-9d375b6c73ae00e74764.js.map",
+      "build-js-styles.css.map"
+    ],
+    "component---src-templates-tag-jsx": [
+      "component---src-templates-tag-jsx-e1770699b3ca28ccd117.js",
+      "component---src-templates-tag-jsx-e1770699b3ca28ccd117.js.map"
+    ],
+    "path---text-cases-in-programming": [
+      "path---text-cases-in-programming-c8dafe5d09c04dcca38e.js",
+      "path---text-cases-in-programming-c8dafe5d09c04dcca38e.js.map"
+    ],
+    "path---categories-conventions": [
+      "path---categories-conventions-fba65a531e6dfce9769c.js",
+      "path---categories-conventions-fba65a531e6dfce9769c.js.map"
+    ],
+    "path---tags-ssid": [
+      "path---tags-ssid-424d7c15f1965364f288.js",
+      "path---tags-ssid-424d7c15f1965364f288.js.map"
+    ],
+    "path---offline-plugin-app-shell-fallback": [
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---categories-fun-stuff": [
+      "path---categories-fun-stuff-4b70952b9d78d6c216ed.js",
+      "path---categories-fun-stuff-4b70952b9d78d6c216ed.js.map"
+    ],
+    "component---src-templates-post-jsx": [
+      "component---src-templates-post-jsx-6acb893a19709d2e102f.js",
+      "component---src-templates-post-jsx-6acb893a19709d2e102f.js.map"
+    ],
+    "component---src-pages-index-jsx": [
+      "component---src-pages-index-jsx-4ea5df94d3f74dc96488.js",
+      "component---src-pages-index-jsx-4ea5df94d3f74dc96488.js.map"
+    ],
+    "path---tags-wi-fi": [
+      "path---tags-wi-fi-ae753d6162605bf9161c.js",
+      "path---tags-wi-fi-ae753d6162605bf9161c.js.map"
+    ],
+    "app": [
+      "app-f19a34f5f6d3e544f5de.js",
+      "build-js-styles.css",
+      "app-f19a34f5f6d3e544f5de.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---about": [
+      "path---about-a0e39f21c11f6a62c5ab.js",
+      "path---about-a0e39f21c11f6a62c5ab.js.map"
+    ]
+  }
+}
