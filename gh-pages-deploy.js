@@ -3,7 +3,7 @@ const path = require("path");
 const ghpages = require('gh-pages');
 
 ghpages.publish(path.join(__dirname, 'public'), {
-    repo: `https://${process.env.GH_Key}@github.com/user/private-repo.git`,
+    repo: `https://${process.env.GH_Key}@github.com/umstek/umstek.github.io.git`,
     branch: 'master',
     silent: true
 });
