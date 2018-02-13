@@ -1,0 +1,20 @@
+// Settings
+@import "~inuit-defaults/settings.defaults";
+@import "~grommet/scss/grommet-core/settings.defaults";
+@import "~grommet/scss/grommet-core/settings.color";
+@import "~grommet/scss/grommet-core/settings.font";
+@import "~inuit-responsive-settings/settings.responsive";
+
+// Tools
+@import "~inuit-functions/tools.functions";
+@import "~inuit-mixins/tools.mixins";
+@import "~inuit-responsive-tools/tools.responsive";
+@import "~grommet/scss/grommet-core/tools.animation";
+@import "~grommet/scss/grommet-core/tools.color-index";
+@import "~grommet/scss/grommet-core/tools.icon";
+@import "~grommet/scss/grommet-core/tools.input";
+@import "~grommet/scss/grommet-core/tools.margin";
+@import "~grommet/scss/grommet-core/tools.pad";
+@import "~grommet/scss/grommet-core/tools.page";
+@import "~grommet/scss/grommet-core/tools.text";
+@import "~grommet/scss/grommet-core/tools.text-align";
