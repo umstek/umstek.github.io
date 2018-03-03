@@ -2,4 +2,4 @@ User-agent: *
 Disallow: */tags/
 Disallow: */categories/
 
-sitemap: https://umstek.github.io/sitemap.xml
+sitemap: https://www.umstek.tk/sitemap.xml

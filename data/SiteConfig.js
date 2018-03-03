@@ -3,7 +3,7 @@ module.exports = {
   siteTitle: "UMSTeK", // Site title.
   siteTitleAlt: "UMSTeK", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-  siteUrl: "https://umstek.github.io", // Domain of your website without pathPrefix.
+  siteUrl: "https://www.umstek.tk", // Domain of your website without pathPrefix.
   pathPrefix: "", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "UMSTeK Labs", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
