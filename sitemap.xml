@@ -7,18 +7,11 @@
 <url> <loc>https://umstek.github.io/tags/snippet/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://umstek.github.io/tags/programming/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://umstek.github.io/tags/naming-conventions/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://umstek.github.io/tags/camel-case/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://umstek.github.io/tags/snake-case/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://umstek.github.io/tags/kebab-case/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://umstek.github.io/tags/train-case/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://umstek.github.io/tags/cobol-case/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://umstek.github.io/tags/best-practices/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://umstek.github.io/tags/ssid/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://umstek.github.io/tags/wi-fi/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://umstek.github.io/tags/funny/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://umstek.github.io/categories/snippets/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://umstek.github.io/categories/conventions/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://umstek.github.io/categories/fun-stuff/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://umstek.github.io/categories/programming/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://umstek.github.io/categories/funny/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://umstek.github.io/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://umstek.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
