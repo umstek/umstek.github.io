@@ -2,14 +2,14 @@
 title: 'Hello, world!'
 date: '2016-09-03 13:42:22 +0530'
 cover: "https://unsplash.it/400/300/?random?BoldMage"
-category: snippets
+category: programming
 tags:
   - hello world
   - snippet
   - programming
 ---
 
-I'm just trying to say hello.
+I'm only trying to say hello.
 Well, here we go. :trollface:
 
 Python:

@@ -2,22 +2,16 @@
 title: 'Text Cases in Programming'
 date: '2017-01-16 11:12:22 +0530'
 cover: "https://unsplash.it/400/300/?random?BoldMage"
-category: conventions
+category: programming
 tags:
   - naming conventions
-  - camel case
-  - snake case
-  - kebab case
-  - train case
-  - cobol case
-  - best practices
   - programming
 ---
 
 When coding, text cases become an important factor if you want to maintain your code up to a high standard, following best practices. Different languages follow different naming conventions for variables, constants etc. Here we discuss some of the different types of text casing and their usages in some popular languages. 
 
 ## Camel Case  
-Spaces are omitted and first letter of each word is capitalized. Looks like a camel with multiple humps. Other names: _Pascal Case_, _Bumpy Caps_, _Upper Camel Case_.  
+Spaces are omitted and first letter of each word is capitalized. Looks like a camel with many humps. Other names: _Pascal Case_, _Bumpy Caps_, _Upper Camel Case_.  
 e.g.: `CreateCatDetailsPage`, `GiveMeAHug`, `XmlHttpRequest` _(Note how popular abbreviations are converted.)_  
 **C#/VB _(VB is case insensitive)_ method names**  
 
@@ -37,7 +31,7 @@ e.g.: `SNAKE_SPEED_FACTOR`, `MAX_SNAKE_AGE`
 **In most programming languages, constants are named using screaming snake case.**  
 
 ## Kebab Case / Lisp Case
-This one does not have a standard name but called with various names like _Caterpillar Case_, _Spine Case_, or just _Hyphenated_.  
+This one does not have a standard name but called with names like _Caterpillar Case_, _Spine Case_, or _Hyphenated_.  
 e.g.: `max-time-limit`, `font-family`  
 **CSS, Lisp**
 
@@ -51,7 +45,7 @@ e.g.: `MAGIC-NUMBER`
 **COBOL**  
 
 ## Studly Caps  
-Uppercase letters and lowercase letters are mixed. I'm just curious whether this is used in any kind of programming.  
+Uppercase letters and lowercase letters are mixed. I'm curious whether this is used in any kind of programming.  
 e.g.: `StUdLyCaPs`  
 
 ---
