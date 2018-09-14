@@ -1,0 +1,26 @@
+{
+  "name": "umstek.tk",
+  "version": "0.3.0",
+  "description": "UMSTek website",
+  "main": "index.js",
+  "repository": "https://github.com/umstek/umstek.github.io.git",
+  "author": "Wickramaranga Abeygunawardhana <umstek@live.com>",
+  "license": "Proprietary",
+  "private": true,
+  "scripts": {
+    "start": "yarn parcel serve --open --no-autoinstall --log-level 3 index.html",
+    "build": "yarn parcel build index.html",
+    "surge": "surge ./dist umstek-next.surge.sh"
+  },
+  "devDependencies": {
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
+    "parcel-bundler": "^1.9.7",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "spectre.css": "^0.5.3"
+  }
+}
