@@ -9,13 +9,15 @@
   "private": true,
   "scripts": {
     "prestart": "rimraf dist .cache",
-    "start": "parcel serve --open --no-autoinstall --log-level 3 index.html",
+    "start": "parcel serve --hmr-port 9999 --open --no-autoinstall --log-level 3 index.html",
     "build": "parcel build index.html",
     "surge": "surge ./dist umstek-next.surge.sh"
   },
   "devDependencies": {
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
+    "@types/react-helmet": "^5.0.7",
+    "@types/react-router-dom": "^4.3.1",
     "parcel-bundler": "^1.9.7",
     "parcel-plugin-md-raw": "./local_modules/parcel-plugin-md-fm",
     "rimraf": "^2.6.2",
@@ -25,6 +27,8 @@
     "markdown-to-jsx": "^6.7.2",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
+    "react-helmet": "^5.2.0",
+    "react-router-dom": "^4.3.1",
     "spectre.css": "^0.5.3"
   }
 }
