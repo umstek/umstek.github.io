@@ -5,6 +5,10 @@
     "strict": true,
     "jsx": "react",
     "experimentalDecorators": true,
-    "lib": ["dom", "es2015"]
+    "lib": ["dom", "es2015"],
+    "baseUrl": ".",
+    "paths": {
+      "~*": ["./src/*"]
+    }
   }
 }

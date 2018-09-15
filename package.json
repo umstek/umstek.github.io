@@ -8,17 +8,21 @@
   "license": "Proprietary",
   "private": true,
   "scripts": {
-    "start": "yarn parcel serve --open --no-autoinstall --log-level 3 index.html",
-    "build": "yarn parcel build index.html",
+    "prestart": "rimraf dist .cache",
+    "start": "parcel serve --open --no-autoinstall --log-level 3 index.html",
+    "build": "parcel build index.html",
     "surge": "surge ./dist umstek-next.surge.sh"
   },
   "devDependencies": {
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
     "parcel-bundler": "^1.9.7",
+    "parcel-plugin-md-raw": "./local_modules/parcel-plugin-md-fm",
+    "rimraf": "^2.6.2",
     "typescript": "^3.0.3"
   },
   "dependencies": {
+    "markdown-to-jsx": "^6.7.2",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "spectre.css": "^0.5.3"
