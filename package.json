@@ -19,7 +19,7 @@
     "@types/react-helmet": "^5.0.7",
     "@types/react-router-dom": "^4.3.1",
     "parcel-bundler": "^1.9.7",
-    "parcel-plugin-md-raw": "./local_modules/parcel-plugin-md-fm",
+    "parcel-plugin-md-fm": "^0.1.15",
     "rimraf": "^2.6.2",
     "typescript": "^3.0.3"
   },

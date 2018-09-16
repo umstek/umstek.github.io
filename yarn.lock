@@ -2828,8 +2828,9 @@ parcel-bundler@^1.9.7:
     v8-compile-cache "^2.0.0"
     ws "^5.1.1"
 
-parcel-plugin-md-raw@./local_modules/parcel-plugin-md-fm:
-  version "0.1.10"
+parcel-plugin-md-fm@^0.1.15:
+  version "0.1.15"
+  resolved "https://registry.yarnpkg.com/parcel-plugin-md-fm/-/parcel-plugin-md-fm-0.1.15.tgz#8d1d05b1e7147b6db53c6f2ff1cf412c9db3a43e"
   dependencies:
     front-matter "^2.3.0"
 
