@@ -1,4 +1,8 @@
-import React from 'react'
-import { Container } from 'rebass'
+import React, { Component } from "react";
+import { Container } from "rebass";
 
-export default props => <Container {...props} />
+export default class Layout extends Component {
+  render() {
+    return <Container {...this.props} />;
+  }
+}

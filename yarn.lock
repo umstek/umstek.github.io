@@ -3883,7 +3883,7 @@ readdirp@^2.0.0:
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
 
-rebass@^2.3.4:
+rebass@2:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/rebass/-/rebass-2.3.4.tgz#f98070730ab6a527bb663f1a63dac6cd4a754a7d"
   dependencies:
@@ -4484,8 +4484,8 @@ styled-system@3.0.3:
     prop-types "^15.6.2"
 
 styled-system@^3.0.1:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-3.1.4.tgz#d3cc0cfea91273c39f06af5eaaaa2decf84506c0"
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-3.1.6.tgz#286448a62932b1f7ed98075d1a520afd52da97d1"
   dependencies:
     prop-types "^15.6.2"
 

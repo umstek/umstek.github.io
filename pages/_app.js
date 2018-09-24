@@ -1,8 +1,8 @@
 import React from "react";
 import { MDXProvider } from "@mdx-js/tag";
-import { Provider as RebassProvider } from "rebass";
 import App, { Container } from "next/app";
-
+import { Provider as RebassProvider } from "rebass";
+import Layout from "../components/Layout";
 import components from "../components/markdown";
 
 export default class _App extends App {
@@ -11,7 +11,11 @@ export default class _App extends App {
     return (
       <MDXProvider components={components}>
         <RebassProvider>
-          <Component {...pageProps} />
+          <Container>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </Container>
         </RebassProvider>
       </MDXProvider>
     );

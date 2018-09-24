@@ -16,6 +16,7 @@ export default class ProjectPage extends Component {
       language,
       license
     } = await res.json();
+
     return {
       name,
       description,
@@ -24,9 +25,10 @@ export default class ProjectPage extends Component {
       watchers_count,
       forks_count,
       language,
-      license: (license && license.spdx_id) || ""
+      license: (license || {}).spdx_id
     };
   }
+
   render() {
     return (
       <div>
