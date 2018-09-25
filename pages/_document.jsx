@@ -2,6 +2,8 @@ import Document, { Head, Main, NextScript } from "next/document";
 import getConfig from "next/config";
 import { ServerStyleSheet } from "styled-components";
 
+import { atomOneLightHighlighting } from "../styles/atomOneLight";
+
 export default class _Document extends Document {
   static async getInitialProps(ctx) {
     const { renderPage } = ctx;
@@ -20,7 +22,11 @@ export default class _Document extends Document {
 
     return (
       <html lang="en">
-        <Head>{styleTags}</Head>
+        <Head>
+          {styleTags}
+          <style>{atomOneLightHighlighting}</style>
+        </Head>
+
         <body>
           <Main />
           <NextScript />
