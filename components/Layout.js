@@ -6,7 +6,9 @@ export default class Layout extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Container>
+          <Navbar />
+        </Container>
         <Container {...this.props} />
       </div>
     );
