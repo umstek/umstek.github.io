@@ -1,5 +1,6 @@
 import { Component } from "react";
 import fetch from "isomorphic-unfetch";
+import { Card } from "rebass";
 
 export default class ProjectPage extends Component {
   static async getInitialProps(props) {
@@ -31,13 +32,13 @@ export default class ProjectPage extends Component {
 
   render() {
     return (
-      <div>
+      <Card>
         {Object.keys(this.props).map(k => (
           <li>
             {k}:{this.props[k]}
           </li>
         ))}
-      </div>
+      </Card>
     );
   }
 }
