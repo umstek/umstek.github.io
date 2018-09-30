@@ -26,7 +26,7 @@ class UserInfo extends Component {
             className="g-follow"
             data-annotation="none"
             data-height="20"
-            data-href={`//plus.google.com/u/0/${userGPlus}`}
+            data-href={`https://plus.google.com/u/0/${userGPlus}`}
             data-rel="author"
           />
         </div>

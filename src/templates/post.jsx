@@ -45,7 +45,10 @@ export default class PostTemplate extends React.Component {
             <div className="post-meta">
               <PostTags tags={post.tags} />
             </div>
-            <FacebookSaveButton appId={config.siteFBAppID} url={slug} />
+            <FacebookSaveButton
+              appId={config.siteFBAppID}
+              url={config.siteUrl + slug}
+            />
             <div className="divider" />
             <div
               className="text-justify"

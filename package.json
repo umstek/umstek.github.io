@@ -69,6 +69,7 @@
     "serve": "gatsby serve",
     "clean": "rm -rf public && rm -rf .cache",
     "build": "gatsby build",
+    "surge": "yarn build && surge ./public umstek-next.surge.sh",
     "build:pp": "gatsby build --prefix-paths",
     "build:gh": "yarn clean && yarn build",
     "lint:js": "eslint --ext .js,.jsx .",
