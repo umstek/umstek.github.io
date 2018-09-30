@@ -1,6 +1,6 @@
 ---
-title: 'Hello, world!'
-date: '2016-09-03 13:42:22 +0530'
+title: "Hello, world!"
+date: "2016-09-03 13:42:22 +0530"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 category: programming
 tags:
@@ -38,9 +38,9 @@ public static void main(String[] args) {
 }
 ```
 
-VB:
+VB.net:
 
-```vb
+```vbnet
 Module Main
   Sub Main(args as String())
     Console.WriteLine("Hello, world!")
@@ -63,5 +63,5 @@ class Main {
 JavaScript:
 
 ```javascript
-console.log('Hello, world!');
+console.log("Hello, world!");
 ```

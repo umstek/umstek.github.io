@@ -1,17 +1,21 @@
 const config = require("./data/SiteConfig");
+const urljoin = require("url-join");
 
-const pathPrefix = config.pathPrefix ? config.pathPrefix : "";
+const realPathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
 
 module.exports = {
-  pathPrefix: pathPrefix === "" ? "/" : pathPrefix,
+  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix,
+    siteUrl: urljoin(config.siteUrl, realPathPrefix),
     rssMetadata: {
-      site_url: config.siteUrl + pathPrefix,
-      feed_url: config.siteUrl + pathPrefix + config.siteRss,
+      site_url: urljoin(config.siteUrl, realPathPrefix),
+      feed_url: urljoin(config.siteUrl, realPathPrefix, config.siteRss),
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `${config.siteUrl + pathPrefix}/logos/logo-512.png`,
+      image_url: `${urljoin(
+        config.siteUrl,
+        realPathPrefix
+      )}/logos/logo-512.png`,
       author: config.userName,
       copyright: config.copyright
     }
@@ -19,11 +23,19 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-lodash",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "assets",
+        path: `${__dirname}/static/`
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
-        path: `${__dirname}/content/${config.blogPostDir}`
+        path: `${__dirname}/content/`
       }
     },
     {
@@ -41,7 +53,8 @@ module.exports = {
           },
           "gatsby-remark-prismjs",
           "gatsby-remark-copy-linked-files",
-          "gatsby-remark-autolink-headers"
+          "gatsby-remark-autolink-headers",
+          "gatsby-remark-emoji"
         ]
       }
     },
@@ -65,9 +78,9 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: config.siteTitle,
-        short_name: config.siteTitle,
+        short_name: config.siteTitleShort,
         description: config.siteDescription,
-        start_url: pathPrefix === "" ? "/" : pathPrefix,
+        start_url: config.pathPrefix,
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: "minimal-ui",
@@ -118,7 +131,7 @@ module.exports = {
               const { rssMetadata } = ctx.query.site.siteMetadata;
               return ctx.query.allMarkdownRemark.edges.map(edge => ({
                 categories: edge.node.frontmatter.tags,
-                date: edge.node.frontmatter.date,
+                date: edge.node.fields.date,
                 title: edge.node.frontmatter.title,
                 description: edge.node.excerpt,
                 author: rssMetadata.author,
@@ -131,14 +144,17 @@ module.exports = {
             {
               allMarkdownRemark(
                 limit: 1000,
-                sort: { order: DESC, fields: [frontmatter___date] },
+                sort: { order: DESC, fields: [fields___date] },
               ) {
                 edges {
                   node {
                     excerpt
                     html
                     timeToRead
-                    fields { slug }
+                    fields {
+                      slug
+                      date
+                    }
                     frontmatter {
                       title
                       cover

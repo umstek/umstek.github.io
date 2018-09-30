@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 
 class PostListing extends React.Component {
   getPostList() {
@@ -10,7 +10,7 @@ class PostListing extends React.Component {
         tags: postEdge.node.frontmatter.tags,
         cover: postEdge.node.frontmatter.cover,
         title: postEdge.node.frontmatter.title,
-        date: postEdge.node.frontmatter.date,
+        date: postEdge.node.fields.date,
         excerpt: postEdge.node.excerpt,
         timeToRead: postEdge.node.timeToRead
       });

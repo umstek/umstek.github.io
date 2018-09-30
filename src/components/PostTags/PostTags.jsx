@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import _ from "lodash";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 
 class PostTags extends Component {
   render() {
@@ -10,12 +10,11 @@ class PostTags extends Component {
         {tags &&
           tags.map(tag => (
             <Link
-              style={{ padding: "3px", textDecoration: "none" }}
-              href={`/tags/${_.kebabCase(tag)}`}
               key={tag}
+              style={{ textDecoration: "none" }}
               to={`/tags/${_.kebabCase(tag)}`}
             >
-              {tag}
+              <span className="chip">{tag}</span>
             </Link>
           ))}
       </div>

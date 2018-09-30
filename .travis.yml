@@ -1,17 +1,21 @@
 language: node_js
 node_js:
   - node
-env:
-  CXX=g++-4.8
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
 cache:
   yarn: true
   directories:
     - node_modules
 script:
   - yarn build:gh
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GH_Key
+  local-dir: public
+  target-branch: master
+  committer-from-gh: true
+  verbose: true,
+  fqdn: www.umstek.tk
+  on:
+    branch: source

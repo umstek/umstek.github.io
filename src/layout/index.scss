@@ -1,0 +1,14 @@
+$primary-color: #2196f3;
+$secondary-color: #e3f2fd;
+
+@import "node_modules/spectre.css/src/spectre";
+@import "node_modules/spectre.css/src/spectre-icons";
+
+::selection {
+  background: $dark-color;
+  color: $gray-color;
+}
+
+code {
+  background-color: inherit;
+}
