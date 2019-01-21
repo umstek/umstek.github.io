@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - node
+cache:
+  yarn: true
+  directories:
+    - node_modules
+script:
+  - yarn build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GH_Key
+  local-dir: build
+  target-branch: master
+  committer-from-gh: true
+  verbose: true,
+  fqdn: www.umstek.tk
+  on:
+    branch: create-react-blog-1
