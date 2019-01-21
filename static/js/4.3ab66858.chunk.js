@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{70:function(n,e,t){"use strict";t.r(e),e.default={title:"Text cases in programming",tags:["naming conventions","programming"],spoiler:"Textual cases in programming",getContent:function(){return t.e(8).then(t.bind(null,66))}}}}]);
+//# sourceMappingURL=4.3ab66858.chunk.js.map

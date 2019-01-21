@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{69:function(n,e,l){"use strict";l.r(e),e.default={title:"Hello, world",tags:["hello world","snippet","programming"],spoiler:"Say hello world in different languages",getContent:function(){return l.e(7).then(l.bind(null,65))}}}}]);
+//# sourceMappingURL=3.afeab2bc.chunk.js.map
