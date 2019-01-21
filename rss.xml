@@ -4,7 +4,7 @@
         <title>umstek blog</title>
         <link>/</link>
         <description>Some bizarre ideas</description>
-        <lastBuildDate>Mon, 21 Jan 2019 16:42:18 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 21 Jan 2019 17:26:28 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
@@ -47,6 +47,64 @@ Well, here we go. :trollface:</p><p>Python:</p><pre><code class="language-python
             <guid>/posts/2017-04-17/funny-wifi-router-names/</guid>
             <pubDate>Mon, 17 Apr 2017 00:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<div><ol><li>Coffee machines network</li><li>Google Loon</li><li>SUPREMESAT-1</li><li>Mom Use This One</li><li>AREA-51 Public Wi-Fi</li><li>FBI Surveillance Van 3</li><li>White Van Transport</li><li>Public Wi-Fi</li><li>Hidden Network</li><li>Internet Unavailable</li><li>Martin Router King</li><li>Unidentified Network</li><li>Infected Network</li><li>Loading…</li><li>Cannot connect</li></ol></div>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[My React+Markdown blog journey (Part 1)]]></title>
+            <link>/posts/2019-01-16/my-blog-journey/</link>
+            <guid>/posts/2019-01-16/my-blog-journey/</guid>
+            <pubDate>Wed, 16 Jan 2019 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<div><p>I had the idea of creating a blog since at least 2010. In fact, I <strong>did</strong> create
+several blogs (<a href="https://umstek.wordpress.com/">https://umstek.wordpress.com/</a>, <a href="http://www.umstek.co.vu/">http://www.umstek.co.vu/</a>,
+<a href="https://bunnydebugs.wordpress.com/">https://bunnydebugs.wordpress.com/</a>) and some of them even had custom domains,
+I got <a href="https://codotvu.co/" title="co.vu">for</a> <a href="https://www.freenom.com/en/index.html?lang=en" title="Freenom">free</a>. After becoming
+more of a programmer than a multimedia guy, I decided that I needed a custom
+blog — or a website.</p><p>Since my focus was a <em>static</em> blog, that also had few custom pages to showcase
+what I have developed, I decided to go with <a href="https://jekyllrb.com/">Jekyll</a>
+on <a href="https://pages.github.com/">GitHub pages</a>. Selecting GitHub pages as the
+hosting space is the best matching choice because of several reasons. I only
+need to add a file to the remote repository hosted on git, with virtually
+unlimited space, to <a href="https://travis-ci.org/" title="Travis-CI">trigger a build</a> and
+update my blog. I can even use GitHub’s web UI to write a post! As far as the
+limitations are concerned, I didn’t need any database connectivity or use of
+any APIs that needed authentication.</p><p>Jekyll, on the other hand, was the preferred choice with GitHub pages, although
+now you can just add some HTML pages or Markdown and configure GitHub Pages
+with a theme to build a site instantly. Even if I could do that at the time, I
+needed the ability to customize my website. My relationship with Jekyll was
+fine initially as it was already familiar to me with the
+<a href="https://shopify.github.io/liquid/">liquid template engine</a>, which is used to
+generate HTML pages (you need pages other than markdown posts, and navigation
+etc.) — I had used <a href="https://symfony.com/">Symfony</a> (v2 and v3) which was (is?)
+a popular <a href="https://secure.php.net/manual/en/intro-whatis.php">PHP</a> web
+framework with a template language called <a href="https://twig.symfony.com/">twig</a>,
+which is similar to liquid. But it became uncomfortable when I had to touch
+<a href="https://www.ruby-lang.org/en/">Ruby</a> to get some things done. Jekyll also had
+some problems with Windows and I had problems with Linux.</p><p>Anyway, I didn’t have much time to write posts, as I was busy with academic
+work and other work, such as finding the perfect blog platform rather than
+writing blogs on what is available.</p><p>I don’t remember when I decided that I needed a new blog site but should be
+around January 2017. But I know why I wanted a new site:
+<a href="https://reactjs.org/">React</a> was beginning to be the de-facto view library and
+<a href="https://nodejs.org/en/">NodeJS</a> was already popular. I accidentally learned
+React and was obsessed with it.</p><p>So, I needed to write posts in
+<a href="https://en.wikipedia.org/wiki/Markdown">markdown</a>, other pages and the site in
+React, and to have the site
+<a href="https://en.wikipedia.org/wiki/Search_engine_optimization">SEO</a> ready. Since I
+was still going to host the site on GitHub pages,
+<a href="https://alligator.io/react/server-side-rendering/">SSR</a> was not possible
+(and not needed, since the content was static) because there was no server.
+But, if I can get the rendered HTML once per change, it was what I needed.
+After researching, I found <a href="https://www.gatsbyjs.org/">GatsbyJS</a>, which matched
+all of my obsessions.</p><p>GatsbyJS is an entire ecosystem which lets you create static
+<a href="https://developers.google.com/web/progressive-web-apps/">progressive web apps</a>
+with state-of-the-art tools like React, <a href="https://graphql.org/">GraphQL</a>,
+Markup(down) together with APIs that brings data to the site. Everything is
+built before publishing on your preferred platform (gh-pages,
+<a href="https://www.netlify.com/">netlify</a>, <a href="https://zeit.co/now">now.sh</a> etc.) so
+it’s plain ol&#x27; HTML with additional CSS/JS and other assets. I used the
+gatsby-advanced-starter boilerplate and it’s even configured with more plugins
+such as image compression, tags, SEO and
+<a href="https://analytics.google.com/analytics/web/">Google Analytics</a>. I added the
+magnificent <a href="https://v1.grommet.io/">Grommet UI</a> kit from hp (?) and was good to
+go.</p><p>Of course, the journey didn’t end there.</p></div>]]></content:encoded>
         </item>
     </channel>
 </rss>
