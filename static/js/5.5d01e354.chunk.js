@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{72:function(n,e,i){"use strict";i.r(e),e.default={title:"Funny names for Wi-Fi router",tags:["ssid","wi-fi","funny"],spoiler:"Make fun of your Wi-Fi router APN",getContent:function(){return i.e(10).then(i.bind(null,67))}}}}]);
-//# sourceMappingURL=5.5d01e354.chunk.js.map
