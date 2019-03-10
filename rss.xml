@@ -1,97 +1,110 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[UMSTeK]]></title><description><![CDATA[UMSTeK Labs]]></description><link>https://www.umstek.tk</link><image><url>https://www.umstek.tk/logos/logo-512.png</url><title>UMSTeK</title><link>https://www.umstek.tk</link></image><generator>GatsbyJS Material Starter</generator><lastBuildDate>Sun, 03 Mar 2019 05:09:06 GMT</lastBuildDate><atom:link href="https://www.umstek.tk/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[hexmint]]></author><copyright><![CDATA[Copyright © 2018 Wickramaranga Abeygunawardhana]]></copyright><item><title><![CDATA[Funny names for Wi-Fi router]]></title><description><![CDATA[Coffee machines network Google Loon SUPREMESAT-1 Mom Use This One AREA-51 Public Wi-Fi FBI Surveillance Van 3 White Van Transport Public Wi…]]></description><link>https://www.umstek.tk/funny-names-for-wi-fi-router</link><guid isPermaLink="false">https://www.umstek.tk/funny-names-for-wi-fi-router</guid><category><![CDATA[ssid]]></category><category><![CDATA[wi-fi]]></category><category><![CDATA[funny]]></category><dc:creator><![CDATA[hexmint]]></dc:creator><pubDate>Mon, 17 Apr 2017 05:00:00 GMT</pubDate><content:encoded>&lt;ol&gt;
-&lt;li&gt;Coffee machines network&lt;/li&gt;
-&lt;li&gt;Google Loon&lt;/li&gt;
-&lt;li&gt;SUPREMESAT-1&lt;/li&gt;
-&lt;li&gt;Mom Use This One&lt;/li&gt;
-&lt;li&gt;AREA-51 Public Wi-Fi&lt;/li&gt;
-&lt;li&gt;FBI Surveillance Van 3&lt;/li&gt;
-&lt;li&gt;White Van Transport&lt;/li&gt;
-&lt;li&gt;Public Wi-Fi&lt;/li&gt;
-&lt;li&gt;Hidden Network&lt;/li&gt;
-&lt;li&gt;Internet Unavailable&lt;/li&gt;
-&lt;li&gt;Martin Router King&lt;/li&gt;
-&lt;li&gt;Unidentified Network&lt;/li&gt;
-&lt;li&gt;Infected Network&lt;/li&gt;
-&lt;li&gt;Loading...&lt;/li&gt;
-&lt;li&gt;Cannot connect&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Text Cases in Programming]]></title><description><![CDATA[When coding, text cases become an important factor if you want to maintain your code up to a high standard, following best practices…]]></description><link>https://www.umstek.tk/text-cases-in-programming</link><guid isPermaLink="false">https://www.umstek.tk/text-cases-in-programming</guid><category><![CDATA[naming conventions]]></category><category><![CDATA[programming]]></category><dc:creator><![CDATA[hexmint]]></dc:creator><pubDate>Mon, 16 Jan 2017 05:42:22 GMT</pubDate><content:encoded>&lt;p&gt;When coding, text cases become an important factor if you want to maintain your code up to a high standard, following best practices. Different languages follow different naming conventions for variables, constants etc. Here we discuss some of the different types of text casing and their usages in some popular languages. &lt;/p&gt;
-&lt;h2 id=&quot;camel-case&quot;&gt;&lt;a href=&quot;#camel-case&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Camel Case&lt;/h2&gt;
-&lt;p&gt;Spaces are omitted and first letter of each word is capitalized. Looks like a camel with many humps. Other names: &lt;em&gt;Pascal Case&lt;/em&gt;, &lt;em&gt;Bumpy Caps&lt;/em&gt;, &lt;em&gt;Upper Camel Case&lt;/em&gt;.&lt;br&gt;
-e.g.: &lt;code&gt;CreateCatDetailsPage&lt;/code&gt;, &lt;code&gt;GiveMeAHug&lt;/code&gt;, &lt;code&gt;XmlHttpRequest&lt;/code&gt; &lt;em&gt;(Note how popular abbreviations are converted.)&lt;/em&gt;&lt;br&gt;
-&lt;strong&gt;C#/VB &lt;em&gt;(VB is case insensitive)&lt;/em&gt; method names&lt;/strong&gt;  &lt;/p&gt;
-&lt;h2 id=&quot;headless-camel-case&quot;&gt;&lt;a href=&quot;#headless-camel-case&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Headless Camel Case&lt;/h2&gt;
-&lt;p&gt;Spaces are omitted and first letter of each word except the first word is capitalized. As implied by the name, looks like a camel without its head.&lt;br&gt;
-e.g.: &lt;code&gt;getCatDetails&lt;/code&gt;, &lt;code&gt;giveMeAHug&lt;/code&gt;&lt;br&gt;
-&lt;strong&gt;Java method and variable names&lt;/strong&gt;  &lt;/p&gt;
-&lt;h2 id=&quot;snake-case&quot;&gt;&lt;a href=&quot;#snake-case&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Snake Case&lt;/h2&gt;
-&lt;p&gt;Looks like snakes, with the words of phrases are separated with undescores (&lt;code&gt;_&lt;/code&gt;) rather than spaces.&lt;br&gt;
-e.g.: &lt;code&gt;get_snake_details&lt;/code&gt;, &lt;code&gt;give_me_a_hug&lt;/code&gt;&lt;br&gt;
-&lt;strong&gt;Python/Ruby function and variable names&lt;/strong&gt;  &lt;/p&gt;
-&lt;h2 id=&quot;screaming-snake-case&quot;&gt;&lt;a href=&quot;#screaming-snake-case&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Screaming Snake Case&lt;/h2&gt;
-&lt;p&gt;Screaming most of the time means making all the text uppercase. This case is the same as snake case except that all letters are capitalized.&lt;br&gt;
-e.g.: &lt;code&gt;SNAKE_SPEED_FACTOR&lt;/code&gt;, &lt;code&gt;MAX_SNAKE_AGE&lt;/code&gt;&lt;br&gt;
-&lt;strong&gt;In most programming languages, constants are named using screaming snake case.&lt;/strong&gt;  &lt;/p&gt;
-&lt;h2 id=&quot;kebab-case--lisp-case&quot;&gt;&lt;a href=&quot;#kebab-case--lisp-case&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Kebab Case / Lisp Case&lt;/h2&gt;
-&lt;p&gt;This one does not have a standard name but called with names like &lt;em&gt;Caterpillar Case&lt;/em&gt;, &lt;em&gt;Spine Case&lt;/em&gt;, or &lt;em&gt;Hyphenated&lt;/em&gt;.&lt;br&gt;
-e.g.: &lt;code&gt;max-time-limit&lt;/code&gt;, &lt;code&gt;font-family&lt;/code&gt;&lt;br&gt;
-&lt;strong&gt;CSS, Lisp&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;train-case&quot;&gt;&lt;a href=&quot;#train-case&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Train Case&lt;/h2&gt;
-&lt;p&gt;This one is the same as the above, but first letters of all words are capitalized.&lt;br&gt;
-e.g.: &lt;code&gt;Train-Case&lt;/code&gt;  &lt;/p&gt;
-&lt;h2 id=&quot;cobol-case&quot;&gt;&lt;a href=&quot;#cobol-case&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;COBOL Case&lt;/h2&gt;
-&lt;p&gt;Looks more like a screaming Lisp case. Hyphenated words with all caps.&lt;br&gt;
-e.g.: &lt;code&gt;MAGIC-NUMBER&lt;/code&gt;&lt;br&gt;
-&lt;strong&gt;COBOL&lt;/strong&gt;  &lt;/p&gt;
-&lt;h2 id=&quot;studly-caps&quot;&gt;&lt;a href=&quot;#studly-caps&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Studly Caps&lt;/h2&gt;
-&lt;p&gt;Uppercase letters and lowercase letters are mixed. I&apos;m curious whether this is used in any kind of programming.&lt;br&gt;
-e.g.: &lt;code&gt;StUdLyCaPs&lt;/code&gt;  &lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;If you know of more, or if you want to add anything, need clarifications, please comment below. :smile:  &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello, world!]]></title><description><![CDATA[I'm only trying to say hello.
-Well, here we go. :trollface: Python: Ruby: PHP: Java: VB: C#: JavaScript:]]></description><link>https://www.umstek.tk/hello-world</link><guid isPermaLink="false">https://www.umstek.tk/hello-world</guid><category><![CDATA[hello world]]></category><category><![CDATA[snippet]]></category><category><![CDATA[programming]]></category><dc:creator><![CDATA[hexmint]]></dc:creator><pubDate>Sat, 03 Sep 2016 08:12:22 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;m only trying to say hello.
-Well, here we go. :trollface:&lt;/p&gt;
-&lt;p&gt;Python:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot;&gt;
-      &lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Hello, world!&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
-&lt;p&gt;Ruby:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot;&gt;
-      &lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;puts &lt;span class=&quot;token string&quot;&gt;&quot;Hello, world!&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
-&lt;p&gt;PHP:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot;&gt;
-      &lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Hello, world!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
-&lt;p&gt;Java:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot;&gt;
-      &lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;String&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  System&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;IO&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Hello, world!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
-&lt;p&gt;VB:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot;&gt;
-      &lt;pre class=&quot;language-vb&quot;&gt;&lt;code class=&quot;language-vb&quot;&gt;Module Main
-  Sub Main(args as String())
-    Console.WriteLine(&quot;Hello, world!&quot;)
-  End Sub
-End Module&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
-&lt;p&gt;C#:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot;&gt;
-      &lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;STAThread&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    Console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Hello, world!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
-&lt;p&gt;JavaScript:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot;&gt;
-      &lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Hello, world!&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;</content:encoded></item></channel></rss>
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>umstek blog</title>
+        <link>/</link>
+        <description>Some bizarre ideas</description>
+        <lastBuildDate>Sun, 10 Mar 2019 03:47:46 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Hello, world]]></title>
+            <link>/posts/2016-09-03/hello-world/</link>
+            <guid>/posts/2016-09-03/hello-world/</guid>
+            <pubDate>Sat, 03 Sep 2016 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<div><p>I’m only trying to say hello.
+Well, here we go. :trollface:</p><p>Python:</p><pre><code class="language-python" data-language="python" data-highlighted-line-numbers=""><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Hello, world!'</span><span class="token punctuation">)</span>
+</code></pre><p>Ruby:</p><pre><code class="language-ruby" data-language="ruby" data-highlighted-line-numbers="">puts <span class="token string">"Hello, world!"</span>
+</code></pre><p>PHP:</p><pre><code class="language-php" data-language="php" data-highlighted-line-numbers=""><span class="token keyword">echo</span> <span class="token double-quoted-string string">"Hello, world!"</span><span class="token punctuation">;</span>
+</code></pre><p>Java:</p><pre><code class="language-java" data-language="java" data-highlighted-line-numbers=""><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  System<span class="token punctuation">.</span>IO<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, world!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>VB.net:</p><pre><code class="language-vbnet" data-language="vbnet" data-highlighted-line-numbers=""><span class="token keyword">Module</span> Main
+  <span class="token keyword">Sub</span> Main<span class="token punctuation">(</span>args <span class="token keyword">as</span> <span class="token keyword">String</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    Console.WriteLine<span class="token punctuation">(</span><span class="token string">"Hello, world!"</span><span class="token punctuation">)</span>
+  <span class="token keyword">End</span> <span class="token keyword">Sub</span>
+<span class="token keyword">End</span> <span class="token keyword">Module</span>
+</code></pre><p>C#:</p><pre><code class="language-csharp" data-language="csharp" data-highlighted-line-numbers=""><span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">[</span><span class="token class-name">STAThread</span><span class="token punctuation">]</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Hello, world!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>JavaScript:</p><pre><code class="language-javascript" data-language="javascript" data-highlighted-line-numbers="">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Hello, world!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Text cases in programming]]></title>
+            <link>/posts/2017-01-16/text-cases/</link>
+            <guid>/posts/2017-01-16/text-cases/</guid>
+            <pubDate>Mon, 16 Jan 2017 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<div><p>When coding, text cases become an important factor if you want to maintain your code up to a high standard, following best practices. Different languages follow different naming conventions for variables, constants etc. Here we discuss some of the different types of text casing and their usages in some popular languages.</p><h2 id="camel-case">Camel Case</h2><p>Spaces are omitted and first letter of each word is capitalized. Looks like a camel with many humps. Other names: <em>Pascal Case</em>, <em>Bumpy Caps</em>, <em>Upper Camel Case</em>.<br/>e.g.: <code>CreateCatDetailsPage</code>, <code>GiveMeAHug</code>, <code>XmlHttpRequest</code> <em>(Note how popular abbreviations are converted.)</em><br/><strong>C#/VB <em>(VB is case insensitive)</em> method names</strong></p><h2 id="headless-camel-case">Headless Camel Case</h2><p>Spaces are omitted and first letter of each word except the first word is capitalized. As implied by the name, looks like a camel without its head.<br/>e.g.: <code>getCatDetails</code>, <code>giveMeAHug</code><br/><strong>Java method and variable names</strong></p><h2 id="snake-case">Snake Case</h2><p>Looks like snakes, with the words of phrases are separated with undescores (<code>_</code>) rather than spaces.<br/>e.g.: <code>get_snake_details</code>, <code>give_me_a_hug</code><br/><strong>Python/Ruby function and variable names</strong></p><h2 id="screaming-snake-case">Screaming Snake Case</h2><p>Screaming most of the time means making all the text uppercase. This case is the same as snake case except that all letters are capitalized.<br/>e.g.: <code>SNAKE_SPEED_FACTOR</code>, <code>MAX_SNAKE_AGE</code><br/><strong>In most programming languages, constants are named using screaming snake case.</strong></p><h2 id="kebab-case--lisp-case">Kebab Case / Lisp Case</h2><p>This one does not have a standard name but called with names like <em>Caterpillar Case</em>, <em>Spine Case</em>, or <em>Hyphenated</em>.<br/>e.g.: <code>max-time-limit</code>, <code>font-family</code><br/><strong>CSS, Lisp</strong></p><h2 id="train-case">Train Case</h2><p>This one is the same as the above, but first letters of all words are capitalized.<br/>e.g.: <code>Train-Case</code></p><h2 id="cobol-case">COBOL Case</h2><p>Looks more like a screaming Lisp case. Hyphenated words with all caps.<br/>e.g.: <code>MAGIC-NUMBER</code><br/><strong>COBOL</strong></p><h2 id="studly-caps">Studly Caps</h2><p>Uppercase letters and lowercase letters are mixed. I’m curious whether this is used in any kind of programming.<br/>e.g.: <code>StUdLyCaPs</code></p><hr/><p>If you know of more, or if you want to add anything, need clarifications, please comment below. 😄</p></div>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Funny names for Wi-Fi router]]></title>
+            <link>/posts/2017-04-17/funny-wifi-router-names/</link>
+            <guid>/posts/2017-04-17/funny-wifi-router-names/</guid>
+            <pubDate>Mon, 17 Apr 2017 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<div><ol><li>Coffee machines network</li><li>Google Loon</li><li>SUPREMESAT-1</li><li>Mom Use This One</li><li>AREA-51 Public Wi-Fi</li><li>FBI Surveillance Van 3</li><li>White Van Transport</li><li>Public Wi-Fi</li><li>Hidden Network</li><li>Internet Unavailable</li><li>Martin Router King</li><li>Unidentified Network</li><li>Infected Network</li><li>Loading…</li><li>Cannot connect</li></ol></div>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[My React+Markdown blog journey (Part 1)]]></title>
+            <link>/posts/2019-01-16/my-blog-journey/</link>
+            <guid>/posts/2019-01-16/my-blog-journey/</guid>
+            <pubDate>Wed, 16 Jan 2019 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<div><p>I had the idea of creating a blog since at least 2010. In fact, I <strong>did</strong> create
+several blogs (<a href="https://umstek.wordpress.com/">https://umstek.wordpress.com/</a>, <a href="http://www.umstek.co.vu/">http://www.umstek.co.vu/</a>,
+<a href="https://bunnydebugs.wordpress.com/">https://bunnydebugs.wordpress.com/</a>) and some of them even had custom domains,
+I got <a href="https://codotvu.co/" title="co.vu">for</a> <a href="https://www.freenom.com/en/index.html?lang=en" title="Freenom">free</a>. After becoming
+more of a programmer than a multimedia guy, I decided that I needed a custom
+blog — or a website.</p><p>Since my focus was a <em>static</em> blog, that also had few custom pages to showcase
+what I have developed, I decided to go with <a href="https://jekyllrb.com/">Jekyll</a>
+on <a href="https://pages.github.com/">GitHub pages</a>. Selecting GitHub pages as the
+hosting space is the best matching choice because of several reasons. I only
+need to add a file to the remote repository hosted on git, with virtually
+unlimited space, to <a href="https://travis-ci.org/" title="Travis-CI">trigger a build</a> and
+update my blog. I can even use GitHub’s web UI to write a post! As far as the
+limitations are concerned, I didn’t need any database connectivity or use of
+any APIs that needed authentication.</p><p>Jekyll, on the other hand, was the preferred choice with GitHub pages, although
+now you can just add some HTML pages or Markdown and configure GitHub Pages
+with a theme to build a site instantly. Even if I could do that at the time, I
+needed the ability to customize my website. My relationship with Jekyll was
+fine initially as it was already familiar to me with the
+<a href="https://shopify.github.io/liquid/">liquid template engine</a>, which is used to
+generate HTML pages (you need pages other than markdown posts, and navigation
+etc.) — I had used <a href="https://symfony.com/">Symfony</a> (v2 and v3) which was (is?)
+a popular <a href="https://secure.php.net/manual/en/intro-whatis.php">PHP</a> web
+framework with a template language called <a href="https://twig.symfony.com/">twig</a>,
+which is similar to liquid. But it became uncomfortable when I had to touch
+<a href="https://www.ruby-lang.org/en/">Ruby</a> to get some things done. Jekyll also had
+some problems with Windows and I had problems with Linux.</p><p>Anyway, I didn’t have much time to write posts, as I was busy with academic
+work and other work, such as finding the perfect blog platform rather than
+writing blogs on what is available.</p><p>I don’t remember when I decided that I needed a new blog site but should be
+around January 2017. But I know why I wanted a new site:
+<a href="https://reactjs.org/">React</a> was beginning to be the de-facto view library and
+<a href="https://nodejs.org/en/">NodeJS</a> was already popular. I accidentally learned
+React and was obsessed with it.</p><p>So, I needed to write posts in
+<a href="https://en.wikipedia.org/wiki/Markdown">markdown</a>, other pages and the site in
+React, and to have the site
+<a href="https://en.wikipedia.org/wiki/Search_engine_optimization">SEO</a> ready. Since I
+was still going to host the site on GitHub pages,
+<a href="https://alligator.io/react/server-side-rendering/">SSR</a> was not possible
+(and not needed, since the content was static) because there was no server.
+But, if I can get the rendered HTML once per change, it was what I needed.
+After researching, I found <a href="https://www.gatsbyjs.org/">GatsbyJS</a>, which matched
+all of my obsessions.</p><p>GatsbyJS is an entire ecosystem which lets you create static
+<a href="https://developers.google.com/web/progressive-web-apps/">progressive web apps</a>
+with state-of-the-art tools like React, <a href="https://graphql.org/">GraphQL</a>,
+Markup(down) together with APIs that brings data to the site. Everything is
+built before publishing on your preferred platform (gh-pages,
+<a href="https://www.netlify.com/">netlify</a>, <a href="https://zeit.co/now">now.sh</a> etc.) so
+it’s plain ol&#x27; HTML with additional CSS/JS and other assets. I used the
+gatsby-advanced-starter boilerplate and it’s even configured with more plugins
+such as image compression, tags, SEO and
+<a href="https://analytics.google.com/analytics/web/">Google Analytics</a>. I added the
+magnificent <a href="https://v1.grommet.io/">Grommet UI</a> kit from hp (?) and was good to
+go.</p><p>Of course, the journey didn’t end there.</p></div>]]></content:encoded>
+        </item>
+    </channel>
+</rss>

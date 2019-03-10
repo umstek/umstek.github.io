@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{73:function(t,e,n){"use strict";n.r(e),e.default={title:"My React+Markdown blog journey (Part 1)",tags:["react","markdown","blog"],spoiler:"How I (try to) create the perfect blog stack",getContent:function(){return n.e(11).then(n.bind(null,68))}}}}]);
+//# sourceMappingURL=6.812da1cf.chunk.js.map
