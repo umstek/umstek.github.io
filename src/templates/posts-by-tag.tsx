@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+import { kebabCase } from "lodash";
 
 import Layout from "../components/layout";
 import PostsList from "../components/PostsList";
@@ -12,7 +13,7 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`;
 
   return (
-    <Layout location={location} title={tagHeader}>
+    <Layout location={`/tags/${kebabCase(tag)}/`} title={tagHeader}>
       <ol style={{ listStyle: `none` }}>
         <PostsList posts={posts} />
       </ol>
