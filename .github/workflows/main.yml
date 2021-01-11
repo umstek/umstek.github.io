@@ -13,8 +13,8 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Configure Git
-        run:
-          - git config user.email "w@umstek.tk"
-          - git config user.name "Wickramaranga Abeygunawardhana"
+        run: |
+          git config user.email "w@umstek.tk"
+          git config user.name "Wickramaranga Abeygunawardhana"
       - name: Deploy Gatsby site
         run: yarn deploy
