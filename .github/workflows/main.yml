@@ -19,4 +19,4 @@ jobs:
       - name: Deploy Gatsby site
         run: yarn deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_Key }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
