@@ -12,7 +12,7 @@ const PostsList = ({ posts }) => (
       return (
         <li key={post.fields.slug}>
           <article
-            className="container mx-auto mt-16"
+            className="px-4 sm:px-8 md:px-0 container mx-auto mt-16 mb-32"
             itemScope
             itemType="http://schema.org/Article" // TechArticle, NewsArticle, BlogPosting
           >
@@ -28,14 +28,19 @@ const PostsList = ({ posts }) => (
                 </div>
               </h1>
               <div className="mt-2 flex flex-row justify-center items-center">
-                <DateDisplay className="mr-4" date={post.frontmatter.date} />
-                {(post.frontmatter.tags || []).map((name) => (
-                  <Tag
-                    key={name}
-                    name={name}
-                    link={`/tags/${kebabCase(name)}/`}
-                  />
-                ))}
+                <DateDisplay
+                  className="mr-4 text-sm"
+                  date={post.frontmatter.date}
+                />
+                <div className="overflow-x-auto overflow-y-hidden flex flex-row">
+                  {(post.frontmatter.tags || []).map((name) => (
+                    <Tag
+                      key={name}
+                      name={name}
+                      link={`/tags/${kebabCase(name)}/`}
+                    />
+                  ))}
+                </div>
               </div>
             </header>
             <section

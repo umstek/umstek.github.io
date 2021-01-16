@@ -27,18 +27,18 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article
-        className="container mx-auto mt-16"
+        className="px-4 sm:px-8 md:px-0 container mx-auto mt-16"
         itemScope
         itemType="http://schema.org/Article"
       >
         <header>
           <h1 itemProp="headline">
-            <div className="text-5xl text-center text-gray-700 font-light">
+            <div className="text-3xl sm:text-4xl sm:font-light md:text-5xl text-center text-gray-700">
               {post.frontmatter.title}
             </div>
           </h1>
           <DateDisplay className="mt-4" date={post.frontmatter.date} />
-          <div className="mt-2 flex flex-row justify-center">
+          <div className="px-2 overflow-x-auto overflow-y-hidden mt-2 flex flex-row justify-center">
             {(post.frontmatter.tags || []).map((name) => (
               <Tag key={name} name={name} link={`/tags/${kebabCase(name)}/`} />
             ))}
@@ -54,7 +54,7 @@ const BlogPostTemplate = ({ data, location }) => {
         </section>
         <footer></footer>
       </article>
-      <div className="mt-32 max-w-prose mx-auto">
+      <div className="px-4 sm:px-8 md:px-0 mt-32 max-w-prose mx-auto">
         <DiscussionEmbed
           config={disqusConfig.config}
           shortname={disqusConfig.shortname}
