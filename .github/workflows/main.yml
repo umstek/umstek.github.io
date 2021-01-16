@@ -14,9 +14,7 @@ jobs:
         run: yarn
       - name: Configure Git
         run: |
-          git config user.email "w@umstek.tk"
-          git config user.name "Wickramaranga Abeygunawardhana"
+          git config --global user.email "w@umstek.tk"
+          git config --global user.name "Wickramaranga Abeygunawardhana"
       - name: Deploy Gatsby site
         run: yarn deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
