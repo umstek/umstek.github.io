@@ -2,15 +2,50 @@ name: prod-deploy
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
+  
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: Install dependencies
         run: yarn
-      - name: Deploy Gatsby site
-        run: yarn deploy
+      - name: Build project
+        run: yarn build
+      - name: Upload artifacts
+        if: success()
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: public/
+          if-no-files-found: error
+  
+  deploy:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout gh-pages
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          token: ${{ secrets.GH_KEY }}
+      - name: Delete everything
+        run: rm -rf *
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+      - name: Configure git
+        run: |
+          git config user.email "w@umstek.tk"
+          git config user.name "Wickramaranga Abeygunawardhana"
+      - name: Commit files
+        run: |
+          git add -A
+          git commit -m "${{ github.sha }} ${{ github.workflow }} ${{ github.run_number }}"
+          git push
+
