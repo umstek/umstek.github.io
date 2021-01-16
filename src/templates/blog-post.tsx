@@ -61,26 +61,26 @@ const BlogPostTemplate = ({ data, location }) => {
         />
       </div>
 
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+      <nav className="my-8 mx-4">
+        <ul className="flex flex-row justify-between">
           <li>
             {previous && (
-              <Link to={`/posts${previous.fields.slug}`} rel="prev">
+              <Link
+                className="px-2 hover:bg-gray-700 hover:text-white"
+                to={`/posts${previous.fields.slug}`}
+                rel="prev"
+              >
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={`/posts${next.fields.slug}`} rel="next">
+              <Link
+                className="px-2 hover:bg-gray-700 hover:text-white"
+                to={`/posts${next.fields.slug}`}
+                rel="next"
+              >
                 {next.frontmatter.title} →
               </Link>
             )}

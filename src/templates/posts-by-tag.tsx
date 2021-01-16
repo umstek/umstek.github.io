@@ -17,7 +17,7 @@ const Tags = ({ pageContext, data }) => {
       <ol style={{ listStyle: `none` }}>
         <PostsList posts={posts} />
       </ol>
-      <Link to="/tags">All tags</Link>
+      <Link className="px-2 hover:bg-gray-700 hover:text-white" to="/tags">All tags</Link>
     </Layout>
   );
 };
