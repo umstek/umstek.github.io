@@ -46,6 +46,6 @@ jobs:
       - name: Commit files
         run: |
           git add -A
-          git commit -m "${{ GITHUB_SHA }} ${{ GITHUB_WORKFLOW }} ${{ GITHUB_RUN_NUMBER }}"
+          git commit -m "${{ github.sha }} ${{ github.workflow }} ${{ github.run_number }}"
           git push
 
