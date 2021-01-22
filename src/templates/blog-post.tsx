@@ -61,7 +61,7 @@ const BlogPostTemplate = ({ data, location }) => {
         />
       </div>
 
-      <nav className="my-8 mx-4">
+      <nav className="my-16 mx-4">
         <ul className="flex flex-row justify-between">
           <li>
             {previous && (

@@ -25,7 +25,7 @@ const TagsPage = ({
               <span className="px-2">Tags</span>
             </div>
           </h1>
-          <div className="mt-16 flex flex-wrap justify-center">
+          <div className="px-4 sm:px-8 md:px-0 mt-32 max-w-prose mx-auto mt-16 flex flex-wrap justify-center">
             {group.map((tag) => (
               <Tag
                 name={tag.fieldValue}
