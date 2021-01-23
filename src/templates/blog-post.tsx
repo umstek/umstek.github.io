@@ -61,12 +61,12 @@ const BlogPostTemplate = ({ data, location }) => {
         />
       </div>
 
-      <nav className="my-16 mx-4">
+      <nav className="mt-16 mb-8 mx-8">
         <ul className="flex flex-row justify-between">
           <li>
             {previous && (
               <Link
-                className="px-2 hover:bg-gray-700 hover:text-white"
+                className="px-2 hover:bg-gray-700 hover:text-white transition-colors"
                 to={`/posts${previous.fields.slug}`}
                 rel="prev"
               >
@@ -77,7 +77,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <li>
             {next && (
               <Link
-                className="px-2 hover:bg-gray-700 hover:text-white"
+                className="px-2 hover:bg-gray-700 hover:text-white transition-colors"
                 to={`/posts${next.fields.slug}`}
                 rel="next"
               >
