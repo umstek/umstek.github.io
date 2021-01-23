@@ -2,7 +2,7 @@
   "name": "umstek",
   "private": true,
   "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.10.0",
+  "version": "0.10.2",
   "author": "Wickramaranga Abeygunawardhana <w@umstek.tk>",
   "bugs": {
     "url": "https://github.com/umstek/umstek.github.io/issues"
