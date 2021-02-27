@@ -941,6 +941,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.10.3":
+  version "7.13.7"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.7.tgz#d494e39d198ee9ca04f4dcb76d25d9d7a1dc961a"
+  integrity sha512-h+ilqoX998mRVM5FtB5ijRuHUDVt5l3yfoOi2uh18Z/O3hvyaHQ39NpxVkCIG5yFs+mLq/ewFp8Bss6zmWv6ZA==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/standalone@^7.12.6":
   version "7.12.12"
   resolved "https://registry.yarnpkg.com/@babel/standalone/-/standalone-7.12.12.tgz#f858ab1c76d9c4c23fe0783a0330ad37755f0176"
@@ -6561,6 +6568,14 @@ gatsby-plugin-sharp@^2.12.0:
     sharp "^0.27.0"
     svgo "1.3.2"
     uuid "3.4.0"
+
+gatsby-plugin-social9-socialshare@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-social9-socialshare/-/gatsby-plugin-social9-socialshare-1.0.4.tgz#484b24519edd0c0de3712b8b8b76d93309a64707"
+  integrity sha512-W1UB+Rjcjd24kcNWrFuF+yVp/OltPLzwPvEyEj/zXzMcnx8LzZlyw1BDbl8qErzxl8CYXKps66bqYE45GaWsmQ==
+  dependencies:
+    "@babel/runtime" "^7.10.3"
+    minimatch "3.0.4"
 
 gatsby-plugin-typescript@^2.10.0:
   version "2.10.0"

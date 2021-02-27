@@ -9,6 +9,6 @@
 } */
 
 .glass {
-  backdrop-filter: blur(20px) saturate(400%);
+  backdrop-filter: blur(2px) saturate(200%);
   background-color: rgba(255, 255, 255, 0.01);
 }

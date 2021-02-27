@@ -78,6 +78,14 @@ module.exports = {
         trackingIds: ["UA-90437175-1"],
       },
     },
+    {
+      resolve: `gatsby-plugin-social9-socialshare`,
+      options: {
+        content: `bc27eb88e557438fb239e4ab0b4d63b2`,
+        async: true,
+        defer: true,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
