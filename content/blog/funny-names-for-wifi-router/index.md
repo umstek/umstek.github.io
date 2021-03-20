@@ -1,6 +1,5 @@
 ---
 title: 'Funny names for Wi-Fi router'
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: '2017-04-17 10:30:00 +0530'
 category: funny
 tags:

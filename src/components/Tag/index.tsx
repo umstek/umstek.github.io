@@ -16,7 +16,7 @@ const Tag = ({
     <div className={["mx-2", wrapperClassName].join(" ")}>
       <a
         className={[
-          "py-1 hover:bg-blue-600 transition-colors cursor-pointer text-blue-600 hover:text-blue-100 rounded-full",
+          "py-1 hover:bg-blue-600 dark:hover:bg-blue-800 transition-colors cursor-pointer text-blue-600 dark:text-blue-400 hover:text-blue-100 dark:hover:text-blue-100 rounded-full",
           anchorClassName,
         ].join(" ")}
         href={link}

@@ -1,6 +1,5 @@
 ---
 title: "My React+Markdown blog journey (Part 1)"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2019-01-21 10:30:00 +0530"
 category: tech
 tags:

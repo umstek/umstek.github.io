@@ -6,6 +6,6 @@ export default ({ date, className }: { date: string; className?: string }) => (
       .filter((c) => !!c)
       .join(" ")}
   >
-    {date}
+    📅 {date}
   </p>
 );

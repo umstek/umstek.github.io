@@ -1,7 +1,6 @@
 ---
 title: 'Hello, world!'
 date: '2016-09-03 13:42:22 +0530'
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 category: programming
 tags:
   - hello world

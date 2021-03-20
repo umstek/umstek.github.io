@@ -1,7 +1,6 @@
 ---
 title: 'Text Cases in Programming'
 date: '2017-01-16 11:12:22 +0530'
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 category: programming
 tags:
   - naming conventions

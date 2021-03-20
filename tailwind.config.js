@@ -3,9 +3,13 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
+      maxWidth: {
+        prose: "81ch",
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            maxWidth: "81ch",
             pre: {
               color: null,
               backgroundColor: null,
@@ -44,6 +48,10 @@ module.exports = {
             blockquote: {
               borderLeftColor: theme("colors.blue.600"),
             },
+            "blockquote p:first-of-type::before": null,
+            "blockquote p:last-of-type::after": null,
+            "code::before": null,
+            "code::after": null,
             "ol > li::before": {
               color: theme("colors.blue.600"),
             },
@@ -52,7 +60,60 @@ module.exports = {
             },
           },
         },
+
+        dark: {
+          css: {
+            color: theme("colors.gray.400"),
+            maxWidth: "81ch",
+            pre: {
+              color: null,
+              backgroundColor: null,
+            },
+            h1: {
+              fontWeight: "300",
+              color: theme("colors.blue.300"),
+            },
+            h2: {
+              fontWeight: "350",
+              color: theme("colors.blue.300"),
+            },
+            h3: {
+              fontWeight: "400",
+              color: theme("colors.blue.300"),
+            },
+            h4: {
+              fontWeight: "600",
+              color: theme("colors.blue.300"),
+            },
+            h5: {
+              color: theme("colors.blue.300"),
+            },
+            h6: {
+              fontStyle: "italic",
+              color: theme("colors.blue.300"),
+            },
+            a: {
+              fontWeight: "450",
+              textDecoration: "none",
+            },
+            "a:hover": {
+              backgroundColor: theme("colors.blue.300"),
+              color: theme("colors.white"),
+            },
+            blockquote: {
+              borderLeftColor: theme("colors.blue.800"),
+              color: theme("colors.gray.400"),
+            },
+            "ol > li::before": {
+              color: theme("colors.blue.300"),
+            },
+            "ul > li::before": {
+              backgroundColor: theme("colors.blue.300"),
+            },
+          },
+        },
       }),
+
       fontFamily: {
         sans: [
           "'Work Sans'",
@@ -94,6 +155,7 @@ module.exports = {
     },
   },
   variants: {
+    typography: ["responsive", "dark"],
     extend: {},
   },
   plugins: [require("@tailwindcss/typography")],
