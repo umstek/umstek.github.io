@@ -60,9 +60,8 @@ const BlogPostTemplate = ({ data, location }) => {
         </header>
         <section
           itemProp="articleBody"
-          className="mx-auto mt-32 prose lg:prose-lg dark:prose-dark lg:dark:prose-dark-lg"
+          className="mx-auto mt-32 prose lg:prose-lg dark:prose-dark lg:dark:prose-dark-lg prose-blue"
         >
-          {/* prose dark:prose dark:lg:prose-lg prose-blue lg:prose-lg */}
           <MDXEmbedProvider>
             <MDXRenderer>{post.body}</MDXRenderer>
           </MDXEmbedProvider>
