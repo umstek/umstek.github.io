@@ -60,11 +60,11 @@ const SEO = ({ description, lang, meta, title, location, imageURL }) => {
         },
         {
           property: `og:image`,
-          content: `${location.origin}${imageURL}`,
+          content: `${location?.origin}${imageURL}`,
         },
         {
           property: `fb:app_id`,
-          content: `${location.origin}${imageURL}`,
+          content: `${location?.origin}${imageURL}`,
         },
         {
           name: `twitter:card`,
