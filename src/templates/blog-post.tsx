@@ -27,6 +27,8 @@ const BlogPostTemplate = ({ data, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        location={location}
+        imageURL={post.frontmatter?.cover?.publicURL}
       />
       {post.frontmatter.cover && (
         <Img
@@ -140,6 +142,7 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+          publicURL
         }
       }
     }

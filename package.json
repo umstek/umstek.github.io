@@ -43,6 +43,7 @@
     "react-helmet": "6.1.0"
   },
   "devDependencies": {
+    "@types/react-helmet": "^6.1.0",
     "postcss": "8.2.8",
     "postcss-nested": "5.0.5",
     "prettier": "2.1.2",
