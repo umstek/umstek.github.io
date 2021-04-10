@@ -968,7 +968,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.3.4", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.3.4", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
   version "7.13.10"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.10.tgz#47d42a57b6095f4468da440388fdbad8bebf0d7d"
   integrity sha512-4QPkjJq6Ns3V/RgpEahRk+AGfL0eO6RHHtTWoNNr5mO49G6B5+X6d6THgWEAvTrznU5xYpbAlVKRYcsCgh/Akw==
@@ -6430,14 +6430,6 @@ gatsby-plugin-feed-mdx@1.1.0:
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
-gatsby-plugin-google-analytics@2.11.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.11.0.tgz#8d74bd3c100706f03bbccf7b130a758fce9994ad"
-  integrity sha512-aVFmzoozd0ifn5HJJY0W8R7DHkyTEvj/ueRyJJNlQMadQagIAYq+7efKon4gJzd4NZkLcoDb6moiAR066FwIIg==
-  dependencies:
-    "@babel/runtime" "^7.12.5"
-    minimatch "3.0.4"
-
 gatsby-plugin-google-gtag@2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-2.8.0.tgz#234dc936dd32440f861a3c0308521864ae55c5aa"
@@ -6567,13 +6559,16 @@ gatsby-plugin-sharp@2.14.3:
     svgo "1.3.2"
     uuid "3.4.0"
 
-gatsby-plugin-social9-socialshare@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-social9-socialshare/-/gatsby-plugin-social9-socialshare-1.0.4.tgz#484b24519edd0c0de3712b8b8b76d93309a64707"
-  integrity sha512-W1UB+Rjcjd24kcNWrFuF+yVp/OltPLzwPvEyEj/zXzMcnx8LzZlyw1BDbl8qErzxl8CYXKps66bqYE45GaWsmQ==
+gatsby-plugin-sitemap@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-3.2.0.tgz#7a17a95ca5b7bc0fe1c9b8661cdbf326e7cd4b17"
+  integrity sha512-UIeOClN5o7eoARmLQY8+ad0hE85cJTCDFvnNMmbJ1SzuAyldgHep2GVDw+YbTnPCkP7rXIZ0aYPFhugPOa/Zqw==
   dependencies:
-    "@babel/runtime" "^7.10.3"
-    minimatch "3.0.4"
+    "@babel/runtime" "^7.12.5"
+    common-tags "^1.8.0"
+    minimatch "^3.0.4"
+    pify "^3.0.0"
+    sitemap "^1.13.0"
 
 gatsby-plugin-typescript@^2.12.1:
   version "2.12.1"
@@ -12996,6 +12991,14 @@ sisteransi@^1.0.5:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
 
+sitemap@^1.13.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/sitemap/-/sitemap-1.13.0.tgz#569cbe2180202926a62a266cd3de09c9ceb43f83"
+  integrity sha1-Vpy+IYAgKSamKiZs094Jyc60P4M=
+  dependencies:
+    underscore "^1.7.0"
+    url-join "^1.1.0"
+
 slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
@@ -14223,6 +14226,11 @@ underscore.string@^3.3.5:
     sprintf-js "^1.0.3"
     util-deprecate "^1.0.2"
 
+underscore@^1.7.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.13.0.tgz#3ccdcbb824230fc6bf234ad0ddcd83dff4eafe5f"
+  integrity sha512-sCs4H3pCytsb5K7i072FAEC9YlSYFIbosvM0tAKAlpSSUgD7yC1iXSEGdl5XrDKQ1YUB+p/HDzYrSG2H2Vl36g==
+
 unherit@^1.0.4:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/unherit/-/unherit-1.1.3.tgz#6c9b503f2b41b262330c80e91c8614abdaa69c22"
@@ -14568,6 +14576,11 @@ urix@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
+
+url-join@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/url-join/-/url-join-1.1.0.tgz#741c6c2f4596c4830d6718460920d0c92202dc78"
+  integrity sha1-dBxsL0WWxIMNZxhGCSDQySIC3Hg=
 
 url-loader@^1.1.2:
   version "1.1.2"

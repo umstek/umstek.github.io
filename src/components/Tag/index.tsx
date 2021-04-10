@@ -23,7 +23,7 @@ const Tag = ({
       >
         <span>{name}</span>
         {count && (
-          <span className="py-1 ml-2 px-4 rounded-full border-blue-600 border-blue-600 bg-blue-600 text-blue-100">
+          <span className="py-1 ml-2 px-4 rounded-full border-blue-600 bg-blue-600 text-blue-100">
             {count}
           </span>
         )}

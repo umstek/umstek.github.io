@@ -19,7 +19,11 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div
-      className={[!ligatures && "no-ligatures", darkMode ? "dark" : "light", "transition duration-100"]
+      className={[
+        !ligatures && "no-ligatures",
+        darkMode ? "dark" : "light",
+        "transition duration-100",
+      ]
         .filter((f) => !!f)
         .join(" ")}
       data-is-root-path={isRootPath}
@@ -33,6 +37,7 @@ const Layout = ({ location, title, children }) => {
       </header>
 
       <main className="mb-8 dark:bg-black">{children}</main>
+      <div className="addthis_inline_share_toolbox_ajiu"></div>
       <Footer />
     </div>
   );

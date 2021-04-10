@@ -53,19 +53,13 @@ module.exports = {
     `gatsby-remark-reading-time`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
     `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `UMSTeK Blog`,
+        short_name: `UMSTeK`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#2563EB`,
@@ -80,14 +74,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-social9-socialshare`,
+      resolve: `gatsby-plugin-addthis`,
       options: {
-        content: `bc27eb88e557438fb239e4ab0b4d63b2`,
-        async: true,
-        defer: true,
+        pubid: "ra-606c8d277ef00c2f",
       },
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
