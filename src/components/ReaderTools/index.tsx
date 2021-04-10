@@ -46,7 +46,7 @@ const ReaderTools = (props: IReaderToolsProps) => {
           aria-labelledby="share-menu"
         >
           <div className="block px-4 py-2 text-sm" role="menuitem">
-            <div className="s9-widget-wrapper"></div>
+            <div className="addthis_inline_share_toolbox_ajiu"></div>
           </div>
         </div>
       </div>
