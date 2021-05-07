@@ -8,7 +8,7 @@
     "url": "https://github.com/umstek/umstek.github.io/issues"
   },
   "dependencies": {
-    "@fontsource/jetbrains-mono": "4.2.2",
+    "@fontsource/jetbrains-mono": "4.3.0",
     "@fontsource/work-sans": "4.2.2",
     "@mdx-js/mdx": "1.6.22",
     "@mdx-js/react": "1.6.22",
