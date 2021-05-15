@@ -13,6 +13,7 @@ tags:
 ---
 
 <div class="alert info">
+
 You will understand this article better if you already:
 
 - have worked with redux
