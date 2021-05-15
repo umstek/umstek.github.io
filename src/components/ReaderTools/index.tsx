@@ -30,7 +30,7 @@ const ReaderTools = (props: IReaderToolsProps) => {
 
       <div
         className={[
-          "origin-top-right absolute right-0 mt-3 sm:rounded-bl-lg shadow-md bg-white",
+          "glass origin-top-right absolute right-0 mt-1 sm:rounded-bl-lg shadow",
           "transform transition-all duration-100 w-full sm:w-auto flex flex-row justify-center",
           shareVisible
             ? "translate-y-0"
@@ -53,7 +53,7 @@ const ReaderTools = (props: IReaderToolsProps) => {
 
       <div
         className={[
-          "origin-top-right absolute right-0 mt-3 sm:rounded-bl-lg shadow-md bg-white",
+          "glass origin-top-right absolute right-0 mt-1 sm:rounded-bl-lg shadow",
           "transform transition-all duration-100 w-full sm:w-auto flex flex-row justify-center",
           settingsVisible
             ? "translate-y-0"
