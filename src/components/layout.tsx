@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
 import Footer from "./Footer";
 import ReaderTools from "./ReaderTools";
 
@@ -12,9 +11,9 @@ const Layout = ({ location, title, children }) => {
   const [darkMode, setDarkMode] = useState(false);
 
   if (isRootPath) {
-    header = <Link to="/">{title}</Link>;
+    header = <a href="/">{title}</a>;
   } else {
-    header = <Link to="/">{title}</Link>;
+    header = <a href="/">{title}</a>;
   }
 
   return (
@@ -28,8 +27,8 @@ const Layout = ({ location, title, children }) => {
         .join(" ")}
       data-is-root-path={isRootPath}
     >
-      <header className="glass shadow-md px-8 py-3 z-50 sticky top-0 flex flex-row justify-between dark:bg-black">
-        {header}
+      <header className="glass shadow px-8 py-1 z-50 sticky top-0 flex flex-row items-center justify-between dark:bg-black">
+        <div>{header}</div>
         <ReaderTools
           toggleLigatures={() => setLigatures(!ligatures)}
           toggleDarkMode={() => setDarkMode(!darkMode)}
@@ -37,7 +36,6 @@ const Layout = ({ location, title, children }) => {
       </header>
 
       <main className="mb-8 dark:bg-black">{children}</main>
-      <div className="addthis_inline_share_toolbox_ajiu"></div>
       <Footer />
     </div>
   );
