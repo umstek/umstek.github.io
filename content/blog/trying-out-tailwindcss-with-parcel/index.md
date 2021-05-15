@@ -3,6 +3,7 @@ title: Trying-out Tailwind CSS with Parcel
 description: How to get started with Tailwind CSS, Parcel bundler, TypeScript and React
 date: "2019-11-27 16:00:00 +0530"
 startedDate: "2019-11-27 12:00:00 +0530"
+cover: vitalik-vynarchyk-0PePaKnEmuM-unsplash.jpg
 category: programming
 tags:
   - Tailwind CSS
