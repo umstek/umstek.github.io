@@ -1105,10 +1105,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/jetbrains-mono@4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-4.3.0.tgz#fde42ebd091975af9cec5168c97fc7e5c187b75e"
-  integrity sha512-JLA18uXrIJZadVN8D1kT2xalJQ+jkS9ZwlRdCXem+kJrnwvdBLH6DSkT9LX0NCmLHAzvRjt8lbM0q31Ar9dlzA==
+"@fontsource/jetbrains-mono@4.4.2":
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-4.4.2.tgz#167724722e845a24706b557baeda82ce89418458"
+  integrity sha512-5kDjpcnQFogrgGulmES5xX80cDd628+69zSE0ClTqzOAYI43yTyH3MeAH4mxohN6MR7v7AQ9bn+OOFvUuuYwBA==
 
 "@fontsource/work-sans@4.3.0":
   version "4.3.0"
