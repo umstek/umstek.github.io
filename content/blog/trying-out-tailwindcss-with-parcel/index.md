@@ -15,8 +15,9 @@ tags:
 
 <div class="alert warn">
 
-This article written targeting TypeScript 3.x, React 16.x, Parcel Bundler 1.x, and Tailwind CSS 1.x is outdated although setting up a project remains mostly the same.
-Scroll to the bottom of the article to find the migration information for TypeScript 4.x, React 17.x, Parcel Bundler 2.x, and Tailwind CSS 2.x.
+- This article written targeting TypeScript 3.x, React 16.x, Parcel Bundler 1.x, and Tailwind CSS 1.x is outdated although setting up a project remains mostly the same.
+
+- Scroll to the bottom of the article to find the migration information for TypeScript 4.x, React 17.x, Parcel Bundler 2.x, and Tailwind CSS 2.x.
 
 </div>
 
