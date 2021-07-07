@@ -1106,15 +1106,15 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/jetbrains-mono@4.4.5":
-  version "4.4.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-4.4.5.tgz#1448c1611ebfdf360847e40328f643ab642247ab"
-  integrity sha512-/xBExp46j7LF0v3mVSy46gEL4NICOyTW8zLKEJegMd5pRBprTwcPY1xpDnAbsljiq9gMSvUyoV4aJ+D61wjjCw==
+"@fontsource/jetbrains-mono@4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-4.5.0.tgz#4cf4014ad1538b1441afb2794097109d8515b7e9"
+  integrity sha512-gxUlpdCLoIrEQ6+1hkPbFHuQz8E5bPZ/iERU+13zEKb8rD/h21v3uHuAT7dTD+Co9nbSlgk6fyVkFwF5edUMog==
 
-"@fontsource/work-sans@4.4.5":
-  version "4.4.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/work-sans/-/work-sans-4.4.5.tgz#325b1eb0b021ba4e76df58dc09be847cb5902764"
-  integrity sha512-6hFChHr8OcegI7quAWItQbdk49Fc1dmkLY0awTwOrtjjoqIsmFDQCxBaqWxb+dotCOTzQUba+2VKriR8e7Bu5w==
+"@fontsource/work-sans@4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/work-sans/-/work-sans-4.5.0.tgz#c2ab966c39fe7cf8fb64008cef5d9034470a42c3"
+  integrity sha512-RPA/AVeF9hLEBVWdH1kMUTuj3tK3rNlhAKxedbkFk8yHHU3K3mpC3FQcCGQlbJTOAjW0qE4ACySSEsDNuW5rUg==
 
 "@fullhuman/postcss-purgecss@^4.0.3":
   version "4.0.3"
