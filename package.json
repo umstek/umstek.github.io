@@ -35,7 +35,7 @@
     "gatsby-source-filesystem": "3.11.0",
     "gatsby-transformer-sharp": "3.11.0",
     "lodash": "4.17.21",
-    "mdx-embed": "0.0.19",
+    "mdx-embed": "0.0.23",
     "postcss-import": "14.0.2",
     "prismjs": "1.24.1",
     "react": "17.0.2",
