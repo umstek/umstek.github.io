@@ -1,0 +1,172 @@
+{
+  "data": {
+    "search": {
+      "nodes": [
+        {
+          "description": "Trying-out Tailwind CSS with Parcel, TypeScript and React",
+          "isFork": false,
+          "forkCount": 3,
+          "stargazerCount": 15,
+          "homepageUrl": "https://parcel-typescript-react-tailwind.vercel.app",
+          "isArchived": false,
+          "isMirror": false,
+          "isPrivate": false,
+          "isTemplate": true,
+          "repositoryTopics": {
+            "totalCount": 6,
+            "nodes": [
+              {
+                "topic": {
+                  "name": "parcel-bundler"
+                }
+              },
+              {
+                "topic": {
+                  "name": "typescript"
+                }
+              },
+              {
+                "topic": {
+                  "name": "reactjs"
+                }
+              },
+              {
+                "topic": {
+                  "name": "tailwindcss"
+                }
+              },
+              {
+                "topic": {
+                  "name": "tailwindcss-scaffolding"
+                }
+              },
+              {
+                "topic": {
+                  "name": "react-scaffolding"
+                }
+              }
+            ]
+          },
+          "languages": {
+            "totalCount": 4,
+            "nodes": [
+              {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              },
+              {
+                "name": "TypeScript",
+                "color": "#3178c6"
+              },
+              {
+                "name": "HTML",
+                "color": "#e34c26"
+              },
+              {
+                "name": "CSS",
+                "color": "#563d7c"
+              }
+            ]
+          },
+          "licenseInfo": {
+            "name": "MIT License"
+          },
+          "nameWithOwner": "umstek/parcel-typescript-react-tailwind",
+          "createdAt": "2022-10-12T23:33:54Z",
+          "url": "https://github.com/umstek/parcel-typescript-react-tailwind"
+        },
+        {
+          "description": "Basic image processing (CS3712 Image Processing - Assignment)",
+          "isFork": false,
+          "forkCount": 0,
+          "stargazerCount": 0,
+          "homepageUrl": "",
+          "isArchived": false,
+          "isMirror": false,
+          "isPrivate": false,
+          "isTemplate": false,
+          "repositoryTopics": {
+            "totalCount": 1,
+            "nodes": [
+              {
+                "topic": {
+                  "name": "image-processing"
+                }
+              }
+            ]
+          },
+          "languages": {
+            "totalCount": 1,
+            "nodes": [
+              {
+                "name": "MATLAB",
+                "color": "#e16737"
+              }
+            ]
+          },
+          "licenseInfo": null,
+          "nameWithOwner": "umstek/megami",
+          "createdAt": "2017-06-24T16:13:31Z",
+          "url": "https://github.com/umstek/megami"
+        },
+        {
+          "description": "An online player for your offline music and audiobooks [WIP]",
+          "isFork": false,
+          "forkCount": 3,
+          "stargazerCount": 0,
+          "homepageUrl": "http://listen-git-main-umstek.vercel.app",
+          "isArchived": false,
+          "isMirror": false,
+          "isPrivate": false,
+          "isTemplate": false,
+          "repositoryTopics": {
+            "totalCount": 2,
+            "nodes": [
+              {
+                "topic": {
+                  "name": "music-player"
+                }
+              },
+              {
+                "topic": {
+                  "name": "audiobook-player"
+                }
+              }
+            ]
+          },
+          "languages": {
+            "totalCount": 5,
+            "nodes": [
+              {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              },
+              {
+                "name": "HTML",
+                "color": "#e34c26"
+              },
+              {
+                "name": "TypeScript",
+                "color": "#3178c6"
+              },
+              {
+                "name": "CSS",
+                "color": "#563d7c"
+              },
+              {
+                "name": "Shell",
+                "color": "#89e051"
+              }
+            ]
+          },
+          "licenseInfo": {
+            "name": "MIT License"
+          },
+          "nameWithOwner": "umstek/listen",
+          "createdAt": "2022-10-14T22:26:26Z",
+          "url": "https://github.com/umstek/listen"
+        }
+      ]
+    }
+  }
+}

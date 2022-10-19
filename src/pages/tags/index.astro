@@ -1,12 +1,12 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Tag from '../components/Tag';
+import BaseHead from '::BaseHead.astro';
+import Header from '::Header';
+import Footer from '::Footer';
+import Tag from '::Tag';
 
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { SITE_TITLE, SITE_DESCRIPTION } from '~config';
 
-const posts = await Astro.glob('./blog/**/*.{md,mdx}');
+const posts = await Astro.glob('../blog/**/*.{md,mdx}');
 
 const groupedPosts: { [tag: string]: Record<string, any>[] } = posts
   .flatMap((post) => (post.frontmatter.tags || []).map((tag: string) => [tag, post]))

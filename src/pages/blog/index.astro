@@ -1,12 +1,12 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import PostsList from '../components/PostsList';
+import BaseHead from '::BaseHead.astro';
+import Header from '::Header';
+import Footer from '::Footer';
+import PostsList from '::PostsList';
 
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { SITE_TITLE, SITE_DESCRIPTION } from '~config';
 
-const posts = (await Astro.glob('./blog/**/*.{md,mdx}')).sort(
+const posts = (await Astro.glob('./**/*.{md,mdx}')).sort(
   (a, b) =>
     new Date(b.frontmatter.publishedAt).valueOf() - new Date(a.frontmatter.publishedAt).valueOf(),
 );
