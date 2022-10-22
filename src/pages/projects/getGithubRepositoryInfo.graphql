@@ -1,4 +1,4 @@
-export default `query GetGitHubRepositoryInfo($query: String!) {
+query GetGitHubRepositoryInfo($query: String!) {
   search(type: REPOSITORY, query: $query, first: 100) {
     nodes {
       ... on Repository {
@@ -19,12 +19,16 @@ export default `query GetGitHubRepositoryInfo($query: String!) {
             }
           }
         }
-        languages(first: 5) {
+        languages(first: 5, orderBy: { field: SIZE, direction: DESC }) {
           totalCount
-          nodes {
-            name
-            color
+          edges {
+            size
+            node {
+              color
+              name
+            }
           }
+          totalSize
         }
         licenseInfo {
           name
@@ -36,4 +40,3 @@ export default `query GetGitHubRepositoryInfo($query: String!) {
     }
   }
 }
-`;

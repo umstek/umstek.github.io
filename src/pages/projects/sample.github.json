@@ -3,17 +3,17 @@
     "search": {
       "nodes": [
         {
-          "description": "Trying-out Tailwind CSS with Parcel, TypeScript and React",
+          "description": "@parcel-bundler plugin for loading markdown with parsed front-matter",
           "isFork": false,
-          "forkCount": 3,
-          "stargazerCount": 15,
-          "homepageUrl": "https://parcel-typescript-react-tailwind.vercel.app",
+          "forkCount": 1,
+          "stargazerCount": 8,
+          "homepageUrl": null,
           "isArchived": false,
           "isMirror": false,
           "isPrivate": false,
-          "isTemplate": true,
+          "isTemplate": false,
           "repositoryTopics": {
-            "totalCount": 6,
+            "totalCount": 3,
             "nodes": [
               {
                 "topic": {
@@ -22,92 +22,42 @@
               },
               {
                 "topic": {
-                  "name": "typescript"
+                  "name": "frontmatter"
                 }
               },
               {
                 "topic": {
-                  "name": "reactjs"
-                }
-              },
-              {
-                "topic": {
-                  "name": "tailwindcss"
-                }
-              },
-              {
-                "topic": {
-                  "name": "tailwindcss-scaffolding"
-                }
-              },
-              {
-                "topic": {
-                  "name": "react-scaffolding"
+                  "name": "markdown"
                 }
               }
             ]
           },
           "languages": {
-            "totalCount": 4,
-            "nodes": [
+            "totalCount": 2,
+            "edges": [
               {
-                "name": "JavaScript",
-                "color": "#f1e05a"
+                "size": 1722,
+                "node": {
+                  "color": "#f1e05a",
+                  "name": "JavaScript"
+                }
               },
               {
-                "name": "TypeScript",
-                "color": "#3178c6"
-              },
-              {
-                "name": "HTML",
-                "color": "#e34c26"
-              },
-              {
-                "name": "CSS",
-                "color": "#563d7c"
+                "size": 299,
+                "node": {
+                  "color": "#e34c26",
+                  "name": "HTML"
+                }
               }
-            ]
+            ],
+            "totalSize": 2021
           },
           "licenseInfo": {
             "name": "MIT License"
           },
-          "nameWithOwner": "umstek/parcel-typescript-react-tailwind",
-          "createdAt": "2022-10-12T23:33:54Z",
-          "url": "https://github.com/umstek/parcel-typescript-react-tailwind"
-        },
-        {
-          "description": "Basic image processing (CS3712 Image Processing - Assignment)",
-          "isFork": false,
-          "forkCount": 0,
-          "stargazerCount": 0,
-          "homepageUrl": "",
-          "isArchived": false,
-          "isMirror": false,
-          "isPrivate": false,
-          "isTemplate": false,
-          "repositoryTopics": {
-            "totalCount": 1,
-            "nodes": [
-              {
-                "topic": {
-                  "name": "image-processing"
-                }
-              }
-            ]
-          },
-          "languages": {
-            "totalCount": 1,
-            "nodes": [
-              {
-                "name": "MATLAB",
-                "color": "#e16737"
-              }
-            ]
-          },
-          "licenseInfo": null,
-          "nameWithOwner": "umstek/megami",
-          "createdAt": "2017-06-24T16:13:31Z",
-          "url": "https://github.com/umstek/megami"
+          "nameWithOwner": "umstek/parcel-plugin-md-fm",
+          "createdAt": "2018-09-16T02:26:03Z",
+          "url": "https://github.com/umstek/parcel-plugin-md-fm"
         },
         {
           "description": "An online player for your offline music and audiobooks [WIP]",
@@ -136,35 +86,83 @@
           },
           "languages": {
             "totalCount": 5,
-            "nodes": [
+            "edges": [
               {
-                "name": "JavaScript",
-                "color": "#f1e05a"
+                "size": 74012,
+                "node": {
+                  "color": "#3178c6",
+                  "name": "TypeScript"
+                }
               },
               {
-                "name": "HTML",
-                "color": "#e34c26"
+                "size": 2973,
+                "node": {
+                  "color": "#563d7c",
+                  "name": "CSS"
+                }
               },
               {
-                "name": "TypeScript",
-                "color": "#3178c6"
+                "size": 2599,
+                "node": {
+                  "color": "#e34c26",
+                  "name": "HTML"
+                }
               },
               {
-                "name": "CSS",
-                "color": "#563d7c"
+                "size": 429,
+                "node": {
+                  "color": "#f1e05a",
+                  "name": "JavaScript"
+                }
               },
               {
-                "name": "Shell",
-                "color": "#89e051"
+                "size": 221,
+                "node": {
+                  "color": "#89e051",
+                  "name": "Shell"
+                }
               }
-            ]
+            ],
+            "totalSize": 80234
           },
           "licenseInfo": {
             "name": "MIT License"
           },
           "nameWithOwner": "umstek/listen",
-          "createdAt": "2022-10-14T22:26:26Z",
+          "createdAt": "2021-04-10T18:09:21Z",
           "url": "https://github.com/umstek/listen"
+        },
+        {
+          "description": "DEPRECATED Repository for Android app",
+          "isFork": false,
+          "forkCount": 0,
+          "stargazerCount": 0,
+          "homepageUrl": "",
+          "isArchived": true,
+          "isMirror": false,
+          "isPrivate": false,
+          "isTemplate": false,
+          "repositoryTopics": {
+            "totalCount": 0,
+            "nodes": []
+          },
+          "languages": {
+            "totalCount": 1,
+            "edges": [
+              {
+                "size": 2175,
+                "node": {
+                  "color": "#b07219",
+                  "name": "Java"
+                }
+              }
+            ],
+            "totalSize": 2175
+          },
+          "licenseInfo": null,
+          "nameWithOwner": "asymptote-inc/jury",
+          "createdAt": "2017-09-30T10:35:36Z",
+          "url": "https://github.com/asymptote-inc/jury"
         }
       ]
     }

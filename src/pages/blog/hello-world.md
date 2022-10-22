@@ -4,9 +4,9 @@ title: 'Hello, world!'
 publishedAt: '2016-09-03 13:42:22 +0530'
 category: programming
 tags:
-  - hello world
+  - hello-world
   - snippet
-  - programming
+  - languages
 ---
 
 I'm only trying to say hello.

@@ -7,11 +7,11 @@ publishedAt: '2022-09-16 20:00:00 +0530'
 heroImage: /what-if-backend-code-looked-like-react-1/cover.png
 category: programming
 tags:
-  - JSX
+  - jsx
   - react
-  - NodeJS
-  - Deno
-  - Backend
+  - nodejs
+  - deno
+  - server
 ---
 
 I had to take another look at [Deno](https://deno.land/). This was one of the zillions of emerging tools and frameworks in the JavaScript world. When it was first introduced, I installed it, tried to do something, failed, and never looked back. I didn't really expect it to survive; it looked like a cry of a lone developer of NodeJS with whom his teammates disagreed on the architecture (sorry). And, well, sometimes they are right (I think; look at [luxon](https://moment.github.io/luxon/#/why)).

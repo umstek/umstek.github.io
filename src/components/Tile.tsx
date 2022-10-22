@@ -16,7 +16,7 @@ function Tile({ post }: { post: Record<string, any> }) {
         <small>{post.frontmatter.description}</small>
       </div>
       <div>
-        <small>
+        <small className='flex'>
           {post.frontmatter.tags?.map((tag: string) => (
             <Tag
               key={tag}

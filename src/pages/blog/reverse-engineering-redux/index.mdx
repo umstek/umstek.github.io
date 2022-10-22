@@ -1,16 +1,17 @@
 ---
-layout: "../../../layouts/BlogPost.astro"
+layout: '../../../layouts/BlogPost.astro'
 title: Reverse engineering redux, TDD, with and without RxJS
 description: Analyze the functionality of redux by trying to reverse engineer it using RxJS and a test driven approach.
-publishedAt: "2021-03-07 16:00:00 +0530"
-initialDraftAt: "2021-02-15 15:00:00 +0530"
+publishedAt: '2021-03-07 16:00:00 +0530'
+initialDraftAt: '2021-02-15 15:00:00 +0530'
 heroImage: /reverse-engineering-redux/cover.png
 category: programming
 tags:
-  - reverse engineering
+  - reverse-engineering
   - redux
-  - TDD
-  - RxJS
+  - tdd
+  - rx
+  - rxjs
 ---
 
 <div class="alert info">
@@ -28,7 +29,7 @@ I didn't use redux for almost 2 years and suddenly had to work with it again. Wh
 The example in redux readme summarizes everything redux does. You don't need to read this code now. I didn't either.
 
 ```jsx
-import { createStore } from "redux";
+import { createStore } from 'redux';
 
 /**
  * This is a reducer - a function that takes a current state value and an
@@ -44,9 +45,9 @@ import { createStore } from "redux";
  */
 function counterReducer(state = { value: 0 }, action) {
   switch (action.type) {
-    case "counter/incremented":
+    case 'counter/incremented':
       return { value: state.value + 1 };
-    case "counter/decremented":
+    case 'counter/decremented':
       return { value: state.value - 1 };
     default:
       return state;
@@ -65,11 +66,11 @@ store.subscribe(() => console.log(store.getState()));
 
 // The only way to mutate the internal state is to dispatch an action.
 // The actions can be serialized, logged or stored and later replayed.
-store.dispatch({ type: "counter/incremented" });
+store.dispatch({ type: 'counter/incremented' });
 // {value: 1}
-store.dispatch({ type: "counter/incremented" });
+store.dispatch({ type: 'counter/incremented' });
 // {value: 2}
-store.dispatch({ type: "counter/decremented" });
+store.dispatch({ type: 'counter/decremented' });
 // {value: 1}
 ```
 
@@ -109,34 +110,34 @@ npx ts-jest config:init
 Let's change the above readme example to a basic test with jest.
 
 ```tsx
-import { Action, createStore, Store } from "redux";
+import { Action, createStore, Store } from 'redux';
 
 function counterReducer(state = { value: 0 }, action: Action) {
   switch (action.type) {
-    case "counter/incremented":
+    case 'counter/incremented':
       return { value: state.value + 1 };
-    case "counter/decremented":
+    case 'counter/decremented':
       return { value: state.value - 1 };
     default:
       return state;
   }
 }
 
-describe("redux basics", () => {
+describe('redux basics', () => {
   let store: Store<{ value: number }, Action>;
 
   beforeEach(() => {
     store = createStore(counterReducer);
   });
 
-  test("dispatch incremented", () => {
-    store.dispatch({ type: "counter/incremented" });
+  test('dispatch incremented', () => {
+    store.dispatch({ type: 'counter/incremented' });
     const state = store.getState();
     expect(state).toEqual({ value: 1 });
   });
 
-  test("dispatch decremented", () => {
-    store.dispatch({ type: "counter/decremented" });
+  test('dispatch decremented', () => {
+    store.dispatch({ type: 'counter/decremented' });
     const state = store.getState();
     expect(state).toEqual({ value: -1 });
   });
@@ -197,7 +198,7 @@ Import `Action` and `Store` as well, from the test script. Now, both of the test
 ```tsx
 // highlight-range{1-2,4,7}
 export function createStore<S, A extends Action<any> = Action<any>>(
-  reducer: (state: S, action: A) => S
+  reducer: (state: S, action: A) => S,
 ) {
   let state: S;
 
@@ -219,7 +220,7 @@ We don't have a problem with copyrights here; we're just trying to learn, the ha
 We missed a test case. What about the initial state? Let's add that to both test scripts.
 
 ```tsx
-test("initial state", () => {
+test('initial state', () => {
   const state = store.getState();
   expect(state).toEqual({ value: 0 });
 });
@@ -249,12 +250,11 @@ export interface Store<S = any, A extends Action<any> = Action<any>> {
   dispatch: (action: A) => void;
 }
 
-export function createStore<
-  S = any,
-  A extends Action = Action<any> & { [x: string]: any }
->(reducer: (state: S | undefined, action: A) => S) {
+export function createStore<S = any, A extends Action = Action<any> & { [x: string]: any }>(
+  reducer: (state: S | undefined, action: A) => S,
+) {
   // highlight-next-line
-  let state: S = reducer(undefined, { type: "@@INIT" } as A);
+  let state: S = reducer(undefined, { type: '@@INIT' } as A);
 
   return {
     dispatch: (action: A) => {
@@ -268,27 +268,27 @@ export function createStore<
 This is the result. I cleaned up the typings as well. It's working. One more thing we need. What about the `subscribe` function? Let's extend our tests.
 
 ```tsx
-describe("redux basics", () => {
+describe('redux basics', () => {
   // ... omitted lines for clarity
 
-  test("subscription", () => {
+  test('subscription', () => {
     const mockF1 = jest.fn();
     const mockF2 = jest.fn();
 
     const unsubscribe1 = store.subscribe(mockF1);
     expect(mockF1).not.toHaveBeenCalled();
 
-    store.dispatch({ type: "counter/incremented" });
+    store.dispatch({ type: 'counter/incremented' });
     expect(mockF1).toHaveBeenCalledTimes(1);
     expect(mockF2).not.toHaveBeenCalled();
 
     const unsubscribe2 = store.subscribe(mockF2);
-    store.dispatch({ type: "counter/decremented" });
+    store.dispatch({ type: 'counter/decremented' });
     expect(mockF1).toHaveBeenCalledTimes(2);
     expect(mockF2).toHaveBeenCalledTimes(1);
 
     unsubscribe1();
-    store.dispatch({ type: "counter/incremented" });
+    store.dispatch({ type: 'counter/incremented' });
     expect(mockF1).toHaveBeenCalledTimes(2); // mockF1 shouldn't be called.
     expect(mockF2).toHaveBeenCalledTimes(2);
   });
@@ -314,11 +314,10 @@ And let's extend the `createStore` function.
 
 ```tsx
 // highlight-range{6,11,14-19}
-export function createStore<
-  S = any,
-  A extends Action = Action<any> & { [x: string]: any }
->(reducer: (state: S | undefined, action: A) => S) {
-  let state: S = reducer(undefined, { type: "@@INIT" } as A);
+export function createStore<S = any, A extends Action = Action<any> & { [x: string]: any }>(
+  reducer: (state: S | undefined, action: A) => S,
+) {
+  let state: S = reducer(undefined, { type: '@@INIT' } as A);
   let listeners: (() => void)[] = [];
 
   return {
@@ -346,16 +345,15 @@ So what's the fuss about RxJS? Redux [lists RxJS](https://redux.js.org/understan
 Let's implement a compatible `createStore` function with RxJS. Surprisingly, my implementation came out to be hacky and clunky; even longer than our basic solution. Any suggestions for improvements are welcome, but remember that we should be able to pass our test cases.
 
 ```tsx
-export function createStore<
-  S = any,
-  A extends Action = Action<any> & { [x: string]: any }
->(reducer: (state: S | undefined, action: A) => S) {
+export function createStore<S = any, A extends Action = Action<any> & { [x: string]: any }>(
+  reducer: (state: S | undefined, action: A) => S,
+) {
   // It is common practice to suffix observable stream variables with '$'.
   const subject$ = new Subject<A>();
   const state$ = subject$.pipe(
-    startWith({ type: "@@INIT" } as A),
+    startWith({ type: '@@INIT' } as A),
     scan(reducer, undefined),
-    share()
+    share(),
   );
   let state: S | undefined;
   state$.subscribe((s) => (state = s));

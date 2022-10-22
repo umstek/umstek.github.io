@@ -1,5 +1,15 @@
 {
   "github": {
-    "umstek": ["listen", "parcel-typescript-react-tailwind"]
+    "umstek": [
+      "keystroke-dynamics",
+      "listen",
+      "parcel-typescript-react-tailwind",
+      "parcel-plugin-md-fm",
+      "edge-comments",
+      "blue-pencil",
+      "DupKiller",
+      "Cl2"
+    ],
+    "asymptote-inc": ["jury-web"]
   }
 }
