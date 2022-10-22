@@ -136,7 +136,7 @@ It runs. Deno interprets TypeScript!
 
 ## Analysis 🤖
 
-[Kovalski analysis meme]
+![Kowalski, analysis](/what-if-backend-code-looked-like-react-1/Kowalski.jpg)
 
 Let's go through the code now.
 
