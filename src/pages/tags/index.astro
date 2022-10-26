@@ -34,7 +34,7 @@ const tags = Object.entries(groupedPosts).map(([tag, taggedPosts]) => ({
           <div class="flex flex-row flex-wrap justify-center">
             {
               tags?.map((tag) => (
-                <Tag className="mr-4" href={`/tags/${tag.name}`} count={tag.count}>
+                <Tag className="mr-4" href={`/tags/${tag.name}/`} count={tag.count}>
                   {tag.name}
                 </Tag>
               ))

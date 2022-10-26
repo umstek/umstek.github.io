@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: "../../../layouts/BlogPost.astro"
 title: 'Text Cases in Programming'
 publishedAt: '2017-01-16 11:12:22 +0530'
 category: programming

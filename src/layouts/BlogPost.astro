@@ -4,9 +4,11 @@ import Header from '::Header';
 import Footer from '::Footer';
 import Tag from '::Tag';
 import PostDates from '::PostDates';
+import svg from '::SocialImage';
 
 export interface Props {
   content: {
+    url: string;
     title: string;
     description: string;
     initialDraftAt?: string;
@@ -22,6 +24,7 @@ export interface Props {
 
 const {
   content: {
+    url,
     title,
     description,
     initialDraftAt,
@@ -63,7 +66,7 @@ const {
           heroImage && (
             <div
               class="w-full h-screen/2 bg-no-repeat bg-center bg-cover"
-              style={{ backgroundImage: `url("${heroImage}")` }}
+              style={{ backgroundImage: `url("${url}/${heroImage}")` }}
             />
           )
         }

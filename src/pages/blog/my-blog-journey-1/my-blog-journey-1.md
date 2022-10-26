@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: "../../../layouts/BlogPost.astro"
 title: "My React+Markdown blog journey (Part 1)"
 publishedAt: "2019-01-21 10:30:00 +0530"
 category: programming

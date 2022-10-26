@@ -4,7 +4,7 @@ title: Trying-out Tailwind CSS with Parcel
 description: How to get started with Tailwind CSS, Parcel bundler, TypeScript and React
 publishedAt: '2019-11-27 16:00:00 +0530'
 initialDraftAt: '2019-11-27 12:00:00 +0530'
-heroImage: /trying-out-tailwindcss-with-parcel/vitalik-vynarchyk-0PePaKnEmuM-unsplash.jpg
+heroImage: vitalik-vynarchyk-0PePaKnEmuM-unsplash.jpg
 category: programming
 tags:
   - tailwind
@@ -126,7 +126,7 @@ At this moment, if you are curious why we didn’t add typescript or react, don�
 
 You should see something like below.
 
-![Hello, world!](/trying-out-tailwindcss-with-parcel/hello-world.png)
+![Hello, world!](hello-world.png)
 
 Done.
 
@@ -140,7 +140,7 @@ I tried playing with it a little. Changed `hover:bg-blue-700` to `hover:bg-blue-
 </button>
 ```
 
-![hover:bg-blue-400](/trying-out-tailwindcss-with-parcel/hover.png)
+![hover:bg-blue-400](hover.png)
 
 Added an [active](https://tailwindcss.com/docs/pseudo-class-variants#active) background color using `active:bg-blue-900`. (This technique with colon is called Pseudo-class Variants in Tailwind CSS; we use pseudo-class names in `className` rather than in CSS.) Nothing changed. It still shows the hover color on press! What could have gone wrong? It is actually documented right below where the example for `active:` is. We have to add `active` variant to the Tailwind config file `tailwind.config.js`.
 
@@ -179,13 +179,13 @@ module.exports = {
 
 It works.
 
-![active:bg-blue-900](/trying-out-tailwindcss-with-parcel/active.png)
+![active:bg-blue-900](active.png)
 
 ## Next steps…
 
 Let’s see the file sizes…
 
-![5.5 MB](/trying-out-tailwindcss-with-parcel/size.png)
+![5.5 MB](size.png)
 
 Gosh! It’s huge. This is not the size you want your production CSS bundle to be. We are using a lot of unwanted styles. But how do we reduce the bundle? [Manually selecting](https://tailwindcss.com/docs/controlling-file-size#removing-unused-theme-values) what is necessary using the configuration file is hard. We have to try [something else](https://tailwindcss.com/docs/controlling-file-size#setting-up-purgecss).
 
@@ -233,7 +233,7 @@ module.exports = {
 
 Now, let’s check the file sizes…
 
-![2 KB](/trying-out-tailwindcss-with-parcel/reduced-size.png)
+![2 KB](reduced-size.png)
 
 It’s down to ~~two~~ (**update: a little larger than that**) kilobytes. That’s because we only have a few classes used.
 So what exactly does purgecss do? It basically traverses through all our `.tsx` files and finds the class names we have used. Then it removes selectors that match all unused class names from CSS (check that regex!). Ugly, but works. Of course, you have to be careful when dynamically generating CSS class names in react.
@@ -261,7 +261,7 @@ There isn’t much to complain about the library but,
 
 ~~The demo below uses Tailwind plugins `tailwindcss-transforms` and `tailwindcss-transitions` because tailwind doesn’t support transforms and transitions out-of-the-box.~~
 
-![Demo](/trying-out-tailwindcss-with-parcel/demo.gif)
+![Demo](demo.gif)
 
 I created a template with the above plugins as a starting point [here](https://github.com/umstek/parcel-typescript-react-tailwind) on GitHub.
 

@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: "../../../layouts/BlogPost.astro"
 title: 'Funny names for Wi-Fi router'
 publishedAt: '2017-04-17 10:30:00 +0530'
 category: funny

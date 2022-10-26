@@ -4,7 +4,7 @@ title: What if backend code looked like React? - Part I/Deno
 description: Introduction to Deno
 initialDraftAt: '2022-09-19 20:00:00 +0530'
 publishedAt: '2022-09-16 20:00:00 +0530'
-heroImage: /what-if-backend-code-looked-like-react-1/cover.png
+heroImage: cover.png
 category: programming
 tags:
   - jsx
@@ -136,7 +136,7 @@ It runs. Deno interprets TypeScript!
 
 ## Analysis 🤖
 
-![Kowalski, analysis](/what-if-backend-code-looked-like-react-1/Kowalski.jpg)
+![Kowalski, analysis](Kowalski.jpg)
 
 Let's go through the code now.
 

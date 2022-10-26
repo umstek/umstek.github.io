@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: "../../../layouts/BlogPost.astro"
 title: 'Hello, world!'
 publishedAt: '2016-09-03 13:42:22 +0530'
 category: programming

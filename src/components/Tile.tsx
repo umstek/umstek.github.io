@@ -10,19 +10,19 @@ function Tile({ post }: { post: Record<string, any> }) {
         </small>
       </div>
       <div>
-        <a href={post.url}>{post.frontmatter.title}</a>
+        <a href={`${post.url}/`}>{post.frontmatter.title}</a>
       </div>
       <div>
         <small>{post.frontmatter.description}</small>
       </div>
       <div>
-        <small className='flex'>
+        <small className="flex">
           {post.frontmatter.tags?.map((tag: string) => (
             <Tag
               key={tag}
               className="inline mr-4"
               anchorClassName="border-0 font-normal text-inherit hover:text-rose-600"
-              href={`/tags/${tag}`}
+              href={`/tags/${tag}/`}
             >
               {tag}
             </Tag>
