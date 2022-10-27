@@ -12,10 +12,12 @@ const groupedPosts: { [tag: string]: Record<string, any>[] } = posts
   .flatMap((post) => (post.frontmatter.tags || []).map((tag: string) => [tag, post]))
   .reduce((groups, [tag, post]) => ({ ...groups, [tag]: [...(groups[tag] || []), post] }), {});
 
-const tags = Object.entries(groupedPosts).map(([tag, taggedPosts]) => ({
-  name: tag,
-  count: taggedPosts.length,
-}));
+const tags = Object.entries(groupedPosts)
+  .map(([tag, taggedPosts]) => ({
+    name: tag,
+    count: taggedPosts.length,
+  }))
+  .sort(({ name: name1 }, { name: name2 }) => (name1 < name2 ? -1 : 1));
 ---
 
 <!DOCTYPE html>
@@ -31,10 +33,14 @@ const tags = Object.entries(groupedPosts).map(([tag, taggedPosts]) => ({
       <div class="p-4">
         <h1>Tags</h1>
         <section>
-          <div class="flex flex-row flex-wrap justify-center">
+          <div class="flex flex-col">
             {
               tags?.map((tag) => (
-                <Tag className="mr-4" href={`/tags/${tag.name}/`} count={tag.count}>
+                <Tag
+                  className="mr-4 my-2"
+                  href={`/tags/${tag.name}/`}
+                  count={tag.count}
+                >
                   {tag.name}
                 </Tag>
               ))
