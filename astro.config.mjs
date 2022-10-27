@@ -9,7 +9,7 @@ import { remarkReadingTime } from './remark-reading-time.mjs';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://umstek.tk',
   markdown: {
     syntaxHighlight: false,
     remarkPlugins: [
