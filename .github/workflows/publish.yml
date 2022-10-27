@@ -1,4 +1,4 @@
-name: Github Pages Astro CI
+name: main
 
 env:
   PUBLIC_SITE: ${{ secrets.PUBLIC_SITE }}
