@@ -1,5 +1,17 @@
 name: Github Pages Astro CI
 
+env:
+  PUBLIC_SITE: ${{ secrets.PUBLIC_SITE }}
+  PUBLIC_SITE_TITLE: ${{ secrets.PUBLIC_SITE_TITLE }}
+  PUBLIC_SITE_DESCRIPTION: ${{ secrets.PUBLIC_SITE_DESCRIPTION }}
+  PUBLIC_OWNER: ${{ secrets.PUBLIC_OWNER }}
+  PUBLIC_START_YEAR: ${{ secrets.PUBLIC_START_YEAR }}
+  PUBLIC_MAINTENANCE_NOTICE: ${{ secrets.PUBLIC_MAINTENANCE_NOTICE }}
+  PUBLIC_LICENSE_NOTICE: ${{ secrets.PUBLIC_LICENSE_NOTICE }}
+  PUBLIC_TWITTER: ${{ secrets.PUBLIC_TWITTER }}
+  PUBLIC_GITHUB: ${{ secrets.PUBLIC_GITHUB }}
+  X_GITHUB_TOKEN: ${{ secrets.X_GITHUB_TOKEN }}
+
 on:
   # Trigger the workflow every time you push to the `main` branch
   # Using a different branch name? Replace `main` with your branch’s name
