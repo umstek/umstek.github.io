@@ -10,4 +10,4 @@ export const MAINTENANCE_NOTICE = import.meta.env.PUBLIC_MAINTENANCE_NOTICE;
 export const LICENSE_NOTICE = import.meta.env.PUBLIC_LICENSE_NOTICE;
 export const TWITTER = import.meta.env.PUBLIC_TWITTER;
 export const GITHUB = import.meta.env.PUBLIC_GITHUB;
-export const GITHUB_TOKEN = import.meta.env.GITHUB_TOKEN;
+export const GITHUB_TOKEN = import.meta.env.X_GITHUB_TOKEN;
