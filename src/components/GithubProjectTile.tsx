@@ -1,4 +1,4 @@
-import { GoRepoForked, GoStar, GoMirror, GoLock, GoArchive, GoRepo } from 'react-icons/go';
+import { GoRepoForked, GoStar, GoMirror, GoLock, GoArchive, GoRepo } from 'react-icons/go/index';
 
 import { GITHUB } from '~config';
 

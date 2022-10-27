@@ -1,6 +1,4 @@
 ---
-import fs from 'node:fs/promises';
-
 import BaseHead from '::BaseHead.astro';
 import Header from '::Header';
 import Footer from '::Footer';
@@ -8,8 +6,49 @@ import ProjectsList from '::ProjectsList';
 
 import { SITE_TITLE, SITE_DESCRIPTION, GITHUB_TOKEN } from '~config';
 
-const url = new URL('./getGithubRepositoryInfo.graphql', import.meta.url);
-const query = await fs.readFile(url, 'utf-8');
+const query = `query GetGitHubRepositoryInfo($query: String!) {
+  search(type: REPOSITORY, query: $query, first: 100) {
+    nodes {
+      ... on Repository {
+        description
+        isFork
+        forkCount
+        stargazerCount
+        homepageUrl
+        isArchived
+        isMirror
+        isPrivate
+        isTemplate
+        repositoryTopics(first: 10) {
+          totalCount
+          nodes {
+            topic {
+              name
+            }
+          }
+        }
+        languages(first: 5, orderBy: { field: SIZE, direction: DESC }) {
+          totalCount
+          edges {
+            size
+            node {
+              color
+              name
+            }
+          }
+          totalSize
+        }
+        licenseInfo {
+          name
+        }
+        nameWithOwner
+        createdAt
+        url
+      }
+    }
+  }
+}
+`;
 
 const projectLocations = (await Astro.glob('./projects.json'))[0];
 const githubProjectsQuery = Object.entries<string[]>(projectLocations.github)

@@ -1,4 +1,4 @@
-import { GoTag } from 'react-icons/go';
+import { GoTag } from 'react-icons/go/index';
 
 const Tag = ({
   children,
