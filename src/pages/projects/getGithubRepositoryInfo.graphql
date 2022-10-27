@@ -1,0 +1,42 @@
+query GetGitHubRepositoryInfo($query: String!) {
+  search(type: REPOSITORY, query: $query, first: 100) {
+    nodes {
+      ... on Repository {
+        description
+        isFork
+        forkCount
+        stargazerCount
+        homepageUrl
+        isArchived
+        isMirror
+        isPrivate
+        isTemplate
+        repositoryTopics(first: 10) {
+          totalCount
+          nodes {
+            topic {
+              name
+            }
+          }
+        }
+        languages(first: 5, orderBy: { field: SIZE, direction: DESC }) {
+          totalCount
+          edges {
+            size
+            node {
+              color
+              name
+            }
+          }
+          totalSize
+        }
+        licenseInfo {
+          name
+        }
+        nameWithOwner
+        createdAt
+        url
+      }
+    }
+  }
+}

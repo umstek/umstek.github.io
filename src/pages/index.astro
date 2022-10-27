@@ -1,0 +1,31 @@
+---
+import BaseHead from '::BaseHead.astro';
+import Header from '::Header';
+import Footer from '::Footer';
+
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <script>
+      location.href = '/blog';
+    </script>
+  </head>
+  <body class="dark:bg-slate-900">
+    <Header title={SITE_TITLE} />
+    <main
+      class="mt-12 prose dark:prose-invert prose-neutral sm:prose-sm lg:prose-lg xl:prose-xl 2xl:prose-2xl mx-auto"
+    >
+      <div class="p-4">
+        <h1>UMSTeK</h1>
+        <div><a href="/blog">Blog</a></div>
+        <div><a href="/projects">Projects</a></div>
+        <div><a href="/about">About</a></div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
