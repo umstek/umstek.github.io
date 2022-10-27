@@ -42,6 +42,7 @@ pre.shiki div.dim,
 pre.shiki div.highlight {
   margin: 0;
   padding: 0;
+  width: fit-content;
 }
 pre.shiki div.highlight {
   opacity: 1;
