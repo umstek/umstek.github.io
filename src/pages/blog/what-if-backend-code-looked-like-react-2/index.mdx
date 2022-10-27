@@ -72,8 +72,7 @@ and get the output
 
 Let's edit our server.
 
-```tsx
-// highlight-range{7,11}
+```tsx {6,8}
 import { serve } from 'https://deno.land/std@0.156.0/http/server.ts';
 
 const port = 8080;
@@ -114,8 +113,7 @@ To run, we need to import `b` into the file where the server is defined, just li
 
 So add an import to `b` on the second line of `index.tsx`. Remember, you don't call it manually; it just sits there.
 
-```tsx
-// highlight-range{2}
+```tsx {1}
 import { serve } from 'https://deno.land/std@0.156.0/http/server.ts';
 import { b } from './renderer/jsx-runtime/index.ts';
 
@@ -198,8 +196,7 @@ I did this by looking at the type hints of `JSON.stringify` function, because we
 
 We also have to edit the `deno.jsonc` and add a line below `jsxFragmentFactory`.
 
-```json
-// highlight-range{6}
+```json {5}
 {
   "compilerOptions": {
     "jsx": "react",
@@ -236,8 +233,7 @@ and types to `types.d.ts`.
 
 Let's also edit the `index.tsx` file.
 
-```tsx
-// highlight-range{8,10}
+```tsx {7,9}
 import { serve } from 'https://deno.land/std@0.156.0/http/server.ts';
 import { b } from './renderer/jsx-runtime/index.ts';
 

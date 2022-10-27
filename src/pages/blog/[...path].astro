@@ -4,8 +4,6 @@ import generateOgSvg from '::SocialImage';
 export async function getStaticPaths() {
   const posts = await Astro.glob('./**/*.{md,mdx}');
 
-  console.dir(posts.map((p) => p.file));
-
   const routes = posts.map((p) => ({
     params: { path: `${p.url}/og.svg`.replace('/blog/', '') },
     props: { file: p },

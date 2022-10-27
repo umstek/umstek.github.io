@@ -2,8 +2,6 @@ import satori from 'satori';
 import { readFile } from 'node:fs/promises';
 
 const svg = async ({ title, tags, imgsrc }: { title: string; tags: string[]; imgsrc?: string }) => {
-  console.log(imgsrc);
-
   return await satori(
     <div
       tw=" bg-slate-900 m-4 p-16 flex flex-col w-full h-full"

@@ -160,8 +160,7 @@ function createStore(reducer) {
 
 We used `dispatch` and `getState` functions in the redux example:
 
-```tsx
-// highlight-range{2,5-8}
+```tsx {1,4-7}
 export function createStore(reducer) {
   let state;
 
@@ -195,8 +194,7 @@ export interface Store<S = any, A extends Action<any> = Action<any>> {
 
 Import `Action` and `Store` as well, from the test script. Now, both of the test scripts look similar with the exception of `./re-redux` instead of `redux` in `import { Action, createStore, Store } from 'redux';`. The test still fails. Let's write the minimum code needed to make the test pass.
 
-```tsx
-// highlight-range{1-2,4,7}
+```tsx {0-1,3,6}
 export function createStore<S, A extends Action<any> = Action<any>>(
   reducer: (state: S, action: A) => S,
 ) {
@@ -240,7 +238,7 @@ Unsurprisingly, it fails. Let's add the code.
 
 We just need to call the reducer once when the store is created, to collect the initial state from the reducer. There is no specific `action` we can provide. So let's create a dummy action with the type `'@@INIT'` (this breaks the user provided type `T` for `Action` but we don't care). You have seen this in redux log, maybe?
 
-```tsx
+```tsx {12}
 export interface Action<T = any> {
   type: T;
 }
@@ -253,7 +251,6 @@ export interface Store<S = any, A extends Action<any> = Action<any>> {
 export function createStore<S = any, A extends Action = Action<any> & { [x: string]: any }>(
   reducer: (state: S | undefined, action: A) => S,
 ) {
-  // highlight-next-line
   let state: S = reducer(undefined, { type: '@@INIT' } as A);
 
   return {
@@ -312,8 +309,7 @@ What is returned here is the unsubscribe function.
 
 And let's extend the `createStore` function.
 
-```tsx
-// highlight-range{6,11,14-19}
+```tsx {4,9,12-17}
 export function createStore<S = any, A extends Action = Action<any> & { [x: string]: any }>(
   reducer: (state: S | undefined, action: A) => S,
 ) {

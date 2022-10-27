@@ -11,7 +11,10 @@ function Footer() {
           <a href={`https://github.com/${GITHUB}`} className="text-slate-400 hover:text-rose-600">
             GitHub
           </a>
-          <a href="/license/" className="text-slate-400 hover:text-rose-600">
+          <a
+            href="https://github.com/umstek/umstek.github.io/blob/main/LICENSE"
+            className="text-slate-400 hover:text-rose-600"
+          >
             License: {LICENSE_NOTICE}
           </a>
         </div>

@@ -23,4 +23,8 @@
   .shiki.github-light {
     display: none;
   }
+  pre.shiki div.highlight {
+    opacity: 1;
+    background-color: #1e293b;
+  }
 }

@@ -8,7 +8,7 @@ function Header({ title }: { title?: string }) {
       <header className="max-w-8xl mx-auto">
         <div className="flex flex-row justify-between py-4 border-b border-slate-900/10 lg:px-8 lg:border-0 dark:border-slate-300/10 mx-4 lg:mx-0">
           <a href="/">
-            <h2 className="text-base md:text-md font-semibold px-4 text-rose-600 dark:text-rose-400 bg-rose-100 dark:bg-rose-900 border-rose-300/50 dark:border-rose-700/50 rounded-full">
+            <h2 className="text-base md:text-md font-semibold px-4 bg-rose-100 text-rose-600 dark:bg-rose-600 dark:text-slate-900 border-rose-300/50 dark:border-rose-700/50 rounded-full">
               {title || SITE_TITLE}
             </h2>
           </a>
