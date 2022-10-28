@@ -10,9 +10,11 @@ export const get = () =>
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     site: SITE,
-    items: posts.map((post: any) => ({
-      link: `${post.url}/`,
-      title: post.frontmatter.title,
-      pubDate: post.frontmatter.publishedAt,
-    })),
+    items: posts
+      .filter((p: any) => import.meta.env.DEV || !p.frontmatter.draft)
+      .map((post: any) => ({
+        link: `${post.url}/`,
+        title: post.frontmatter.title,
+        pubDate: post.frontmatter.publishedAt,
+      })),
   });
