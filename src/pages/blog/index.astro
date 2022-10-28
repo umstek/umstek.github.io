@@ -6,10 +6,12 @@ import PostsList from '::PostsList';
 
 import { SITE_TITLE, SITE_DESCRIPTION } from '~config';
 
-const posts = (await Astro.glob('./**/*.{md,mdx}')).sort(
-  (a, b) =>
-    new Date(b.frontmatter.publishedAt).valueOf() - new Date(a.frontmatter.publishedAt).valueOf(),
-);
+const posts = (await Astro.glob('./**/*.{md,mdx}'))
+  .filter((p: any) => import.meta.env.DEV || !p.frontmatter.draft)
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.publishedAt).valueOf() - new Date(a.frontmatter.publishedAt).valueOf(),
+  );
 ---
 
 <!DOCTYPE html>

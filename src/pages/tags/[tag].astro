@@ -10,6 +10,7 @@ export async function getStaticPaths() {
   const posts = await Astro.glob('../blog/**/*.{md,mdx}');
 
   const groupedPosts: { [tag: string]: Record<string, any>[] } = posts
+    .filter((p: any) => import.meta.env.DEV || !p.frontmatter.draft)
     .flatMap((post) => (post.frontmatter.tags || []).map((tag: string) => [tag, post]))
     .reduce((groups, [tag, post]) => ({ ...groups, [tag]: [...(groups[tag] || []), post] }), {});
 
