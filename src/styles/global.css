@@ -2,6 +2,7 @@
 @import '@fontsource/lexend/variable';
 @import 'shiki.css';
 @import 'alert.css';
+@import 'obsolete.css';
 
 /* The integration's default injected base.css file */
 @tailwind base;
