@@ -8,7 +8,7 @@ specifiers:
   '@astrojs/tailwind': 2.1.2
   '@fontsource/jetbrains-mono': 4.5.11
   '@fontsource/lexend': 4.5.13
-  '@tailwindcss/typography': 0.5.7
+  '@tailwindcss/typography': 0.5.8
   '@types/jest': ^29.1.2
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.8
@@ -36,7 +36,7 @@ dependencies:
   '@astrojs/tailwind': 2.1.2_tailwindcss@3.2.2
   '@fontsource/jetbrains-mono': 4.5.11
   '@fontsource/lexend': 4.5.13
-  '@tailwindcss/typography': 0.5.7_tailwindcss@3.2.2
+  '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.2
   astro: 1.6.3
   autoprefixer: 10.4.12_postcss@8.4.18
   mdast-util-to-string: 3.1.0
@@ -694,8 +694,8 @@ packages:
     resolution: {integrity: sha512-ng4ut1z2MCBhK/NwDVwIQp3pAUOCs/KNaW3cBxdFB2xTDrOuo1xuNmpr/9HHFhxqIvHrs1NTH3KJg6q+JSy1Kw==}
     dev: true
 
-  /@tailwindcss/typography/0.5.7_tailwindcss@3.2.2:
-    resolution: {integrity: sha512-JTTSTrgZfp6Ki4svhPA4mkd9nmQ/j9EfE7SbHJ1cLtthKkpW2OxsFXzSmxbhYbEkfNIyAyhle5p4SYyKRbz/jg==}
+  /@tailwindcss/typography/0.5.8_tailwindcss@3.2.2:
+    resolution: {integrity: sha512-xGQEp8KXN8Sd8m6R4xYmwxghmswrd0cPnNI2Lc6fmrC3OojysTBJJGSIVwPV56q4t6THFUK3HJ0EaWwpglSxWw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
