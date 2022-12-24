@@ -7,5 +7,11 @@
         "extensions",
         "rss",
         "blog"
+    ],
+    "grammarly.selectors": [
+        {
+            "language": "mdx",
+            "scheme": "file"
+        }
     ]
 }
