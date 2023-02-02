@@ -24,7 +24,7 @@ specifiers:
   reading-time: 1.5.0
   remark-shiki-twoslash: 3.1.0
   rollup: 3.12.1
-  satori: ^0.1.0
+  satori: ^0.2.0
   shiki: 0.14.0
   tailwindcss: 3.2.4
 
@@ -47,7 +47,7 @@ dependencies:
   react-icons: 4.6.0_react@18.2.0
   reading-time: 1.5.0
   rollup: 3.12.1
-  satori: 0.1.0
+  satori: 0.2.0
   shiki: 0.14.0
   tailwindcss: 3.2.4_postcss@8.4.18
 
@@ -3973,8 +3973,8 @@ packages:
       suf-log: 2.5.3
     dev: false
 
-  /satori/0.1.0:
-    resolution: {integrity: sha512-U079oj1Tb8RYlo3E/eKptWZBjUxiq43Ng3IxAgUqw5wfUfNItVIAR53RRKTzjHDV9sLu0JeNifbupzxZAgp4FQ==}
+  /satori/0.2.0:
+    resolution: {integrity: sha512-QSqOYYN0A25qO+smoGMXKlTj/B0F6hcfCjjinP2sXO8r3zrZYIovo+PADFF4aegZTMuQGS1/n/8nKd6h62ohDQ==}
     engines: {node: '>=16'}
     dependencies:
       '@shuding/opentype.js': 1.4.0-beta.0
