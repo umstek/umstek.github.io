@@ -26,17 +26,17 @@ specifiers:
   rollup: 3.15.0
   satori: ^0.3.0
   shiki: 0.14.1
-  tailwindcss: 3.2.6
+  tailwindcss: 3.2.7
 
 dependencies:
   '@astrojs/mdx': 0.16.2_astro@1.9.2+rollup@3.15.0
   '@astrojs/react': 1.2.2_3xleytyzprlgycb2ded54tx72i
   '@astrojs/rss': 1.2.1
   '@astrojs/sitemap': 1.0.1
-  '@astrojs/tailwind': 2.1.3_tailwindcss@3.2.6
+  '@astrojs/tailwind': 2.1.3_tailwindcss@3.2.7
   '@fontsource/jetbrains-mono': 4.5.12
   '@fontsource/lexend': 4.5.15
-  '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.6
+  '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
   astro: 1.9.2
   autoprefixer: 10.4.12_postcss@8.4.18
   mdast-util-to-string: 3.1.1
@@ -49,7 +49,7 @@ dependencies:
   rollup: 3.15.0
   satori: 0.3.0
   shiki: 0.14.1
-  tailwindcss: 3.2.6_postcss@8.4.18
+  tailwindcss: 3.2.7_postcss@8.4.18
 
 devDependencies:
   '@types/jest': 29.1.2
@@ -235,7 +235,7 @@ packages:
       zod: 3.19.1
     dev: false
 
-  /@astrojs/tailwind/2.1.3_tailwindcss@3.2.6:
+  /@astrojs/tailwind/2.1.3_tailwindcss@3.2.7:
     resolution: {integrity: sha512-W7UUUBJ3itDGcvJPvk+M/eNKFlLBYGODIzPsJ3zuehNzcJDhv/Ues+TzrpSvd0FaKfmV9Zlq3ZtToy96xxJU6Q==}
     peerDependencies:
       tailwindcss: ^3.0.24
@@ -243,7 +243,7 @@ packages:
       '@proload/core': 0.3.3
       autoprefixer: 10.4.12_postcss@8.4.18
       postcss: 8.4.18
-      tailwindcss: 3.2.6_postcss@8.4.18
+      tailwindcss: 3.2.7_postcss@8.4.18
     dev: false
 
   /@astrojs/telemetry/1.0.1:
@@ -733,7 +733,7 @@ packages:
     resolution: {integrity: sha512-ng4ut1z2MCBhK/NwDVwIQp3pAUOCs/KNaW3cBxdFB2xTDrOuo1xuNmpr/9HHFhxqIvHrs1NTH3KJg6q+JSy1Kw==}
     dev: true
 
-  /@tailwindcss/typography/0.5.9_tailwindcss@3.2.6:
+  /@tailwindcss/typography/0.5.9_tailwindcss@3.2.7:
     resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
@@ -742,7 +742,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.2.6_postcss@8.4.18
+      tailwindcss: 3.2.7_postcss@8.4.18
     dev: false
 
   /@types/acorn/4.0.6:
@@ -4300,8 +4300,8 @@ packages:
       tslib: 2.4.0
     dev: false
 
-  /tailwindcss/3.2.6_postcss@8.4.18:
-    resolution: {integrity: sha512-BfgQWZrtqowOQMC2bwaSNe7xcIjdDEgixWGYOd6AL0CbKHJlvhfdbINeAW76l1sO+1ov/MJ93ODJ9yluRituIw==}
+  /tailwindcss/3.2.7_postcss@8.4.18:
+    resolution: {integrity: sha512-B6DLqJzc21x7wntlH/GsZwEXTBttVSl1FtCzC8WP4oBc/NKef7kaax5jeihkkCEWc831/5NDJ9gRNDK6NEioQQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
