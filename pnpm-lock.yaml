@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/mdx': 0.16.2
+  '@astrojs/mdx': 0.17.0
   '@astrojs/react': 1.2.2
   '@astrojs/rss': 1.2.1
   '@astrojs/sitemap': 1.0.1
@@ -29,7 +29,7 @@ specifiers:
   tailwindcss: 3.2.7
 
 dependencies:
-  '@astrojs/mdx': 0.16.2_astro@1.9.2+rollup@3.16.0
+  '@astrojs/mdx': 0.17.0_astro@1.9.2+rollup@3.16.0
   '@astrojs/react': 1.2.2_3xleytyzprlgycb2ded54tx72i
   '@astrojs/rss': 1.2.1
   '@astrojs/sitemap': 1.0.1
@@ -148,8 +148,8 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/mdx/0.16.2_astro@1.9.2+rollup@3.16.0:
-    resolution: {integrity: sha512-ZNOdBW7ExnWM50+wubg8iw5J1jkUVkTHAJXQt3IwH4TVIOC3mQyr5hDPfN2/pwG9Ch9RNlI+7nsDFNaHY0AeaA==}
+  /@astrojs/mdx/0.17.0_astro@1.9.2+rollup@3.16.0:
+    resolution: {integrity: sha512-vy4m/mwzdfDK4jC9wraFLMVwx13eXBPC8r7nkO5s8YlcFX6IDcl2LKPurP3+/ibpTei9IPQLIZOufXRDO96SYg==}
     engines: {node: '>=16.12.0'}
     dependencies:
       '@astrojs/markdown-remark': 2.0.1_astro@1.9.2
