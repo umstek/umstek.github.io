@@ -23,13 +23,13 @@ specifiers:
   react-icons: ^4.6.0
   reading-time: 1.5.0
   remark-shiki-twoslash: 3.1.1
-  rollup: 3.20.0
+  rollup: 3.20.1
   satori: ^0.4.0
   shiki: 0.14.1
   tailwindcss: 3.2.7
 
 dependencies:
-  '@astrojs/mdx': 0.18.2_astro@1.9.2+rollup@3.20.0
+  '@astrojs/mdx': 0.18.2_astro@1.9.2+rollup@3.20.1
   '@astrojs/react': 1.2.2_3xleytyzprlgycb2ded54tx72i
   '@astrojs/rss': 1.2.1
   '@astrojs/sitemap': 1.2.1
@@ -46,7 +46,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.6.0_react@18.2.0
   reading-time: 1.5.0
-  rollup: 3.20.0
+  rollup: 3.20.1
   satori: 0.4.0
   shiki: 0.14.1
   tailwindcss: 3.2.7_postcss@8.4.18
@@ -148,14 +148,14 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/mdx/0.18.2_astro@1.9.2+rollup@3.20.0:
+  /@astrojs/mdx/0.18.2_astro@1.9.2+rollup@3.20.1:
     resolution: {integrity: sha512-eSR6R62I5cwM6AH8r4UhyBwcV/KKLaZ2siXDA9QR9O4uzUBRnT4gwvoGOvaqpjZCvdNJ2ThaVjePH4DFvxFhaQ==}
     engines: {node: '>=16.12.0'}
     dependencies:
       '@astrojs/markdown-remark': 2.1.1_astro@1.9.2
       '@astrojs/prism': 2.1.1
       '@mdx-js/mdx': 2.3.0
-      '@mdx-js/rollup': 2.3.0_rollup@3.20.0
+      '@mdx-js/rollup': 2.3.0_rollup@3.20.1
       acorn: 8.8.1
       es-module-lexer: 1.2.0
       estree-util-visit: 1.2.0
@@ -638,14 +638,14 @@ packages:
       - supports-color
     dev: false
 
-  /@mdx-js/rollup/2.3.0_rollup@3.20.0:
+  /@mdx-js/rollup/2.3.0_rollup@3.20.1:
     resolution: {integrity: sha512-wLvRfJS/M4UmdqTd+WoaySEE7q4BIejYf1xAHXYvtT1du/1Tl/z2450Gg2+Hu7fh05KwRRiehiTP9Yc/Dtn0fA==}
     peerDependencies:
       rollup: '>=2'
     dependencies:
       '@mdx-js/mdx': 2.3.0
-      '@rollup/pluginutils': 5.0.2_rollup@3.20.0
-      rollup: 3.20.0
+      '@rollup/pluginutils': 5.0.2_rollup@3.20.1
+      rollup: 3.20.1
       source-map: 0.7.4
       vfile: 5.3.5
     transitivePeerDependencies:
@@ -705,7 +705,7 @@ packages:
       tsm: 2.2.2
     dev: false
 
-  /@rollup/pluginutils/5.0.2_rollup@3.20.0:
+  /@rollup/pluginutils/5.0.2_rollup@3.20.1:
     resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -717,7 +717,7 @@ packages:
       '@types/estree': 1.0.0
       estree-walker: 2.0.2
       picomatch: 2.3.1
-      rollup: 3.20.0
+      rollup: 3.20.1
     dev: false
 
   /@shuding/opentype.js/1.4.0-beta.0:
@@ -3971,8 +3971,8 @@ packages:
       fsevents: 2.3.2
     dev: false
 
-  /rollup/3.20.0:
-    resolution: {integrity: sha512-YsIfrk80NqUDrxrjWPXUa7PWvAfegZEXHuPsEZg58fGCdjL1I9C1i/NaG+L+27kxxwkrG/QEDEQc8s/ynXWWGQ==}
+  /rollup/3.20.1:
+    resolution: {integrity: sha512-sz2w8cBJlWQ2E17RcpvHuf4sk2BQx4tfKDnjNPikEpLEevrbIAR7CH3PGa2hpPwWbNgPaA9yh9Jzljds5bc9zg==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
