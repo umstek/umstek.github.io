@@ -10,7 +10,7 @@ specifiers:
   '@fontsource/lexend': 4.5.15
   '@tailwindcss/typography': 0.5.9
   '@types/jest': ^29.1.2
-  '@types/react': 18.0.29
+  '@types/react': 18.0.30
   '@types/react-dom': 18.0.11
   '@typescript/twoslash': 3.2.1
   astro: 1.9.2
@@ -30,7 +30,7 @@ specifiers:
 
 dependencies:
   '@astrojs/mdx': 0.18.2_astro@1.9.2+rollup@3.20.2
-  '@astrojs/react': 1.2.2_dgjuf3aqqre24bd27wvsbnxpoe
+  '@astrojs/react': 1.2.2_l7jektmlbfkfzseoswiw3ervwq
   '@astrojs/rss': 1.2.1
   '@astrojs/sitemap': 1.2.1
   '@astrojs/tailwind': 2.1.3_tailwindcss@3.2.7
@@ -53,7 +53,7 @@ dependencies:
 
 devDependencies:
   '@types/jest': 29.1.2
-  '@types/react': 18.0.29
+  '@types/react': 18.0.30
   '@types/react-dom': 18.0.11
   '@typescript/twoslash': 3.2.1
   remark-shiki-twoslash: 3.1.1
@@ -203,7 +203,7 @@ packages:
       prismjs: 1.29.0
     dev: false
 
-  /@astrojs/react/1.2.2_dgjuf3aqqre24bd27wvsbnxpoe:
+  /@astrojs/react/1.2.2_l7jektmlbfkfzseoswiw3ervwq:
     resolution: {integrity: sha512-ab9fYvzkC74J7N+M3DWQuZgwu7sYjW0aLO3sEAdCX/jZZz+0BhrqS8m9QjtGJyQK/niF4tgJjpPfadopxKc56g==}
     engines: {node: ^14.18.0 || >=16.12.0}
     peerDependencies:
@@ -214,7 +214,7 @@ packages:
     dependencies:
       '@babel/core': 7.19.3
       '@babel/plugin-transform-react-jsx': 7.19.0_@babel+core@7.19.3
-      '@types/react': 18.0.29
+      '@types/react': 18.0.30
       '@types/react-dom': 18.0.11
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -872,10 +872,10 @@ packages:
   /@types/react-dom/18.0.11:
     resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
     dependencies:
-      '@types/react': 18.0.29
+      '@types/react': 18.0.30
 
-  /@types/react/18.0.29:
-    resolution: {integrity: sha512-wXHktgUABxplw1+UnljseDq4+uztQyp2tlWZRIxHlpchsCFqiYkvaDS8JR7eKOQm8wziTH/el5qL7D6gYNkYcw==}
+  /@types/react/18.0.30:
+    resolution: {integrity: sha512-AnME2cHDH11Pxt/yYX6r0w448BfTwQOLEhQEjCdwB7QskEI7EKtxhGUsExTQe/MsY3D9D5rMtu62WRocw9A8FA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
