@@ -56,8 +56,8 @@ dependencies:
     specifier: 3.21.0
     version: 3.21.0
   satori:
-    specifier: ^0.6.0
-    version: 0.6.0
+    specifier: ^0.7.0
+    version: 0.7.0
   shiki:
     specifier: 0.14.1
     version: 0.14.1
@@ -4097,8 +4097,8 @@ packages:
       suf-log: 2.5.3
     dev: false
 
-  /satori@0.6.0:
-    resolution: {integrity: sha512-fbH0A4qvJG0qxZdnoLro9DlLwuPm/NQ78x0OWHqEm/94noWwP5BMolBeO2pAYkMxp9fD6ayKgvoaq54rrMGQZQ==}
+  /satori@0.7.0:
+    resolution: {integrity: sha512-PGd9RPgYh2dkDJVdpc0X5Jm0WLdwRLrHo7HSDLCZ72RDp0eOMojMOFf7ukDlJ2MB7afWd2YFiR6PywoFnaeVHg==}
     engines: {node: '>=16'}
     dependencies:
       '@shuding/opentype.js': 1.4.0-beta.0
