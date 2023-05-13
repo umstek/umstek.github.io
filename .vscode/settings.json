@@ -6,7 +6,8 @@
         "config",
         "extensions",
         "rss",
-        "blog"
+        "blog",
+        "deps"
     ],
     "grammarly.selectors": [
         {
