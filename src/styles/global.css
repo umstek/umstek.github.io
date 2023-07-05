@@ -1,5 +1,5 @@
-@import '@fontsource/jetbrains-mono/variable';
-@import '@fontsource/lexend/variable';
+@import '@fontsource-variable/jetbrains-mono';
+@import '@fontsource-variable/lexend';
 @import 'shiki.css';
 @import 'alert.css';
 @import 'obsolete.css';
