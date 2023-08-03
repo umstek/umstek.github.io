@@ -19,7 +19,7 @@
     "@fontsource-variable/jetbrains-mono": "^5.0.5",
     "@fontsource-variable/lexend": "^5.0.4",
     "@tailwindcss/typography": "0.5.9",
-    "astro": "2.9.7",
+    "astro": "2.10.1",
     "autoprefixer": "^10.4.14",
     "mdast-util-to-string": "3.2.0",
     "postcss": "^8.4.24",
