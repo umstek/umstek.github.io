@@ -1,10 +1,21 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "/home/hexmint/src/astro-theme-cactus",
+    "jsx": "react-jsx",
+    "lib": ["DOM"],
     "paths": {
-      "~*": ["./src/*"],
-      "::*": ["./src/components/*"]
-    }
-  }
+      "@/assets/*": ["src/assets/*"],
+      "@/components/*": ["src/components/*.astro"],
+      "::*": ["src/components/react/*"],
+      "@/layouts/*": ["src/layouts/*.astro"],
+      "@/utils": ["src/utils/index.ts"],
+      "@/stores/*": ["src/stores/*"],
+      "@/types": ["src/types.ts"],
+      "@/site-config": ["src/site.config.ts"]
+    },
+    "jsxImportSource": "react"
+  },
+  "include": ["src", "*.ts"],
+  "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"]
 }

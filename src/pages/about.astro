@@ -1,0 +1,44 @@
+---
+import PageLayout from "@/layouts/Base";
+import { siteConfig } from "@/site-config";
+
+const meta = {
+  title: "About",
+  description: "About me",
+};
+---
+
+<PageLayout meta={meta}>
+  <div class="space-y-6">
+    <h1 class="title">About the author</h1>
+    <p>
+      Hi, I'm {siteConfig.author}.
+    </p>
+    <p>
+      I started programming as a hobby, by accident when I was around 14y or so. I had fun
+      programming with my friends, back in the school days. In the beginning, I coded batch scripts,
+      desktop applications with VB6/VB.NET, with no internet or even documentation most of the time.
+      We were good at problem solving. However, I couldn't pursue this hobby for long, because of
+      school, exams, etc.
+    </p><p>
+      Anyway, before attending college, I learned a bit of Java, and C# too. From college I learned
+      Software Engineering, Networking, DBMS, Algorithms, AI/ML, etc. during my Computer Science and
+      Engineering degree. At the same time I taught myself another bunch of programming languages,
+      some mainstream frameworks and tools like php/symfony, MySQL, JavaScript, Python, Git,
+      Blockchain concept, to name a few.
+    </p>
+    <p>
+      I like everything but get bored pretty easily. I have loved every subject in some stage of my
+      life, but the ones I still love are... I don't know. Probably linguistics? And that includes
+      programming languages, music, and slightly mathematics (I'm terrible at it); I believe
+      everything is a language at some level. I like cryptography too. My latest interest, however,
+      is philosophy.
+    </p>
+    <p>
+      Currently, I'm working as a Software Engineer (Associate Tech Lead, to be exact), living in a
+      bankrupt 3rd world country in Asia. My usual tech stack is TypeScript React, NodeJS, and
+      MongoDB, although I'm fine with anything, as long as it is not outdated, or overhyped. I like
+      functional (+reactive) programming, my favorite language is Rust and I'm still learning it.
+    </p>
+  </div>
+</PageLayout>
