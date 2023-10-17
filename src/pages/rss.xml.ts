@@ -1,20 +1,19 @@
-import rss from '@astrojs/rss';
+import rss from "@astrojs/rss";
+import { siteConfig } from "@/site-config";
+import { getAllPosts } from "@/utils";
 
-import { SITE_TITLE, SITE_DESCRIPTION, SITE } from '~config';
+export const GET = async () => {
+  const posts = await getAllPosts();
 
-const postImportResult = import.meta.glob('./blog/**/*.{md,mdx}', { eager: true });
-const posts = Object.values(postImportResult);
-
-export const get = () =>
-  rss({
-    title: SITE_TITLE,
-    description: SITE_DESCRIPTION,
-    site: SITE,
-    items: posts
-      .filter((p: any) => import.meta.env.DEV || !p.frontmatter.draft)
-      .map((post: any) => ({
-        link: `${post.url}/`,
-        title: post.frontmatter.title,
-        pubDate: post.frontmatter.publishedAt,
-      })),
+  return rss({
+    title: siteConfig.title,
+    description: siteConfig.description,
+    site: import.meta.env.SITE,
+    items: posts.map((post) => ({
+      title: post.data.title,
+      description: post.data.description,
+      pubDate: post.data.publishedAt,
+      link: `blog/${post.slug}`,
+    })),
   });
+};

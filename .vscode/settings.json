@@ -1,13 +1,7 @@
 {
     "dotenv.enableAutocloaking": false,
     "conventionalCommits.scopes": [
-        "readme",
-        "ui",
-        "config",
-        "extensions",
-        "rss",
-        "blog",
-        "deps"
+        "project"
     ],
     "grammarly.selectors": [
         {
