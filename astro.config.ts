@@ -8,6 +8,11 @@ import prefetch from '@astrojs/prefetch';
 import remarkShikiTwoslash from 'remark-shiki-twoslash';
 import remarkUnwrapImages from 'remark-unwrap-images';
 import { remarkReadingTime } from './src/utils/remark-reading-time';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // https://astro.build/config
 export default defineConfig({
@@ -39,6 +44,18 @@ export default defineConfig({
     plugins: [rawFonts(['.ttf', '.woff', '.woff2'])],
     optimizeDeps: {
       exclude: ['@resvg/resvg-js'],
+    },
+    resolve: {
+      alias: {
+        '::*': path.resolve(__dirname, './src/components/react/*'),
+        '@/assets/*': path.resolve(__dirname, './src/assets/*'),
+        '@/components/*': path.resolve(__dirname, './src/components/*.astro'),
+        '@/layouts/*': path.resolve(__dirname, './src/layouts/*.astro'),
+        '@/utils': path.resolve(__dirname, './src/utils/index.ts'),
+        '@/stores/*': path.resolve(__dirname, './src/stores/*'),
+        '@/types': path.resolve(__dirname, './src/types.ts'),
+        '@/site-config': path.resolve(__dirname, './src/site.config.ts'),
+      },
     },
   },
 });
