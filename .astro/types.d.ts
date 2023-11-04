@@ -241,13 +241,13 @@ declare module 'astro:content' {
   collection: "post";
   data: InferEntrySchema<"post">
 } & { render(): Render[".mdx"] };
-"what-if-backend-code-looked-like-react-1/index.md": {
-	id: "what-if-backend-code-looked-like-react-1/index.md";
+"what-if-backend-code-looked-like-react-1/index.mdx": {
+	id: "what-if-backend-code-looked-like-react-1/index.mdx";
   slug: "what-if-backend-code-looked-like-react-1";
   body: string;
   collection: "post";
   data: InferEntrySchema<"post">
-} & { render(): Render[".md"] };
+} & { render(): Render[".mdx"] };
 "what-if-backend-code-looked-like-react-2/index.mdx": {
 	id: "what-if-backend-code-looked-like-react-2/index.mdx";
   slug: "what-if-backend-code-looked-like-react-2";

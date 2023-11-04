@@ -1,12 +1,12 @@
 ---
 title: Trying-out Tailwind CSS with Parcel
 description: How to get started with Tailwind CSS, Parcel bundler, TypeScript and React
-publishedAt: "2019-11-27 16:00:00 +0530"
-initialDraftAt: "2019-11-27 12:00:00 +0530"
-updatedAt: "2022-10-29 09:30:00 +0530"
+publishedAt: '2019-11-27 16:00:00 +0530'
+initialDraftAt: '2019-11-27 12:00:00 +0530'
+updatedAt: '2022-10-29 09:30:00 +0530'
 coverImage:
-  src: "./vitalik-vynarchyk-0PePaKnEmuM-unsplash.jpg"
-  alt: "cover"
+  src: './vitalik-vynarchyk-0PePaKnEmuM-unsplash.jpg'
+  alt: 'cover'
 category: programming
 tags:
   - tailwind
@@ -111,8 +111,8 @@ utility classes. Utility classes are [not the only way](https://tailwindcss.com/
 Tailwind styles. Since we're trying Tailwind with React, utility classes is enough for us right now.
 
 ```tsx
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 function App() {
   return (
@@ -124,7 +124,7 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("app")!).render(<App />);
+ReactDOM.createRoot(document.getElementById('app')!).render(<App />);
 ```
 
 Create `main.css` file and add the below. These are tailwind directives. This is needed to inject tailwind
@@ -185,124 +185,11 @@ names in `className` rather than in CSS.)
 
 <div class="alert warn">Faded content is for an older version and not applicable anymore.</div>
 
-<div class="obsolete">
-
-Nothing changed. It still shows the hover color on press!
-What could have gone wrong? It is actually documented right below where the example for `active:` is. We have to add
-`active` variant to the Tailwind config file `tailwind.config.js`.
-
-```js
-module.exports = {
-  // ...
-  variants: {
-    backgroundColor: ["active", "responsive", "hover", "focus"],
-  },
-  // ...
-};
-```
-
-By default,
-[some of the variants are disabled](https://tailwindcss.com/docs/pseudo-class-variants#default-variants-reference) due
-to file-size considerations. Even with these disabled, Tailwind is quite
-[large](https://tailwindcss.com/docs/controlling-file-size). 😕 Anyway, now I configured variants as the above and ran
-`yarn clean` to clean temp files and started again. We clearly configured tailwind! Or… did we? There is an order how we
-should organize variants, because,
-[Tailwind is no magic](https://tailwindcss.com/docs/configuring-variants/#ordering-variants); it generates CSS. CSS
-precedence applies here too. I enabled all the variants in the correct order for all the styles with the below. We don't
-have file size considerations for this test so that is fine.
-
-```js
-module.exports = {
-  variants: [
-    "responsive",
-    "group-hover",
-    "focus-within",
-    "first",
-    "last",
-    "odd",
-    "even",
-    "hover",
-    "focus",
-    "active",
-    "visited",
-    "disabled",
-  ],
-};
-```
-
-</div>
-
 It works.
 
 ![active:bg-blue-900](./active.png)
 
 ## Next steps…
-
-<div class="obsolete">
-
-Let's see the file sizes…
-
-![5.5 MB](./size.png)
-
-Gosh! It's huge. This is not the size you want your production CSS bundle to be. We are using a lot of unwanted styles.
-But how do we reduce the bundle?
-[Manually selecting](https://tailwindcss.com/docs/controlling-file-size#removing-unused-theme-values) what is necessary
-using the configuration file is hard. We have to try
-[something else](https://tailwindcss.com/docs/controlling-file-size#setting-up-purgecss).
-
-> Mozilla's [Firefox Send](https://send.firefox.com/) is built with Tailwind, yet somehow their CSS is only 13.1kb
-> minified, and only 4.7kb gzipped! How?
-> They're using [Purgecss](https://www.purgecss.com/),…
-
-~~Let's add `purgecss`. Run `yarn add @fullhuman/postcss-purgecss -D`. Unfortunately, parcel currently fails to auto
-install postcss plugins just by looking at its config. I don't think it's in parcel's scope.~~
-
-**Update: As of `tailwindcss` version `1.4.5`, we don't need to configure purgecss this way. So do not install
-`purgecss` and keep your `postcss.config.js` intact. (The old way would also work, anyway.)**
-
-```js
-// const purgecss = require("@fullhuman/postcss-purgecss")({
-//   // Specify the paths to all of the template files in your project
-//   content: [
-//     "./src/**/*.html",
-//     "./src/**/*.{t,j}sx"
-//     // etc.
-//   ],
-//   // Include any special characters you're using in this regular expression
-//   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-// });
-module.exports = {
-  plugins: [
-    require("tailwindcss"),
-    require("autoprefixer"),
-    require("postcss-nested"),
-    // ...(process.env.NODE_ENV === "production" ? [purgecss] : [])
-  ],
-};
-```
-
-**Update: But edit the `tailwind.config.css` to look like the below (note the _purge_):**
-
-```js
-module.exports = {
-  purge: ["./src/**/*.html", "./src/**/*.{j,t}sx"],
-  theme: {
-    // ...
-  },
-  variants: [
-    //...
-  ],
-};
-```
-
-Now, let's check the file sizes…
-
-![2 KB](./reduced-size.png)
-
-It's down to ~~two~~ (**update: a little larger than that**) kilobytes. That's because we only have a few classes used.
-So what exactly does purgecss do?
-
-</div>
 
 Now, let's check the file sizes… It's only a few kilobytes!
 
@@ -328,26 +215,7 @@ There isn't much to complain about the library but,
 
 - Advanced controls such as switches, calendars, tables, floating notifications, modals etc. are not available.
 
-<div class="obsolete">
-
-- It can get unintuitive sometimes to configure.
-- ~~Gradients~~, icons, ~~fonts~~, ~~animations and transitions~~ aren't built-in. Adding them can be complicated.
-- Generated CSS can get quite large if you're using a lot of features. Using purgecss eliminates this but it's kind of
-  ugly because it does a string search; not proper parsing. But, again, it doesn't know what template language/framework
-  we're using.
-- Lack of IDE support (yet). But there are vscode extensions, but none for react
-  (**Update: bradlc.vscode-tailwindcss worked for react**).
-
-</div>
-
 ## Demo
-
-<div class="obsolete">
-
-The demo below uses Tailwind plugins `tailwindcss-transforms` and `tailwindcss-transitions` because tailwind doesn't
-support transforms and transitions out-of-the-box.
-
-</div>
 
 ![Demo](./demo.gif)
 
@@ -367,19 +235,19 @@ documentation is your friend.
 
 ## Resources
 
-Official: https://tailwindcss.com/resources
+Official: [https://tailwindcss.com/resources](https://tailwindcss.com/resources)
 
-Official (paid): https://tailwindui.com/
+Official (paid): [https://tailwindui.com/](https://tailwindui.com/)
 
-Official: https://headlessui.com/
+Official: [https://headlessui.com/](https://headlessui.com/)
 
-https://github.com/aniftyco/awesome-tailwindcss
+[https://github.com/aniftyco/awesome-tailwindcss](https://github.com/aniftyco/awesome-tailwindcss)
 
-https://tailblocks.cc/
+[https://tailblocks.cc/](https://tailblocks.cc/)
 
-https://daisyui.com/
+[https://daisyui.com/](https://daisyui.com/)
 
-Doesn't use tailwind, but complementary: https://www.radix-ui.com/
+Doesn't use tailwind, but complementary: [https://www.radix-ui.com/](https://www.radix-ui.com/)
 
 <div class="alert error">I'm not affiliated with any project mentioned above.</div>
 
