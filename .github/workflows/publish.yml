@@ -44,6 +44,9 @@ jobs:
           version: 8
           run_install: true
 
+      - name: list files
+        run: ls && echo $NODE_ENV
+
       - name: Run build
         run: pnpm build
 
