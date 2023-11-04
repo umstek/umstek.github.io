@@ -47,12 +47,12 @@ export default defineConfig({
     },
     resolve: {
       alias: {
-        '::*': path.resolve(__dirname, './src/components/react/*'),
-        '@/assets/*': path.resolve(__dirname, './src/assets/*'),
-        '@/components/*': path.resolve(__dirname, './src/components/*.astro'),
-        '@/layouts/*': path.resolve(__dirname, './src/layouts/*.astro'),
+        '::*': path.resolve(__dirname, './src/components/react'),
+        '@/assets': path.resolve(__dirname, './src/assets'),
+        '@/components': path.resolve(__dirname, './src/components'),
+        '@/layouts': path.resolve(__dirname, './src/layouts'),
         '@/utils': path.resolve(__dirname, './src/utils/index.ts'),
-        '@/stores/*': path.resolve(__dirname, './src/stores/*'),
+        '@/stores': path.resolve(__dirname, './src/stores'),
         '@/types': path.resolve(__dirname, './src/types.ts'),
         '@/site-config': path.resolve(__dirname, './src/site.config.ts'),
       },
