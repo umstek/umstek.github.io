@@ -33,22 +33,10 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
-      - name: install node
-        uses: actions/setup-node@v4
+      - name: Install, build, and upload your site
+        uses: withastro/action@v1
         with:
           node-version: 20
-
-      - name: install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-          run_install: true
-
-      - name: list files
-        run: ls && echo $NODE_ENV
-
-      - name: Run build
-        run: pnpm build
 
   deploy:
     needs: build

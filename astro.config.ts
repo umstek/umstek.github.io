@@ -11,13 +11,13 @@ import { remarkReadingTime } from './src/utils/remark-reading-time';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 // https://astro.build/config
 export default defineConfig({
   // ! Please remember to replace the following site property with your own domain
-  site: 'https://umstek.github.io/',
+  site: 'https://umstek.github.io',
   markdown: {
     remarkPlugins: [
       [remarkShikiTwoslash, { themes: ['github-dark', 'github-light'] }],
@@ -45,18 +45,18 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ['@resvg/resvg-js'],
     },
-    resolve: {
-      alias: {
-        '::*': path.resolve(__dirname, './src/components/react/*.tsx'),
-        '@/assets/*': path.resolve(__dirname, './src/assets/*'),
-        '@/components/*': path.resolve(__dirname, './src/components/*.astro'),
-        '@/layouts/*': path.resolve(__dirname, './src/layouts/*.astro'),
-        '@/utils': path.resolve(__dirname, './src/utils/index.ts'),
-        '@/stores/*': path.resolve(__dirname, './src/stores/*'),
-        '@/types': path.resolve(__dirname, './src/types.ts'),
-        '@/site-config': path.resolve(__dirname, './src/site.config.ts'),
-      },
-    },
+    // resolve: {
+    //   alias: {
+    //     '::*': path.resolve(__dirname, './src/components/react/*.tsx'),
+    //     '@/assets/*': path.resolve(__dirname, './src/assets/*'),
+    //     '@/components/*': path.resolve(__dirname, './src/components/*.astro'),
+    //     '@/layouts/*': path.resolve(__dirname, './src/layouts/*.astro'),
+    //     '@/utils': path.resolve(__dirname, './src/utils/index.ts'),
+    //     '@/stores/*': path.resolve(__dirname, './src/stores/*'),
+    //     '@/types': path.resolve(__dirname, './src/types.ts'),
+    //     '@/site-config': path.resolve(__dirname, './src/site.config.ts'),
+    //   },
+    // },
   },
 });
 
