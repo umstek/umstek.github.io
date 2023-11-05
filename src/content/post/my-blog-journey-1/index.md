@@ -1,7 +1,7 @@
 ---
-title: "My React+Markdown blog journey (Part 1)"
-description: "Me trying to create the perfect blog, and failing"
-publishedAt: "2019-01-21 10:30:00 +0530"
+title: 'My React+Markdown blog journey (Part 1)'
+description: 'Me trying to create the perfect blog, and failing'
+publishedAt: '2019-01-21 10:30:00 +0530'
 category: programming
 tags:
   - blog
@@ -13,8 +13,8 @@ tags:
 I had the idea of creating a blog since at least 2010. In fact, I **did** create
 several blogs (<https://umstek.wordpress.com/>, <http://www.umstek.co.vu/>,
 <https://bunnydebugs.wordpress.com/>) and some of them even had custom domains,
-I got [for](https://codotvu.co/ "co.vu")
-[free](https://www.freenom.com/en/index.html?lang=en "Freenom"). After becoming
+I got [for](https://codotvu.co/ 'co.vu')
+[free](https://www.freenom.com/en/index.html?lang=en 'Freenom'). After becoming
 more of a programmer than a multimedia guy, I decided that I needed a custom
 blog -- or a website.
 
@@ -23,7 +23,7 @@ what I have developed, I decided to go with [Jekyll](https://jekyllrb.com/)
 on [GitHub pages](https://pages.github.com/). Selecting GitHub pages as the
 hosting space is the best matching choice because of several reasons. I only
 need to add a file to the remote repository hosted on git, with virtually
-unlimited space, to [trigger a build](https://travis-ci.org/ "Travis-CI") and
+unlimited space, to [trigger a build](https://travis-ci.org/ 'Travis-CI') and
 update my blog. I can even use GitHub's web UI to write a post! As far as the
 limitations are concerned, I didn't need any database connectivity or use of
 any APIs that needed authentication.

@@ -45,16 +45,16 @@ export type WebmentionsChildren = {
   author: Author | null;
   url: string;
   published?: string | null;
-  "wm-received": string;
-  "wm-id": number;
-  "wm-source": string;
-  "wm-target": string;
-  "wm-protocol": string;
+  'wm-received': string;
+  'wm-id': number;
+  'wm-source': string;
+  'wm-target': string;
+  'wm-protocol': string;
   syndication?: string[] | null;
   content?: Content | null;
-  "mention-of": string;
-  "wm-property": string;
-  "wm-private": boolean;
+  'mention-of': string;
+  'wm-property': string;
+  'wm-private': boolean;
   rels?: Rels | null;
   name?: string | null;
   photo?: string[] | null;
@@ -69,7 +69,7 @@ export type Author = {
 };
 
 export type Content = {
-  "content-type": string;
+  'content-type': string;
   value: string;
   html: string;
   text: string;
@@ -80,6 +80,6 @@ export type Rels = {
 };
 
 export type Summary = {
-  "content-type": string;
+  'content-type': string;
   value: string;
 };

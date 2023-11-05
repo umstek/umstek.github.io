@@ -1,7 +1,7 @@
 ---
-title: "Hello, world!"
-description: "A placeholder post writing hello world programs in multiple languages"
-publishedAt: "2016-09-03 13:42:22 +0530"
+title: 'Hello, world!'
+description: 'A placeholder post writing hello world programs in multiple languages'
+publishedAt: '2016-09-03 13:42:22 +0530'
 category: programming
 tags:
   - hello-world
@@ -63,5 +63,5 @@ class Main {
 JavaScript:
 
 ```javascript
-console.log("Hello, world!");
+console.log('Hello, world!');
 ```

@@ -1,11 +1,11 @@
 ---
 title: What if backend code looked like React? - Part II/JSX
 description: Making JSX work with Deno
-initialDraftAt: "2022-09-19 22:00:00 +0530"
-publishedAt: "2022-09-18 09:00:00 +0530"
+initialDraftAt: '2022-09-19 22:00:00 +0530'
+publishedAt: '2022-09-18 09:00:00 +0530'
 coverImage:
-  src: "./cover.png"
-  alt: "cover"
+  src: './cover.png'
+  alt: 'cover'
 category: programming
 tags:
   - jsx
@@ -74,14 +74,14 @@ and get the output
 Let's edit our server.
 
 ```tsx {6,8}
-import { serve } from "https://deno.land/std@0.156.0/http/server.ts";
+import { serve } from 'https://deno.land/std@0.156.0/http/server.ts';
 
 const port = 8080;
 
 const handler = (request: Request): Response => {
   const body = (
     <json space={2}>
-      {`Your user-agent is:\n\n${request.headers.get("user-agent") ?? "Unknown"}`}
+      {`Your user-agent is:\n\n${request.headers.get('user-agent') ?? 'Unknown'}`}
     </json>
   );
 
@@ -115,8 +115,8 @@ To run, we need to import `b` into the file where the server is defined, just li
 So add an import to `b` on the second line of `index.tsx`. Remember, you don't call it manually; it just sits there.
 
 ```tsx {1}
-import { serve } from "https://deno.land/std@0.156.0/http/server.ts";
-import { b } from "./renderer/jsx-runtime/index.ts";
+import { serve } from 'https://deno.land/std@0.156.0/http/server.ts';
+import { b } from './renderer/jsx-runtime/index.ts';
 
 const port = 8080;
 
@@ -140,10 +140,10 @@ So. Apparently, there are 3 arguments. First one is the tag name, second one is 
 ```ts
 export function b(tag: string, props: { [x: string]: any }, children: unknown) {
   switch (tag) {
-    case "json":
+    case 'json':
       return JSON.stringify(children, props.replacer, props.space);
     default:
-      return "";
+      return '';
   }
 }
 ```
@@ -158,7 +158,7 @@ It would be clearer if we used an object in `index.tsx`.
 
 ```tsx
 // ...
-<json space={2}>{{ hello: "world" + 1 }}</json>
+<json space={2}>{{ hello: 'world' + 1 }}</json>
 // ...
 ```
 
@@ -235,15 +235,15 @@ and types to `types.d.ts`.
 Let's also edit the `index.tsx` file.
 
 ```tsx {7,9}
-import { serve } from "https://deno.land/std@0.156.0/http/server.ts";
-import { b } from "./renderer/jsx-runtime/index.ts";
+import { serve } from 'https://deno.land/std@0.156.0/http/server.ts';
+import { b } from './renderer/jsx-runtime/index.ts';
 
 const port = 8080;
 
 const handler = (request: Request): Response => {
   return (
     <response status={200}>
-      <json space={2}>{{ hello: "world" + 1 }}</json>
+      <json space={2}>{{ hello: 'world' + 1 }}</json>
     </response>
   );
 };

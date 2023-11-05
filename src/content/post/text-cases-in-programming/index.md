@@ -1,7 +1,7 @@
 ---
-title: "Text Cases in Programming"
-description: "Camel, Pascal, Snake, what do they even mean?"
-publishedAt: "2017-01-16 11:12:22 +0530"
+title: 'Text Cases in Programming'
+description: 'Camel, Pascal, Snake, what do they even mean?'
+publishedAt: '2017-01-16 11:12:22 +0530'
 category: programming
 tags:
   - conventions

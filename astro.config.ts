@@ -8,8 +8,8 @@ import prefetch from '@astrojs/prefetch';
 import remarkShikiTwoslash from 'remark-shiki-twoslash';
 import remarkUnwrapImages from 'remark-unwrap-images';
 import { remarkReadingTime } from './src/utils/remark-reading-time';
-import path from 'path';
-import { fileURLToPath } from 'url';
+// import path from 'path';
+// import { fileURLToPath } from 'url';
 
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);

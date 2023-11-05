@@ -1,12 +1,10 @@
 {
-    "dotenv.enableAutocloaking": false,
-    "conventionalCommits.scopes": [
-        "project"
-    ],
-    "grammarly.selectors": [
-        {
-            "language": "mdx",
-            "scheme": "file"
-        }
-    ]
+  "dotenv.enableAutocloaking": false,
+  "conventionalCommits.scopes": ["project"],
+  "grammarly.selectors": [
+    {
+      "language": "mdx",
+      "scheme": "file"
+    }
+  ]
 }

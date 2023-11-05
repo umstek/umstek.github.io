@@ -2,16 +2,16 @@
 module.exports = {
   printWidth: 100,
   semi: true,
-  trailingComma: "all",
-  singleQuote: false,
+  trailingComma: 'all',
+  singleQuote: true,
   tabWidth: 2,
   useTabs: false,
-  plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss" /* Must come last */],
+  plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss' /* Must come last */],
   overrides: [
     {
-      files: "*.astro",
+      files: '*.astro',
       options: {
-        parser: "astro",
+        parser: 'astro',
       },
     },
   ],

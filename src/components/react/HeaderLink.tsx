@@ -9,7 +9,7 @@ function HeaderLink(props: HeaderProps) {
   return (
     <a
       href={href}
-      className={[className, "px-4 opacity-100 hover:text-rose-600"].filter(Boolean).join(" ")}
+      className={[className, 'px-4 opacity-100 hover:text-rose-600'].filter(Boolean).join(' ')}
       {...props}
     >
       {children}
