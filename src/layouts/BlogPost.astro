@@ -1,13 +1,13 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import type { CollectionEntry } from 'astro:content';
 
-import BaseLayout from "./Base.astro";
-import BlogHero from "@/components/blog/Hero";
-import TOC from "@/components/blog/TOC";
-import WebMentions from "@/components/blog/webmentions/index";
+import BaseLayout from './Base.astro';
+import BlogHero from '../components/blog/Hero.astro';
+import TOC from '../components/blog/TOC.astro';
+import WebMentions from '../components/blog/webmentions/index.astro';
 
 interface Props {
-  post: CollectionEntry<"post">;
+  post: CollectionEntry<'post'>;
 }
 
 const { post } = Astro.props;
@@ -39,8 +39,8 @@ const { headings } = await post.render();
   async></script>
 
 <script>
-  const scrollBtn = document.getElementById("to-top-btn") as HTMLButtonElement;
-  const targetHeader = document.getElementById("blog-hero") as HTMLDivElement;
+  const scrollBtn = document.getElementById('to-top-btn') as HTMLButtonElement;
+  const targetHeader = document.getElementById('blog-hero') as HTMLDivElement;
 
   function callback(entries: IntersectionObserverEntry[]) {
     entries.forEach((entry) => {
@@ -49,18 +49,18 @@ const { headings } = await post.render();
     });
   }
 
-  scrollBtn.addEventListener("click", () => {
-    document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+  scrollBtn.addEventListener('click', () => {
+    document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   const observer = new IntersectionObserver(callback);
   observer.observe(targetHeader);
 
   document
-    .getElementById("giscus-script")
+    .getElementById('giscus-script')
     ?.setAttribute(
-      "data-theme",
-      document.documentElement.classList.contains("dark") ? "dark" : "light",
+      'data-theme',
+      document.documentElement.classList.contains('dark') ? 'dark' : 'light',
     );
 </script>
 

@@ -1,10 +1,10 @@
 ---
-import type { Page, GetStaticPaths } from "astro";
-import type { CollectionEntry } from "astro:content";
-import PageLayout from "@/layouts/Base";
-import PostPreview from "@/components/blog/PostPreview";
-import Pagination from "@/components/Paginator";
-import { getAllPosts, getUniqueTags, sortMDByDate } from "@/utils";
+import type { Page, GetStaticPaths } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import PageLayout from '../../layouts/Base.astro';
+import PostPreview from '../../components/blog/PostPreview.astro';
+import Pagination from '../../components/Paginator.astro';
+import { getAllPosts, getUniqueTags, sortMDByDate } from '../../utils';
 
 export const getStaticPaths = (async ({ paginate }) => {
   const allPosts = await getAllPosts();
@@ -14,15 +14,15 @@ export const getStaticPaths = (async ({ paginate }) => {
 }) satisfies GetStaticPaths;
 
 interface Props {
-  page: Page<CollectionEntry<"post">>;
+  page: Page<CollectionEntry<'post'>>;
   uniqueTags: string[];
 }
 
 const { page, uniqueTags } = Astro.props;
 
 const meta = {
-  title: "Posts",
-  description: "Ready my collection of posts and the things that interest me",
+  title: 'Posts',
+  description: 'Ready my collection of posts and the things that interest me',
 };
 
 const paginationProps = {
