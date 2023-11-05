@@ -4,8 +4,8 @@ import { getEntryBySlug } from 'astro:content';
 import satori, { type SatoriOptions } from 'satori';
 import { html } from 'satori-html';
 import { Resvg } from '@resvg/resvg-js';
-import { siteConfig } from '@/site-config';
-import { getAllPosts, getFormattedDate } from '@/utils';
+import { getAllPosts, getFormattedDate } from '../../utils';
+import { siteConfig } from '../../site.config';
 
 const font = 'node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff';
 
