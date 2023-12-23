@@ -4,21 +4,25 @@ import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
-import prefetch from '@astrojs/prefetch';
-import remarkShikiTwoslash from 'remark-shiki-twoslash';
 import remarkUnwrapImages from 'remark-unwrap-images';
 import { remarkReadingTime } from './src/utils/remark-reading-time';
+// import remarkShikiTwoslash from 'remark-shiki-twoslash';
+
+// const r = remarkShikiTwoslash({ themes: ['github-dark', 'github-light'] });
 
 // https://astro.build/config
 export default defineConfig({
   // ! Please remember to replace the following site property with your own domain
   site: 'https://umstek.github.io',
   markdown: {
-    remarkPlugins: [
-      [remarkShikiTwoslash, { themes: ['github-dark', 'github-light'] }],
-      remarkUnwrapImages,
-      remarkReadingTime,
-    ],
+    remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
+    shikiConfig: {
+      experimentalThemes: {
+        light: 'github-light',
+        dark: 'github-dark',
+      },
+      // wrap: true,
+    },
     remarkRehype: { footnoteLabelProperties: { className: [''] } },
   },
   integrations: [
@@ -30,8 +34,8 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     sitemap(),
-    prefetch(),
   ],
+  prefetch: true,
   image: {
     domains: ['webmention.io'],
   },
