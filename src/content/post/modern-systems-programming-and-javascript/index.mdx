@@ -15,9 +15,11 @@ tags:
   - javascript
 ---
 
-# Modern Systems Programming Languages and their Impact on the JavaScript Ecosystem
+<div class="alert info">
 
 This article assumes basic programming knowledge.
+
+</div>
 
 ## System Software and Application Software
 
@@ -33,11 +35,11 @@ JavaScript is a scripting language introduced by [Netscape Navigator](https://en
 
 JavaScript was made to make the web more dynamic. With [Microsoft introducing what is known today as AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)), it laid the foundation to build Web 2.0. Initially, every browser had their own JavaScript implementations, however ECMAScript standardization helped unify them. 
 
-JavaScript doesn't just run on browsers anymore; there are various JavaScript runtimes like Node, Deno, Bun, and [LLRT](https://github.com/awslabs/llrt) that allow the language to run on server, on the edge, and sometimes even on embedded systems. 
+JavaScript doesn't just run on browsers anymore; there are various JavaScript runtimes like Node, Deno, Bun, and [LLRT](https://github.com/awslabs/llrt) that allow the language to run on server, on the edge, and sometimes even on embedded systems.
 
 ## The Need for JavaScript Tooling
 
-JavaScript evolved a lot. And fast. Developers wanted to use the latest features, but sometimes the browsers couldn't keep up; because either the features were not yet standardized, or the users didn't update their browsers frequently enough. Sometimes, browsers even had different APIs exposed. The developers also wanted to maintain compatibility across them. Some "tools" were needed to make this happen. 
+JavaScript evolved a lot. And fast. Developers wanted to use the latest features, but sometimes the browsers couldn't keep up; because either the features were not yet standardized, or the users didn't update their browsers frequently enough. Sometimes, browsers even had different APIs exposed. The developers also wanted to maintain compatibility across them. Some "tools" were needed to make this happen.
 
 [NodeJS](https://nodejs.org/en) can be thought of as the first popular JavaScript tool. Not only that it allowed to write the server side of the web sites in JavaScript, it also provided a nice framework to run scripts to do anything that the developer wanted. Most of the JavaScript tooling still revolve around NodeJS. 
 
@@ -47,7 +49,7 @@ Performance!
 
 ## The Need for _Better_ JavaScript Tooling
 
-JavaScript is slow compared to most compiled languages, regardless of attempts to optimize it. Although features like hot reloading, where the browser page is automatically updated to reflect the changes you do to the source code, make the developer experience better, you can hardly achieve their full potential due to long wait times, sudden crashes, high resource usage etc. 
+JavaScript is slow compared to most compiled languages, regardless of attempts to optimize it. Although features like hot reloading, where the browser page is automatically updated to reflect the changes you do to the source code, make the developer experience better, you can hardly achieve their full potential due to long wait times, sudden crashes, high resource usage etc.
 
 At the same time, a new set of compiled and systems programming languages were gaining popularity. And this was an opportunity, and a necessity for the developers to write faster tools to do all things above.
 
@@ -92,6 +94,7 @@ Overall, V aims to strike a balance between performance, safety, and developer p
 Google engineer Chandler Carruth first introduced Carbon, an experimental programming language at the CppNorth conference in Toronto in July 2022 as an open-source project. Carbon is designed to focus on providing memory safety, and is thus built to stand on the shoulders of C++ – the language it is expected to succeed.
 
 Some of Carbon's advanced features that make it an alternative to C++ include:
+
 - Prohibiting access to deallocated memory (such as garbage-collected memory)
 - Disallowing attempts to access memory via dereferenced pointers
 - Extra safeguards for access to incorrect data types
@@ -114,6 +117,7 @@ Speedy Web Compiler is an extensible, Rust-based platform for the Web. It can co
 `swc` can't replace `tsc` (typescript compiler) just yet because it doesn't check types; but probably your editor is already doing that. There was another project [`stc`](https://github.com/dudykr/stc), trying to create a "Speedy TypeScript type checker", but unfortunately, [that has been abandoned](https://github.com/dudykr/stc/issues/1101), likely because it's hard for a few developers to keep up with the speed TypeScript change. 
 
 `swc` also offers `@swc/wasm-web` to synchronously transform code inside the browser using WebAssembly, and `@swc-node/register` as a replacement for `ts-node`.
+
 ### [esbuild](https://esbuild.github.io/)
 
 `esbuild` is an extremely fast JavaScript bundler and minifier written in Go. It might even be slightly faster than `swc`. 
@@ -127,6 +131,7 @@ While most bundlers like webpack rely on JavaScript for their core implementatio
 - Tree shaking - esbuild analyzes imports and exports to exclude unused code from bundles to reduce size.
 
 While still new, esbuild shows enormous potential to speed up JavaScript bundling, a common bottleneck in frontend workflows. Its focus on performance and a simple cohesive architecture make it compelling to try for optimizing build times.
+
 ### [Bun](https://bun.sh/)
 
 Bun is a faster all-in-one JavaScript runtime written in Zig. While others are trying to replace individual parts of the JavaScript toolchain like `babel` or `webpack`, Bun aims to replace the entire Node.js runtime along with `npm`, Jest, `webpack`, `tsc` and more in one tool.
@@ -139,6 +144,7 @@ Some key features and benefits of Bun include:
 - TypeScript support - Bun has full native support for TypeScript without a separate compilation step.
 
 While still new, Bun shows potential to greatly simplify and speed up JavaScript/TypeScript development by consolidating the entire toolchain into a single performant runtime. It can be incrementally adopted in place of NPM and other tools or used as a complete replacement for the Node.js stack.
+
 ### [Deno](https://deno.com/)
 
 Deno is a Rust-based runtime that provides built-in support for TypeScript and aims to fix perceived shortcomings of Node.js. Some key features of Deno include:
@@ -151,29 +157,34 @@ Deno is a Rust-based runtime that provides built-in support for TypeScript and a
 - Browser compatible API - Deno uses web platform standards like WebSockets, WebWorkers and Fetch which allows code to run in browser environments as well as the server.
 
 While still relatively new, Deno shows promise as a lighter and more secure runtime for JavaScript and TypeScript server applications. The built-in type checking and avoidance of NPM could make it well suited for large mission critical code bases.
+
 ### [Biome](https://github.com/biomejs/biome) (successor to [Rome](https://github.com/rome/tools))
 
 Biome is a Rust-based toolchain for the web which supports JavaScript, TypeScript, (JSX,) JSON, and CSS. Biome is designed to eventually replace `babel`, `eslint`,`webpack`,`prettier`, and `jest` and do all that with minimal configuration.
 
 Rome was supposed to do all that, and apparently, it has been abandoned.
+
 ### [Parcel](https://parceljs.org/docs/)
 
 Parcel (v1) was probably the first zero-configuration bundler (replacement for webpack) out their at a time when configuring webpack was a pain. It supported so many file/asset types out-of-the box, and sometimes even automatically installed the necessary dependencies for you. 
 
 The new parcel (v2) does all that, although written mostly in JavaScript, it's now faster as well thanks to SWC. It's not clear to me why more people aren't using Parcel anymore.
+
 ### [Vite](https://vitejs.dev/) (and the now defunct [Snowpack](https://www.snowpack.dev/))
 
 Vite is a (non-)bundler and dev server which takes a different approach for better developer experience. It relies on `esbuild` for pre-bundling dependencies, and serves source code over native ESM, so the browser takes over the job of the bundler. It uses `babel` to do any required transforms but we can easily opt to `swc` using a plug-in.  While building for production, it uses rollup as the bundler. 
 
 It [has a rich ecosystem](https://github.com/vitejs/awesome-vite). If you want it to be like NextJS, there is the [`vite-plugin-ssr`](https://vite-plugin-ssr.com/) plugin for that. [Vitest](https://vitest.dev/) is a vite-native unit test framework. 
 
-It is listed under the 
+It is listed under the
+
 - Most adopted technology (interestingly, Vitest gets the 2nd place),
 - Highest retention, and
 - Highest interest
 in [State of JS 2022 awards](https://2022.stateofjs.com/en-US/awards/).
 
 The behavior of snowpack was similar to Vite, but it is not maintained anymore. [According to Vite docs](https://vitejs.dev/guide/comparisons.html#snowpack), the Snowpack team is now building [Astro](https://astro.build/), a popular static site builder powered by Vite.
+
 ### [Turbo(pack)](https://turbo.build/pack)
 [Vercel](https://vercel.com/) claims `turbopack` to be the "The Rust-powered successor to Webpack". It utilizes worker threads for parallelized processing and an incremental filesystem cache to achieve faster bundle times.
 
@@ -192,6 +203,7 @@ Rolldown is an upcoming Rollup-compatible Rust-based bundler built for Vite. It 
 ### WebAssembly
 
 WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable compilation target for programming languages, enabling deployment on the web for client and server applications. WebAssembly aims to execute at native speed by taking advantage of common hardware capabilities available on a wide range of platforms. It is an open web standard developed by the W3C WebAssembly Working Group. WebAssembly code can be generated from C/C++, Rust, AssemblyScript and other languages and executed in modern web browsers with near-native performance. This allows web applications to run computationally intensive tasks efficiently without compromising on load times. Overall, WebAssembly brings near-native performance to the web, unlocking new use cases and enabling a high performance web.
+
 ### Edge Computing
 
 Edge computing refers to processing data near the source of data generation rather than sending it to the cloud. This allows for faster response times and reduces bandwidth usage. Modern systems programming languages like Rust and Go are well-suited for developing edge computing applications, although other languages like JavaScript are more commonly used.
