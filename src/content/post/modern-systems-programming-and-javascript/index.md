@@ -1,3 +1,20 @@
+---
+title: Modern Systems Programming Languages and their Impact on the JavaScript Ecosystem
+description: This mostly discusses about new JavaScript build tools created with modern systems programming languages
+initialDraftAt: '2024-03-16 21:00:00 +0530'
+publishedAt: '2024-03-16 21:00:00 +0530'
+coverImage:
+  src: './cover.jpg'
+  alt: 'cover'
+category: programming
+tags:
+  - rust
+  - vite
+  - nodejs
+  - bun
+  - javascript
+---
+
 # Modern Systems Programming Languages and their Impact on the JavaScript Ecosystem
 
 This article assumes basic programming knowledge.
