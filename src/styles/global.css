@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@import "./typography.css";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+:root,
+html[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: oklch(28.2% 0.091 267.935);
+  --accent: oklch(48.8% 0.243 264.376);
+  --muted: oklch(28.2% 0.091 267.935 / 0.1);
+  --border: oklch(28.2% 0.091 267.935 / 0.4);
+}
+
+html[data-theme="dark"] {
+  --background: #000000;
+  --foreground: oklch(86.9% 0.022 252.894);
+  --accent: oklch(68.5% 0.169 237.323);
+  --muted: oklch(54.6% 0.245 262.881 / 0.3);
+  --border: oklch(54.6% 0.245 262.881 / 0.7);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-accent/75;
+    scrollbar-width: auto;
+    scrollbar-color: var(--color-muted) transparent;
+  }
+  html {
+    @apply overflow-y-scroll scroll-smooth;
+  }
+  body {
+    @apply flex min-h-svh flex-col bg-background font-serif text-foreground selection:bg-accent/75 selection:text-background;
+  }
+  a,
+  button {
+    @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  section,
+  footer {
+    @apply mx-auto max-w-app px-4;
+  }
+}
+
+@utility max-w-app {
+  @apply max-w-3xl;
+}
+
+.active-nav {
+  @apply underline decoration-wavy decoration-2 underline-offset-4;
+}
+
+/* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 1rem;
+}
+
+/* Font Family Overrides */
+html[data-font="sans"] body {
+  font-family: "Inter", system-ui, sans-serif !important;
+}
+
+html[data-font="mono"] body {
+  font-family: "Fira Code", "Fira Code NF", "Roboto Mono", monospace !important;
+}
+
+html[data-font="dyslexic"] body {
+  font-family: "OpenDyslexic", "Open-Dyslexic", sans-serif !important;
+}
+
+html[data-font="serif"] body {
+  font-family:
+    "Merriweather", Georgia, "Times New Roman", Times, serif !important;
+}
