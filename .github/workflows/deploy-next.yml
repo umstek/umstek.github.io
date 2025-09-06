@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Next Branch to /next
 
 permissions:
   contents: read
@@ -7,11 +7,11 @@ permissions:
 
 on:
   push:
-    branches: [main]
+    branches: [next]
   workflow_dispatch:
 
 concurrency:
-  group: "pages"
+  group: "pages-next"
   cancel-in-progress: false
 
 jobs:
@@ -42,15 +42,18 @@ jobs:
         run: bun run format:check
 
       - name: "🚀 Build the project"
-        run: bun run build
+        run: |
+          # Update base URL for /next subdirectory
+          bun run build --base=/next
 
       - name: "📤 Upload Pages Artifact"
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+          name: next-branch
 
   deploy:
-    name: Deploy to GitHub Pages
+    name: Deploy to GitHub Pages /next
     needs: build
     runs-on: ubuntu-latest
     environment:
@@ -60,3 +63,6 @@ jobs:
       - name: "🚀 Deploy to GitHub Pages"
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: next-branch
+          preview: true
