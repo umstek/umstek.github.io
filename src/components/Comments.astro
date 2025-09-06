@@ -1,0 +1,50 @@
+<div id="comments" class="mt-8">
+  <script
+    id="giscus-script"
+    src="https://giscus.app/client.js"
+    data-repo="umstek/umstek.github.io"
+    data-repo-id="MDEwOlJlcG9zaXRvcnk2NjI1NjkzNQ=="
+    data-category="Comments"
+    data-category-id="DIC_kwDOA_MAJ84CR_9a"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="1"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    is:inline
+    async></script>
+  <div class="giscus"></div>
+</div>
+
+<script is:inline>
+  /**
+   * Synchronise giscus theme with site theme
+   */
+  const applyGiscusTheme = () => {
+    const iframe = document.querySelector("iframe.giscus-frame");
+    if (!iframe) return;
+    const theme = document.documentElement.classList.contains("dark")
+      ? "dark"
+      : "light";
+    iframe.contentWindow?.postMessage(
+      {
+        giscus: {
+          setConfig: { theme },
+        },
+      },
+      "https://giscus.app"
+    );
+  };
+
+  // Initial call after load
+  window.addEventListener("load", () => setTimeout(applyGiscusTheme, 0));
+
+  // Update on theme button click
+  document.querySelector("#theme-btn")?.addEventListener("click", () => {
+    setTimeout(applyGiscusTheme, 0);
+  });
+</script>

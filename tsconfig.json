@@ -1,11 +1,13 @@
 {
-  "extends": "astro/tsconfigs/strictest",
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist", "public/pagefind"],
   "compilerOptions": {
-    "baseUrl": "/home/hexmint/src/astro-theme-cactus",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "jsx": "react-jsx",
-    "lib": ["DOM"],
     "jsxImportSource": "react"
-  },
-  "include": ["src", "*.ts"],
-  "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"]
+  }
 }

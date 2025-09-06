@@ -1,66 +1,68 @@
-import { defineConfig } from 'astro/config';
-import fs from 'fs';
-import mdx from '@astrojs/mdx';
-import react from '@astrojs/react';
-import tailwind from '@astrojs/tailwind';
-import sitemap from '@astrojs/sitemap';
-import remarkUnwrapImages from 'remark-unwrap-images';
-import { remarkReadingTime } from './src/utils/remark-reading-time';
-// import remarkShikiTwoslash from 'remark-shiki-twoslash';
-
-// const r = remarkShikiTwoslash({ themes: ['github-dark', 'github-light'] });
+import { defineConfig, envField } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
+import sitemap from "@astrojs/sitemap";
+import mdx from "@astrojs/mdx";
+import remarkToc from "remark-toc";
+import remarkCollapse from "remark-collapse";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import {
+  transformerNotationDiff,
+  transformerNotationHighlight,
+  transformerNotationWordHighlight,
+} from "@shikijs/transformers";
+import { transformerFileName } from "./src/utils/transformers/fileName";
+import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
-  // ! Please remember to replace the following site property with your own domain
-  site: 'https://umstek.github.io',
-  markdown: {
-    remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
-    shikiConfig: {
-      experimentalThemes: {
-        light: 'github-light',
-        dark: 'github-dark',
-      },
-      // wrap: true,
-    },
-    remarkRehype: { footnoteLabelProperties: { className: [''] } },
-  },
+  site: SITE.website,
   integrations: [
-    mdx({}),
-    react({
-      include: ['**/react/*'],
+    mdx(),
+    sitemap({
+      filter: page => SITE.showArchives || !page.endsWith("/archives"),
     }),
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    sitemap(),
   ],
-  prefetch: true,
-  image: {
-    domains: ['webmention.io'],
+  markdown: {
+    remarkPlugins: [
+      remarkMath,
+      remarkToc,
+      [remarkCollapse, { test: "Table of contents" }],
+    ],
+    rehypePlugins: [rehypeKatex],
+    shikiConfig: {
+      // For more themes, visit https://shiki.style/themes
+      themes: { light: "github-light", dark: "ayu-dark" },
+      defaultColor: false,
+      wrap: false,
+      transformers: [
+        transformerFileName(),
+        transformerNotationHighlight(),
+        transformerNotationWordHighlight(),
+        transformerNotationDiff({ matchAlgorithm: "v3" }),
+      ],
+    },
   },
   vite: {
-    plugins: [rawFonts(['.ttf', '.woff', '.woff2'])],
+    plugins: [tailwindcss()],
     optimizeDeps: {
-      exclude: ['@resvg/resvg-js'],
+      exclude: ["@resvg/resvg-js"],
     },
   },
-});
-
-function rawFonts(ext: Array<string>) {
-  return {
-    name: 'vite-plugin-raw-fonts',
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore:next-line
-    transform(_, id) {
-      if (ext.some((e) => id.endsWith(e))) {
-        console.log(_, id);
-        const buffer = fs.readFileSync(id);
-        return {
-          code: `export default ${JSON.stringify(buffer)}`,
-          map: null,
-        };
-      }
+  image: {
+    responsiveStyles: true,
+    layout: "constrained",
+  },
+  env: {
+    schema: {
+      PUBLIC_GOOGLE_SITE_VERIFICATION: envField.string({
+        access: "public",
+        context: "client",
+        optional: true,
+      }),
     },
-  };
-}
+  },
+  experimental: {
+    preserveScriptOrder: true,
+  },
+});
