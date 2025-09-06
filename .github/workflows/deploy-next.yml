@@ -43,8 +43,10 @@ jobs:
 
       - name: "🚀 Build the project"
         run: |
-          # Update base URL for /next subdirectory
-          bun run build --base=/next
+          bun run astro check
+          bun run astro build --base=/next
+          bun run pagefind --site dist
+          cp -r dist/pagefind public/pagefind
 
       - name: "📤 Upload Pages Artifact"
         uses: actions/upload-pages-artifact@v3
