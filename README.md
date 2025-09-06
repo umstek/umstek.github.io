@@ -15,6 +15,7 @@ Personal blog of **Wickramaranga (UMSTeK)** - a software engineer from Sri Lanka
 I'm Wickramaranga, a software engineer from Sri Lanka who mainly works with the MERN stack. This blog is where I share my thoughts, experiences, and learnings in software development.
 
 **Find me on:**
+
 - 🐙 [GitHub](https://github.com/umstek)
 - 🐘 [Mastodon](https://mastodon.social/@umstek)
 - 💼 [LinkedIn](https://linkedin.com/in/umstek)
@@ -43,7 +44,7 @@ I'm Wickramaranga, a software engineer from Sri Lanka who mainly works with the 
 **Syntax Highlighting**: [Shiki](https://shiki.style/) with transformers  
 **Comments**: [Giscus](https://giscus.app/) (GitHub Discussions)  
 **Deployment**: [GitHub Pages](https://pages.github.com/)  
-**Package Manager**: [Bun](https://bun.sh/)  
+**Package Manager**: [Bun](https://bun.sh/)
 
 ## 💻 Local Development
 
@@ -65,16 +66,16 @@ The site will be available at `http://localhost:4321`.
 
 ## 🧞 Available Commands
 
-| Command                | Action                                                                                                                           |
-| :--------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
-| `bun install`          | Install dependencies                                                                                                             |
-| `bun run dev`          | Start local dev server at `localhost:4321`                                                                                      |
-| `bun run build`        | Build production site to `./dist/`                                                                                              |
-| `bun run preview`      | Preview build locally before deploying                                                                                          |
-| `bun run format:check` | Check code format with Prettier                                                                                                 |
-| `bun run format`       | Format code with Prettier                                                                                                       |
-| `bun run sync`         | Generate TypeScript types for Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync).  |
-| `bun run lint`         | Lint with ESLint                                                                                                                |
+| Command                | Action                                                                                                                      |
+| :--------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| `bun install`          | Install dependencies                                                                                                        |
+| `bun run dev`          | Start local dev server at `localhost:4321`                                                                                  |
+| `bun run build`        | Build production site to `./dist/`                                                                                          |
+| `bun run preview`      | Preview build locally before deploying                                                                                      |
+| `bun run format:check` | Check code format with Prettier                                                                                             |
+| `bun run format`       | Format code with Prettier                                                                                                   |
+| `bun run sync`         | Generate TypeScript types for Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
+| `bun run lint`         | Lint with ESLint                                                                                                            |
 
 ## 📁 Project Structure
 
@@ -114,13 +115,13 @@ tags:
 featured: false
 draft: false
 ---
-
 Your post content here...
 ```
 
 ## 🎨 Customization
 
 The blog can be customized through:
+
 - `src/config.ts` - Site metadata and configuration
 - `src/constants.ts` - Global constants and settings
 - `src/styles/` - Custom styles and theme modifications
@@ -140,4 +141,4 @@ This blog is built using the [AstroPaper](https://github.com/satnaing/astro-pape
 ---
 
 **Built with ❤️ by [Wickramaranga](https://github.com/umstek)**  
-*Based on [AstroPaper](https://github.com/satnaing/astro-paper) theme by [Sat Naing](https://satnaing.dev)*
+_Based on [AstroPaper](https://github.com/satnaing/astro-paper) theme by [Sat Naing](https://satnaing.dev)_
