@@ -13,7 +13,7 @@
     data-input-position="top"
     data-theme="preferred_color_scheme"
     data-lang="en"
-    data-loading="lazy"
+    data-loading="eager"
     crossorigin="anonymous"
     is:inline
     async></script>
@@ -27,9 +27,13 @@
   const applyGiscusTheme = () => {
     const iframe = document.querySelector("iframe.giscus-frame");
     if (!iframe) return;
-    const theme = document.documentElement.classList.contains("dark")
-      ? "dark"
-      : "light";
+
+    // Get theme from data-theme attribute instead of class
+    const theme =
+      document.documentElement.getAttribute("data-theme") === "dark"
+        ? "dark"
+        : "light";
+
     iframe.contentWindow?.postMessage(
       {
         giscus: {
@@ -40,11 +44,69 @@
     );
   };
 
-  // Initial call after load
-  window.addEventListener("load", () => setTimeout(applyGiscusTheme, 0));
+  // Function to wait for giscus iframe to load
+  const waitForGiscusAndApplyTheme = () => {
+    const checkForIframe = () => {
+      const iframe = document.querySelector("iframe.giscus-frame");
+      if (iframe) {
+        applyGiscusTheme();
+      } else {
+        // Retry after a short delay if iframe not found
+        setTimeout(checkForIframe, 100);
+      }
+    };
+    checkForIframe();
+  };
 
-  // Update on theme button click
-  document.querySelector("#theme-btn")?.addEventListener("click", () => {
-    setTimeout(applyGiscusTheme, 0);
+  // Watch for iframe creation using MutationObserver
+  const observeGiscusIframe = () => {
+    const observer = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        mutation.addedNodes.forEach(node => {
+          if (
+            node.nodeType === Node.ELEMENT_NODE &&
+            node.tagName === "IFRAME" &&
+            node.classList.contains("giscus-frame")
+          ) {
+            // Small delay to ensure iframe is fully loaded
+            setTimeout(applyGiscusTheme, 500);
+          }
+        });
+      });
+    });
+
+    const giscusContainer = document.querySelector(".giscus");
+    if (giscusContainer) {
+      observer.observe(giscusContainer, { childList: true, subtree: true });
+    }
+  };
+
+  // Initial setup
+  window.addEventListener("load", () => {
+    observeGiscusIframe();
+    // Also try immediate application in case iframe is already there
+    setTimeout(waitForGiscusAndApplyTheme, 1000);
+  });
+
+  // Update on theme changes - listen to the same events as toggle-theme.js
+  window.addEventListener("load", () => {
+    // Listen for theme button clicks
+    document.querySelector("#theme-btn")?.addEventListener("click", () => {
+      // Wait a bit for the theme to be applied, then sync giscus
+      setTimeout(applyGiscusTheme, 100);
+    });
+
+    // Also listen for system theme changes
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", () => {
+        setTimeout(applyGiscusTheme, 100);
+      });
+  });
+
+  // Listen for astro navigation events
+  document.addEventListener("astro:after-swap", () => {
+    observeGiscusIframe();
+    setTimeout(waitForGiscusAndApplyTheme, 1000);
   });
 </script>
