@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "arrowParens": "avoid",
+  "semi": true,
+  "tabWidth": 2,
+  "printWidth": 80,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "ignorePatterns": [
+    "dist/**",
+    ".astro/**",
+    "public/pagefind/**",
+    "node_modules/**"
+  ]
+}

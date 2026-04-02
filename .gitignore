@@ -148,8 +148,8 @@ web_modules/
 # Optional npm cache directory
 .npm
 
-# Optional eslint cache
-.eslintcache
+# Optional oxc cache
+.oxlintcache
 
 # Optional stylelint cache
 .stylelintcache

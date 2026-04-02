@@ -128,7 +128,7 @@ Write `Table of contents` in h2 format (## in markdown) and place it where you w
 
 For instance, if you want to place your table of contents just under the intro paragraph (like I usually do), you can do that in the following way.
 
-<!-- prettier-ignore-start -->
+<!-- oxfmt-ignore-start -->
 ```md
 ---
 # frontmatter
@@ -141,7 +141,7 @@ Here are some recommendations, tips & ticks for creating new posts in AstroPaper
 
 <!-- the rest of the post -->
 ```
-<!-- prettier-ignore-end -->
+<!-- oxfmt-ignore-end -->
 
 ## Headings
 
