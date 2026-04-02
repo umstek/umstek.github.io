@@ -151,6 +151,9 @@ web_modules/
 # Optional oxc cache
 .oxlintcache
 
+# Pagefind generated files
+public/pagefind/
+
 # Optional stylelint cache
 .stylelintcache
 

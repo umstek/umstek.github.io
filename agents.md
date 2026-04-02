@@ -1,4 +1,5 @@
 # AGENTS.md
 
 ## Package Management
-- ALWAYS use `bun` for installing dependencies, never npm or yarn 
+
+- ALWAYS use `bun` for installing dependencies, never npm or yarn
