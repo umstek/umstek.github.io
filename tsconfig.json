@@ -4,10 +4,9 @@
   "exclude": ["dist", "public/pagefind"],
   "compilerOptions": {
     "baseUrl": ".",
+    "lib": ["es2023"],
     "paths": {
       "@/*": ["./src/*"]
-    },
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    }
   }
 }
