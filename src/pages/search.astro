@@ -18,6 +18,13 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
 </Layout>
 
 <script>
+  function resetSearchParam(e: Event) {
+    const target = e.target;
+    if (target instanceof HTMLInputElement && target.value.trim() === "") {
+      history.replaceState(history.state, "", window.location.pathname);
+    }
+  }
+
   function initSearch() {
     const pageFindSearch: HTMLElement | null =
       document.querySelector("#pagefind-search");
@@ -67,14 +74,9 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
       // Reset search param if search input is cleared
       const searchInput = document.querySelector(".pagefind-ui__search-input");
       const clearButton = document.querySelector(".pagefind-ui__search-clear");
+
       searchInput?.addEventListener("input", resetSearchParam);
       clearButton?.addEventListener("click", resetSearchParam);
-
-      function resetSearchParam(e: Event) {
-        if ((e.target as HTMLInputElement)?.value.trim() === "") {
-          history.replaceState(history.state, "", window.location.pathname);
-        }
-      }
     });
   }
 

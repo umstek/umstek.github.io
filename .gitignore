@@ -148,8 +148,11 @@ web_modules/
 # Optional npm cache directory
 .npm
 
-# Optional eslint cache
-.eslintcache
+# Optional oxc cache
+.oxlintcache
+
+# Pagefind generated files
+public/pagefind/
 
 # Optional stylelint cache
 .stylelintcache
