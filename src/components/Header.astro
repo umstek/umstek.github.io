@@ -6,6 +6,7 @@ import IconSearch from "@/assets/icons/IconSearch.svg";
 import IconArchive from "@/assets/icons/IconArchive.svg";
 import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
 import IconMenuDeep from "@/assets/icons/IconMenuDeep.svg";
+import IconDeviceDesktop from "@/assets/icons/IconDeviceDesktop.svg";
 import LinkButton from "./LinkButton.astro";
 import { SITE } from "@/config";
 
@@ -149,12 +150,13 @@ const isActive = (path: string) => {
                 <button
                   id="theme-btn"
                   class="focus-outline relative size-12 p-4 sm:size-8 hover:[&>svg]:stroke-accent"
-                  title="Toggles light & dark"
-                  aria-label="auto"
+                  title="Toggles light, dark & system"
+                  aria-label="system"
                   aria-live="polite"
                 >
-                  <IconMoon class="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-                  <IconSunHigh class="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+                  <IconSunHigh class="theme-icon-sun absolute top-[50%] left-[50%] transition-transform duration-300" style="transform: translate(-50%, -50%) scale(0) rotate(90deg)" />
+                  <IconMoon class="theme-icon-moon absolute top-[50%] left-[50%] transition-transform duration-300" style="transform: translate(-50%, -50%) scale(0) rotate(90deg)" />
+                  <IconDeviceDesktop class="theme-icon-system absolute top-[50%] left-[50%] transition-transform duration-300" style="transform: translate(-50%, -50%) scale(1) rotate(0deg)" />
                 </button>
               </li>
             )

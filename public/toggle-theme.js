@@ -1,73 +1,90 @@
-const primaryColorScheme = ""; // "light" | "dark"
-
-// Get theme data from local storage
-const currentTheme = localStorage.getItem("theme");
-
-function getPreferTheme() {
-  // return theme value in local storage if it is set
-  if (currentTheme) return currentTheme;
-
-  // return primary color scheme if it is set
-  if (primaryColorScheme) return primaryColorScheme;
-
-  // return user device's prefer color scheme
+function getSystemTheme() {
   return window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
     : "light";
 }
 
-let themeValue = getPreferTheme();
+function getThemeMode() {
+  const stored = localStorage.getItem("theme");
+  return stored || "system";
+}
+
+function resolveTheme(mode) {
+  return mode === "system" ? getSystemTheme() : mode;
+}
+
+let themeMode = getThemeMode();
 
 function setPreference() {
-  localStorage.setItem("theme", themeValue);
+  localStorage.setItem("theme", themeMode);
   reflectPreference();
 }
 
+function updateIconVisibility() {
+  const btn = document.querySelector("#theme-btn");
+  if (!btn) return;
+
+  const sun = btn.querySelector(".theme-icon-sun");
+  const moon = btn.querySelector(".theme-icon-moon");
+  const system = btn.querySelector(".theme-icon-system");
+
+  if (sun) {
+    sun.style.transform =
+      themeMode === "light"
+        ? "translate(-50%, -50%) scale(1) rotate(0deg)"
+        : "translate(-50%, -50%) scale(0) rotate(90deg)";
+  }
+  if (moon) {
+    moon.style.transform =
+      themeMode === "dark"
+        ? "translate(-50%, -50%) scale(1) rotate(0deg)"
+        : "translate(-50%, -50%) scale(0) rotate(90deg)";
+  }
+  if (system) {
+    system.style.transform =
+      themeMode === "system"
+        ? "translate(-50%, -50%) scale(1) rotate(0deg)"
+        : "translate(-50%, -50%) scale(0) rotate(90deg)";
+  }
+}
+
 function reflectPreference() {
-  document.firstElementChild.setAttribute("data-theme", themeValue);
+  const resolved = resolveTheme(themeMode);
+  document.firstElementChild.setAttribute("data-theme", resolved);
+  document.firstElementChild.setAttribute("data-theme-mode", themeMode);
 
-  document.querySelector("#theme-btn")?.setAttribute("aria-label", themeValue);
+  document.querySelector("#theme-btn")?.setAttribute("aria-label", themeMode);
 
-  // Get a reference to the body element
+  updateIconVisibility();
+
   const body = document.body;
-
-  // Check if the body element exists before using getComputedStyle
   if (body) {
-    // Get the computed styles for the body element
-    const computedStyles = window.getComputedStyle(body);
-
-    // Get the background color property
-    const bgColor = computedStyles.backgroundColor;
-
-    // Set the background color in <meta theme-color ... />
+    const bgColor = window.getComputedStyle(body).backgroundColor;
     document
       .querySelector("meta[name='theme-color']")
       ?.setAttribute("content", bgColor);
   }
 }
 
-// set early so no page flashes / CSS is made aware
 reflectPreference();
 
 window.addEventListener("load", () => {
   function setThemeFeature() {
-    // set on load so screen readers can get the latest value on the button
     reflectPreference();
 
-    // now this script can find and listen for clicks on the control
     document.querySelector("#theme-btn")?.addEventListener("click", () => {
-      themeValue = themeValue === "light" ? "dark" : "light";
+      if (themeMode === "light") themeMode = "dark";
+      else if (themeMode === "dark") themeMode = "system";
+      else themeMode = "light";
       setPreference();
     });
   }
 
   setThemeFeature();
 
-  // Runs on view transitions navigation
   document.addEventListener("astro:after-swap", setThemeFeature);
 });
-// Set theme-color value before page transition
-// to avoid navigation bar color flickering in Android dark mode
+
 document.addEventListener("astro:before-swap", event => {
   const bgColor = document
     .querySelector("meta[name='theme-color']")
@@ -78,10 +95,10 @@ document.addEventListener("astro:before-swap", event => {
     ?.setAttribute("content", bgColor);
 });
 
-// sync with system changes
 window
   .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", ({ matches: isDark }) => {
-    themeValue = isDark ? "dark" : "light";
-    setPreference();
+  .addEventListener("change", () => {
+    if (themeMode === "system") {
+      reflectPreference();
+    }
   });

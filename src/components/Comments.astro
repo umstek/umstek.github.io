@@ -28,7 +28,6 @@
     const iframe = document.querySelector("iframe.giscus-frame");
     if (!iframe) return;
 
-    // Get theme from data-theme attribute instead of class
     const theme =
       document.documentElement.getAttribute("data-theme") === "dark"
         ? "dark"
@@ -92,15 +91,16 @@
   window.addEventListener("load", () => {
     // Listen for theme button clicks
     document.querySelector("#theme-btn")?.addEventListener("click", () => {
-      // Wait a bit for the theme to be applied, then sync giscus
       setTimeout(applyGiscusTheme, 100);
     });
 
-    // Also listen for system theme changes
     window
       .matchMedia("(prefers-color-scheme: dark)")
       .addEventListener("change", () => {
-        setTimeout(applyGiscusTheme, 100);
+        const mode = document.documentElement.getAttribute("data-theme-mode");
+        if (mode === "system") {
+          setTimeout(applyGiscusTheme, 100);
+        }
       });
   });
 
