@@ -29,19 +29,22 @@ function updateIconVisibility() {
   const system = btn.querySelector(".theme-icon-system");
 
   if (sun) {
-    sun.style.transform = themeMode === "light"
-      ? "translate(-50%, -50%) scale(1) rotate(0deg)"
-      : "translate(-50%, -50%) scale(0) rotate(90deg)";
+    sun.style.transform =
+      themeMode === "light"
+        ? "translate(-50%, -50%) scale(1) rotate(0deg)"
+        : "translate(-50%, -50%) scale(0) rotate(90deg)";
   }
   if (moon) {
-    moon.style.transform = themeMode === "dark"
-      ? "translate(-50%, -50%) scale(1) rotate(0deg)"
-      : "translate(-50%, -50%) scale(0) rotate(90deg)";
+    moon.style.transform =
+      themeMode === "dark"
+        ? "translate(-50%, -50%) scale(1) rotate(0deg)"
+        : "translate(-50%, -50%) scale(0) rotate(90deg)";
   }
   if (system) {
-    system.style.transform = themeMode === "system"
-      ? "translate(-50%, -50%) scale(1) rotate(0deg)"
-      : "translate(-50%, -50%) scale(0) rotate(90deg)";
+    system.style.transform =
+      themeMode === "system"
+        ? "translate(-50%, -50%) scale(1) rotate(0deg)"
+        : "translate(-50%, -50%) scale(0) rotate(90deg)";
   }
 }
 
