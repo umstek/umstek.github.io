@@ -19,7 +19,8 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
 
 <script>
   function resetSearchParam(e: Event) {
-    if ((e.target as HTMLInputElement)?.value.trim() === "") {
+    const target = e.target;
+    if (target instanceof HTMLInputElement && target.value.trim() === "") {
       history.replaceState(history.state, "", window.location.pathname);
     }
   }

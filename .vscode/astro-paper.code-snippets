@@ -29,6 +29,6 @@
       "",
       "## ${3: heading 1}",
     ],
-    "description": "Adds the template for the AstroPaper Blog post. You will need to trigger the snippet modal on the 'frontmatter' line to insert the other snipper.",
+    "description": "Adds the template for the AstroPaper Blog post. You will need to trigger the snippet modal on the 'frontmatter' line to insert the other snippet.",
   },
 }
