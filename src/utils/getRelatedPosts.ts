@@ -1,4 +1,5 @@
 import type { CollectionEntry } from "astro:content";
+import postFilter from "./postFilter";
 
 export default function getRelatedPosts(
   currentPost: CollectionEntry<"blog">,
@@ -11,7 +12,7 @@ export default function getRelatedPosts(
     .filter(
       post =>
         post.id !== currentPost.id &&
-        !post.data.draft &&
+        postFilter(post) &&
         post.data.tags.some(tag => currentTags.has(tag))
     )
     .map(post => ({
