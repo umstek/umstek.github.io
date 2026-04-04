@@ -10,11 +10,16 @@ import ShareLinks from "@/components/ShareLinks.astro";
 import Comments from "@/components/Comments.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
+import RelatedPosts from "@/components/RelatedPosts.astro";
+import SeriesNav from "@/components/SeriesNav.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
+import getReadingTime from "@/utils/getReadingTime";
+import getRelatedPosts from "@/utils/getRelatedPosts";
+import getSeriesPosts from "@/utils/getSeriesPosts";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -37,6 +42,8 @@ const {
 } = post.data;
 
 const { Content } = await render(post);
+
+const readingTime = getReadingTime(post.body ?? "");
 
 let ogImageUrl: string | undefined;
 
@@ -66,6 +73,7 @@ const layoutProps = {
   canonicalURL,
   ogImage,
   scrollSmooth: true,
+  loadKaTeX: /\$\$/.test(post.body ?? ""),
 };
 
 /* ========== Prev/Next Posts ========== */
@@ -81,6 +89,14 @@ const currentPostIndex = allPosts.findIndex(a => a.id === post.id);
 const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
 const nextPost =
   currentPostIndex !== allPosts.length ? allPosts[currentPostIndex + 1] : null;
+
+/* ========== Related Posts ========== */
+
+const relatedPosts = getRelatedPosts(post, posts);
+
+/* ========== Series Navigation ========== */
+
+const seriesPosts = getSeriesPosts(post, posts);
 ---
 
 <Layout {...layoutProps}>
@@ -102,9 +118,13 @@ const nextPost =
     </h1>
     <div class="my-2 flex items-center gap-2">
       <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
+      <span class="text-sm opacity-80">{readingTime} min read</span>
       <span aria-hidden="true" class="max-sm:hidden">|</span>
       <EditPost {hideEditPost} {post} class="max-sm:hidden" />
     </div>
+    {post.data.series && (
+      <SeriesNav currentPost={post} seriesPosts={seriesPosts} />
+    )}
     <article
       id="article"
       class="app-prose mx-auto mt-8 max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
@@ -125,6 +145,8 @@ const nextPost =
     <ShareLinks />
 
     <Comments />
+
+    <RelatedPosts posts={relatedPosts} />
 
     <hr class="my-6 border-dashed" />
 
