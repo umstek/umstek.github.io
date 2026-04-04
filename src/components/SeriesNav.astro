@@ -1,0 +1,44 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getPath } from "@/utils/getPath";
+
+export interface Props {
+  currentPost: CollectionEntry<"blog">;
+  seriesPosts: CollectionEntry<"blog">[];
+}
+
+const { currentPost, seriesPosts } = Astro.props;
+
+const seriesName = currentPost.data.series!.name;
+const currentPart = currentPost.data.series!.part;
+const totalParts = seriesPosts.length + 1;
+---
+
+<nav aria-label="Series navigation" class="my-6 rounded-lg border border-border p-4">
+  <div class="mb-3 text-sm font-semibold uppercase tracking-wide opacity-75">
+    {seriesName} ({totalParts} parts)
+  </div>
+  <ol class="space-y-1">
+    <li>
+      <a
+        href={getPath(currentPost.id, currentPost.filePath)}
+        class="font-medium text-accent"
+        aria-current="page"
+      >
+        Part {currentPart}: {currentPost.data.title}
+      </a>
+    </li>
+    {
+      seriesPosts.map(post => (
+        <li>
+          <a
+            href={getPath(post.id, post.filePath)}
+            class="text-foreground/75 hover:text-accent"
+          >
+            Part {post.data.series!.part}: {post.data.title}
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+</nav>
