@@ -10,10 +10,9 @@ export interface Props {
 const { currentPost, seriesPosts } = Astro.props;
 
 const seriesName = currentPost.data.series!.name;
-const currentPart = currentPost.data.series!.part;
 
 // Combine current post with series posts and sort by part number
-const allPosts = [currentPost, ...seriesPosts].sort(
+const allPosts = [currentPost, ...seriesPosts].toSorted(
   (a, b) => a.data.series!.part - b.data.series!.part
 );
 const totalParts = allPosts.length;
