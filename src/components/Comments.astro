@@ -13,7 +13,7 @@
     data-input-position="top"
     data-theme="preferred_color_scheme"
     data-lang="en"
-    data-loading="eager"
+    data-loading="lazy"
     crossorigin="anonymous"
     is:inline
     async></script>
@@ -45,14 +45,19 @@
 
   // Function to wait for giscus iframe to load
   const waitForGiscusAndApplyTheme = () => {
+    const maxRetries = 50; // Max 5 seconds (50 * 100ms)
+    let retryCount = 0;
+
     const checkForIframe = () => {
       const iframe = document.querySelector("iframe.giscus-frame");
       if (iframe) {
         applyGiscusTheme();
-      } else {
+      } else if (retryCount < maxRetries) {
         // Retry after a short delay if iframe not found
+        retryCount++;
         setTimeout(checkForIframe, 100);
       }
+      // Stop polling after max retries reached
     };
     checkForIframe();
   };

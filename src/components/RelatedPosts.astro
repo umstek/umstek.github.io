@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Card from "./Card.astro";
+
+export interface Props {
+  posts: CollectionEntry<"blog">[];
+}
+
+const { posts } = Astro.props;
+---
+
+{
+  posts.length > 0 && (
+    <section class="mt-8">
+      <h2 class="mb-4 text-xl font-semibold tracking-wide">Related Posts</h2>
+      <ul>
+        {posts.map(post => (
+          <Card variant="h3" {...post} />
+        ))}
+      </ul>
+    </section>
+  )
+}

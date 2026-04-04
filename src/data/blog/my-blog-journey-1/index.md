@@ -2,7 +2,9 @@
 title: "My React+Markdown blog journey (Part 1)"
 description: "Me trying to create the perfect blog, and failing"
 pubDatetime: 2019-01-21T05:00:00.000Z
-category: programming
+series:
+  name: "My blog journey"
+  part: 1
 tags:
   - blog
   - react

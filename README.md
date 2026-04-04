@@ -17,9 +17,9 @@ I'm Wickramaranga, a software engineer from Sri Lanka who mainly works with the 
 **Find me on:**
 
 - 🐙 [GitHub](https://github.com/umstek)
-- 🐘 [Mastodon](https://mastodon.social/@umstek)
-- 💼 [LinkedIn](https://linkedin.com/in/umstek)
-- 📧 [Email](mailto:hello@umstek.com)
+- 🐘 [Mastodon](https://mastodon.social/@hexmint)
+- 💼 [LinkedIn](https://www.linkedin.com/in/wickramaranga/)
+- 📧 [Email](mailto:umstek@live.com)
 
 ## 🔥 Features
 
@@ -29,6 +29,9 @@ I'm Wickramaranga, a software engineer from Sri Lanka who mainly works with the 
 - 🔍 **Fuzzy search** - Find posts quickly with Pagefind
 - 📝 **Markdown & MDX support** - Rich content with components
 - 🏷️ **Tag system** - Organize and filter posts by topics
+- 📖 **Series navigation** - Multi-part posts linked together
+- 🔗 **Related posts** - Suggestions based on shared tags
+- ⏱️ **Reading time** - Estimated reading time per post
 - 💬 **Comments** - Giscus integration with GitHub Discussions
 - 🖼️ **Dynamic OG images** - Auto-generated social media cards
 - 📊 **SEO optimized** - Sitemap, RSS feed, meta tags
@@ -37,9 +40,9 @@ I'm Wickramaranga, a software engineer from Sri Lanka who mainly works with the 
 
 ## 🚀 Tech Stack
 
-**Framework**: [Astro](https://astro.build/) v5.13.5  
-**Styling**: [TailwindCSS](https://tailwindcss.com/) v4.1.13  
-**Language**: [TypeScript](https://www.typescriptlang.org/) v5.9.2  
+**Framework**: [Astro](https://astro.build/) v6  
+**Styling**: [TailwindCSS](https://tailwindcss.com/) v4  
+**Language**: [TypeScript](https://www.typescriptlang.org/) v6  
 **Search**: [Pagefind](https://pagefind.app/) v1.4.0  
 **Syntax Highlighting**: [Shiki](https://shiki.style/) with transformers  
 **Comments**: [Giscus](https://giscus.app/) (GitHub Discussions)  
@@ -72,10 +75,10 @@ The site will be available at `http://localhost:4321`.
 | `bun run dev`          | Start local dev server at `localhost:4321`                                                                                  |
 | `bun run build`        | Build production site to `./dist/`                                                                                          |
 | `bun run preview`      | Preview build locally before deploying                                                                                      |
-| `bun run format:check` | Check code format with Prettier                                                                                             |
-| `bun run format`       | Format code with Prettier                                                                                                   |
+| `bun run format:check` | Check code format with oxfmt                                                                                                |
+| `bun run format`       | Format code with oxfmt                                                                                                      |
 | `bun run sync`         | Generate TypeScript types for Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
-| `bun run lint`         | Lint with ESLint                                                                                                            |
+| `bun run lint`         | Lint with oxlint                                                                                                            |
 
 ## 📁 Project Structure
 
@@ -86,16 +89,16 @@ The site will be available at `http://localhost:4321`.
 │   ├── toggle-theme.js
 │   └── toggle-font.js
 ├── src/
+│   ├── assets/            # Icons and images
 │   ├── components/         # Reusable components
 │   ├── data/blog/         # Blog posts (Markdown/MDX)
 │   ├── layouts/           # Page layouts
-│   ├── pages/             # Routes and API endpoints
+│   ├── pages/             # Routes
 │   ├── styles/            # Global styles
 │   ├── utils/             # Utility functions
 │   ├── config.ts          # Site configuration
 │   └── constants.ts       # Global constants
 ├── astro.config.ts        # Astro configuration
-├── tailwind.config.js     # TailwindCSS configuration
 └── tsconfig.json          # TypeScript configuration
 ```
 
@@ -108,12 +111,16 @@ Blog posts are written in Markdown/MDX format and stored in `src/data/blog/`. Ea
 title: Your Post Title
 description: Brief description for SEO
 pubDatetime: 2025-01-06T10:00:00Z
+modDatetime: 2025-01-07T10:00:00Z
 author: Wickramaranga
 tags:
   - programming
   - web development
 featured: false
 draft: false
+series:
+  name: "My Series Name"
+  part: 1
 ---
 Your post content here...
 ```
