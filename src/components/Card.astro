@@ -27,9 +27,14 @@ const coverImage = ogImage;
 
 <li class="my-6">
   <div class="flex gap-4">
-    {coverImage && (
-      <div class="flex-none w-24 self-start overflow-hidden rounded-md">
-        {typeof coverImage === "string" ? (
+    <div
+      class:list={[
+        "flex-none w-24 self-start overflow-hidden rounded-md",
+        !coverImage && "invisible",
+      ]}
+    >
+      {coverImage && (
+        typeof coverImage === "string" ? (
           <img
             src={coverImage}
             alt=""
@@ -45,9 +50,9 @@ const coverImage = ogImage;
             height={96}
             loading="lazy"
           />
-        )}
-      </div>
-    )}
+        )
+      )}
+    </div>
     <div class="min-w-0">
       <a
         href={getPath(id, filePath)}
