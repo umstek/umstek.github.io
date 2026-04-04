@@ -1,6 +1,7 @@
 ---
 import { slugifyStr } from "@/utils/slugify";
 import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
 import { getPath } from "@/utils/getPath";
 import Datetime from "./Datetime.astro";
 import getReadingTime from "@/utils/getReadingTime";
@@ -11,7 +12,8 @@ export interface Props extends CollectionEntry<"blog"> {
 
 const { variant = "h2", data, id, filePath, body } = Astro.props;
 
-const { title, description, pubDatetime, modDatetime, timezone } = data;
+const { title, description, pubDatetime, modDatetime, timezone, ogImage } =
+  data;
 
 const readingTime = getReadingTime(body ?? "");
 
@@ -19,24 +21,56 @@ const headerProps = {
   style: { viewTransitionName: slugifyStr(title) },
   class: "text-lg font-medium decoration-dashed hover:underline",
 };
+
+const coverImage = ogImage;
 ---
 
 <li class="my-6">
-  <a
-    href={getPath(id, filePath)}
-    class="inline-block text-lg font-medium text-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
-  >
-    {
-      variant === "h2" ? (
-        <h2 {...headerProps}>{title}</h2>
-      ) : (
-        <h3 {...headerProps}>{title}</h3>
-      )
-    }
-  </a>
-  <div class="flex items-center gap-2">
-    <Datetime {pubDatetime} {modDatetime} {timezone} />
-    <span class="text-sm opacity-80">{readingTime} min read</span>
+  <div class="flex gap-4">
+    <div
+      class:list={[
+        "flex-none w-24 self-start overflow-hidden rounded-md",
+        !coverImage && "invisible",
+      ]}
+    >
+      {coverImage && (
+        typeof coverImage === "string" ? (
+          <img
+            src={coverImage}
+            alt=""
+            class="aspect-square h-full w-full object-cover"
+            loading="lazy"
+          />
+        ) : (
+          <Image
+            src={coverImage}
+            alt=""
+            class="aspect-square h-full w-full object-cover"
+            width={96}
+            height={96}
+            loading="lazy"
+          />
+        )
+      )}
+    </div>
+    <div class="min-w-0">
+      <a
+        href={getPath(id, filePath)}
+        class="inline-block text-lg font-medium text-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+      >
+        {
+          variant === "h2" ? (
+            <h2 {...headerProps}>{title}</h2>
+          ) : (
+            <h3 {...headerProps}>{title}</h3>
+          )
+        }
+      </a>
+      <div class="flex items-center gap-2">
+        <Datetime {pubDatetime} {modDatetime} {timezone} />
+        <span class="text-sm opacity-80">{readingTime} min read</span>
+      </div>
+      <p>{description}</p>
+    </div>
   </div>
-  <p>{description}</p>
 </li>
