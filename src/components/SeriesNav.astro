@@ -11,7 +11,12 @@ const { currentPost, seriesPosts } = Astro.props;
 
 const seriesName = currentPost.data.series!.name;
 const currentPart = currentPost.data.series!.part;
-const totalParts = seriesPosts.length + 1;
+
+// Combine current post with series posts and sort by part number
+const allPosts = [currentPost, ...seriesPosts].sort(
+  (a, b) => a.data.series!.part - b.data.series!.part
+);
+const totalParts = allPosts.length;
 ---
 
 <nav aria-label="Series navigation" class="my-6 rounded-lg border border-border p-4">
@@ -19,26 +24,21 @@ const totalParts = seriesPosts.length + 1;
     {seriesName} ({totalParts} parts)
   </div>
   <ol class="space-y-1">
-    <li>
-      <a
-        href={getPath(currentPost.id, currentPost.filePath)}
-        class="font-medium text-accent"
-        aria-current="page"
-      >
-        Part {currentPart}: {currentPost.data.title}
-      </a>
-    </li>
     {
-      seriesPosts.map(post => (
-        <li>
-          <a
-            href={getPath(post.id, post.filePath)}
-            class="text-foreground/75 hover:text-accent"
-          >
-            Part {post.data.series!.part}: {post.data.title}
-          </a>
-        </li>
-      ))
+      allPosts.map(post => {
+        const isCurrentPost = post.id === currentPost.id;
+        return (
+          <li>
+            <a
+              href={getPath(post.id, post.filePath)}
+              class={isCurrentPost ? "font-medium text-accent" : "text-foreground/75 hover:text-accent"}
+              aria-current={isCurrentPost ? "page" : undefined}
+            >
+              Part {post.data.series!.part}: {post.data.title}
+            </a>
+          </li>
+        );
+      })
     }
   </ol>
 </nav>

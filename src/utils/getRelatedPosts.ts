@@ -11,6 +11,7 @@ export default function getRelatedPosts(
     .filter(
       post =>
         post.id !== currentPost.id &&
+        !post.data.draft &&
         post.data.tags.some(tag => currentTags.has(tag))
     )
     .map(post => ({
