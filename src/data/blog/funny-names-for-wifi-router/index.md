@@ -2,7 +2,6 @@
 title: "Funny names for Wi-Fi router"
 description: "Funny names for Wi-Fi router"
 pubDatetime: 2017-04-17T05:00:00.000Z
-category: funny
 tags:
   - ssid
   - wi-fi

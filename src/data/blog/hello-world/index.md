@@ -2,7 +2,6 @@
 title: "Hello, world!"
 description: "A placeholder post writing hello world programs in multiple languages"
 pubDatetime: 2016-09-03T08:12:22.000Z
-category: programming
 tags:
   - hello-world
   - snippet

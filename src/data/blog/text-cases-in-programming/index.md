@@ -2,7 +2,6 @@
 title: "Text Cases in Programming"
 description: "Camel, Pascal, Snake, what do they even mean?"
 pubDatetime: 2017-01-16T05:42:22.000Z
-category: programming
 tags:
   - conventions
   - programming
