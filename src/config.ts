@@ -4,7 +4,7 @@ export const SITE = {
   profile: "https://github.com/umstek",
   desc: "Personal blog of Wickramaranga (UMSTeK) – programming, tech and more.",
   title: "UMSTeK Blog",
-  ogImage: "umstek-blog-og.jpg",
+  ogImage: "",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 4,
